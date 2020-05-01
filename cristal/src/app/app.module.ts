@@ -13,6 +13,7 @@ import { PoliticaDePrivacidadeComponent } from './politica-de-privacidade/politi
 import { ProdutosComponent } from './produtos/produtos.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     PoliticaDePrivacidadeComponent,
     ProdutosComponent,
-    FooterComponent
+    FooterComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,

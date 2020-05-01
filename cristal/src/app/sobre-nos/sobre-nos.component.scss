@@ -1,0 +1,26 @@
+.card{
+    border: 1px solid rgba(0,0,0,0);
+    transition: 1s;
+}
+
+.card:hover{
+    transition: 1.5s;
+    background-color: #7395ae;
+    transition-timing-function: ease-in-out;
+}
+
+// Diminuição das imagens no modo responsivo, pois utilizando apenas o Bootstrap elas ficavam muito grandes
+@media screen and (max-width: 767px){
+    .card-img{
+        width: 75%;
+        height: 75%;
+        margin: 0 auto;
+    }
+
+    .div-img-card{
+        width: 75%;
+        height: 75%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
