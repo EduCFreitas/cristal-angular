@@ -1,1 +1,58 @@
-<p>cadastro works!</p>
+<!-- Botão Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">
+botao da navbar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title titulo" id="modalCadastro">Cadastro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <!-- Nome -->
+                    <label for="inputText" class="lead">Nome:</label>
+                    <br>
+                    <input type="text" placeholder="Digite aqui seu nome completo">
+                    <br>
+
+                    <!-- E-mail -->
+                    <label for="inputText" class="lead">Email:</label>
+                    <br>
+                    <input type="e-mail" placeholder="Ex: carla@gmail.com">
+                    <br>
+
+                    <!-- Senha -->
+                    <label for="inputText" class="lead">Senha: </label>
+                    <br>
+                    <input type="password">
+                    <br>
+
+                    <!-- Confirmar senha -->
+                    <label for="inputText" class="lead">Confime sua senha: </label>
+                    <br>
+                    <input type="password">
+                </form>
+
+                <!-- botoes -->
+                <button type="button" class="btn btn-secondary botao-formulario mt-2" data-dismiss="modal">Cancelar</button>
+                <br>
+                <button type="button" class="btn btn-primary botao-formulario mt-2 text-center">Entrar</button>
+
+            </div>
+
+
+            <div class="modal-footer">
+                Já tem cadastro? <a data-toggle="modal" data-target="#modalLogin" routerLink="/login">Clique aqui</a>
+            </div>
+        </div>
+    </div>
+</div>
