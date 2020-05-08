@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 $theme-colors: (
-  "primary": #0074d9,
-  "danger": #ff4136
+  // "primary": #0074d9,
+  // "secondary": #aaaaaa,
+  // "success": #bbbbbb,
+  // "danger": #ff4136,
+  // "warning": #cccccc,
+  // "info": #dddddd,
+  // "dark": #eeeeee
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
