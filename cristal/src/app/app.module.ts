@@ -14,14 +14,11 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-=======
 import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
->>>>>>> eduardo
 
 @NgModule({
   declarations: [
@@ -43,7 +40,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
     HttpClientModule,
     FormsModule
   ],
