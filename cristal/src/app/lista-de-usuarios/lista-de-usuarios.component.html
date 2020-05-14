@@ -1,0 +1,31 @@
+<main class="container">
+    <div class="row my-4">
+        <div class="col-12 text-center">
+            <h1 class="h2">Lista de Usuários</h1>
+        </div>
+    </div>
+
+    <!-- Tabela para lista de usuários -->
+    <div class="row mb-4 text-center">
+        <div class="col-12 text-center">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col">Senha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of listaUsuarios">
+                        <td scope="row">{{ usuario.id }}</td>
+                        <td>{{ usuario.nome }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.senha }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
