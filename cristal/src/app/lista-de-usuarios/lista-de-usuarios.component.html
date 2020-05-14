@@ -8,7 +8,7 @@
     <!-- Tabela para lista de usuários -->
     <div class="row mb-4 text-center">
         <div class="col-12 text-center">
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -18,30 +18,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">--ID--</th>
-                        <td>--NOME--</td>
-                        <td>--EMAIL--</td>
-                        <td>--SENHA--</td>
+                    <tr *ngFor="let usuario of listaUsuarios">
+                        <td scope="row">{{ usuario.id }}</td>
+                        <td>{{ usuario.nome }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.senha }}</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-
-    <!-- BACKUP CASO TABELA NÃO FUNCIONE -->
-    <div class="row text-center">
-        <div class="col-3">Id</div>
-        <div class="col-3">Nome</div>
-        <div class="col-3">E-mail</div>
-        <div class="col-3">Senha</div>
-    </div>
-    <div>
-        <div class="row text-center">
-            <div class="col-3">ID</div>
-            <div class="col-3">NOME</div>
-            <div class="col-3">EMAIL</div>
-            <div class="col-3">SENHA</div>
         </div>
     </div>
 </main>
