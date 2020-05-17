@@ -1,4 +1,8 @@
-section{
+textarea{
+  resize: none;
+}
+
+.container-fluid{
     background-image: url('https://i.imgur.com/ilq2Hcg.png');
     background-attachment: fixed;
     background-position: center;
@@ -13,7 +17,7 @@ section{
 .form-group { 
     max-width:420px; 
     margin-left: 10%; 
-    padding: 12% 0%;  
+    padding: 12% 0%;
 }
 
 .form-control {
@@ -29,6 +33,7 @@ section{
   width:100%;
   box-sizing: border-box;
   outline:0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 // textarea {
@@ -42,7 +47,7 @@ section{
   background:#26272b;
   border-radius:5px;
   border:0;
-  font-size:24px;
+  font-size: 1em;
   padding-top:10px;
   padding-bottom:10px;
   margin-top:-4px;
@@ -56,7 +61,7 @@ section{
 
 ::placeholder{
   color: #26272b;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-size: 12px;
 }
 
