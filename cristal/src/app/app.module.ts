@@ -14,6 +14,9 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     PoliticaDePrivacidadeComponent,
     ProdutosComponent,
     FooterComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    ListaDeUsuariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
