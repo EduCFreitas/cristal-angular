@@ -28,7 +28,6 @@ export class CadastroComponent implements OnInit {
       this.cadastrar();
     }else{
       this.erroSenha=true;
-      // alert("Não rolou");
     }
   }
 
