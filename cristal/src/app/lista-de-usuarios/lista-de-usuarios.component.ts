@@ -12,10 +12,22 @@ export class ListaDeUsuariosComponent implements OnInit {
   listaUsuarios:Usuario[]
   usuario:Usuario = new Usuario()
 
+  alerta:boolean = false
+
   constructor(private usuarioService:UsuarioService) { }
 
   ngOnInit() {
     this.findAllUsuarios()
+    let item:string = localStorage.getItem('delOk')
+    if (item=="true"){
+      this.alerta = true
+      localStorage.clear()
+      setTimeout(()=>{
+        location.assign('lista-de-usuarios')
+      }, 4000)
+     
+    }
+    
   }
 
   findAllUsuarios(){

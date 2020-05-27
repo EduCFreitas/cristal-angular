@@ -5,8 +5,32 @@
         </div>
     </div>
 
+    <div class="row mb-4 d-flex justify-content-center">
+        <div class="col-6">
+            <div class="card" style="width: 36rem;">
+                <div class="card-header">
+                    ID {{ usuario.id }}
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nome: {{ usuario.nome }} </li>
+                <li class="list-group-item">E-Mail: {{ usuario.email}} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="text-center" style="width: 36rem;">
+                <button type="button" class="btn btn-outline-success col-5 mr-1" (click)="btnSim()">Sim</button>
+
+                <button type="button" class="btn btn-outline-danger col-5 ml-1" (click)="btnNao()">Não</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Tabela para lista de usuários -->
-    <div class="row mb-4 text-center">
+   <!-- <div class="row mb-4 text-center">
         <div class="col-12 text-center">
             <table class="table table-striped">
                 <thead>
@@ -32,6 +56,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> -->
 </main>
 
