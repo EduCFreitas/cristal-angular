@@ -11,10 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditarUsuarioComponent implements OnInit {
   
   
-  usuario: Usuario = new Usuario;
+  usuario: Usuario = new Usuario();
 
 
-  constructor(private editarUsuario: UsuarioService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 // pegar na rota ativa (API) o item pelo ID
@@ -24,18 +24,18 @@ export class EditarUsuarioComponent implements OnInit {
   }
 
   findById(id:number){
-    this.editarUsuario.getUsuarioById(id).subscribe((res: Usuario)=>{
-      this.usuario = res
-      console.log(res)
-      console.log(this.usuario)
+    this.usuarioService.getUsuarioById(id).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+    }, err =>{
+      console.log(`Erro: ${err.status}, não conseguimos pegar o id`)
     })
   }
 
-  salvarEdicao(){
-    this.editarUsuario.putUsuarios(this.usuario).subscribe((res: Usuario)=>{
-      this.usuario = res
-      this.router.navigate(['/feed'])
-      location.assign('/feed')
+  salvar(){
+    this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+      this.router.navigate(['/lista-de-usuarios'])
+      location.assign('/lista-de-usuarios')
     })
   }
 
