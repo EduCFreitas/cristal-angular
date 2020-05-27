@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'lista-de-usuarios', component: ListaDeUsuariosComponent},
   {path: 'editar-usuario/:id', component: EditarUsuarioComponent},
-  {path: 'deletar-usuario', component: DeletarUsuarioComponent}
+  {path: 'deletar-usuario/:id', component: DeletarUsuarioComponent}
 ];
 
 @NgModule({
