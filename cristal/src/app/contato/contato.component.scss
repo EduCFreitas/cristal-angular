@@ -1,0 +1,67 @@
+textarea{
+  resize: none;
+}
+
+.container-fluid{
+    background-image: url('https://i.imgur.com/ilq2Hcg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo-form{
+  text-transform: uppercase;
+}
+
+.form-group { 
+    max-width:420px; 
+    margin-left: 10%; 
+    padding: 12% 0%;
+}
+
+.form-control {
+  color:#26272b;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #26272b;
+  padding: 13px;
+  margin-bottom: 10px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+// textarea {
+//   height: 150px;
+//   line-height: 150%;
+//   resize:vertical;
+// }
+
+.input {
+  width: 40%;
+  background:#26272b;
+  border-radius:5px;
+  border:0;
+  font-size: 1em;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-top:-4px;
+  font-weight:700;
+
+}
+
+// .input:hover{
+//   color: #334681;
+// }
+
+::placeholder{
+  color: #26272b;
+  // text-transform: uppercase;
+  font-size: 12px;
+}
+
