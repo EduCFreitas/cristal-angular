@@ -1,3 +1,10 @@
+.bg-full {
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
 .bg {
   // background-image: url(https://i.imgur.com/FRMd7uv.png);
   background-image: url(https://i.imgur.com/JqWDitT.png);
@@ -19,14 +26,42 @@
   color: white;
 }
 
-.produto1 {
-  background-color: crimson;
+
+// Cards
+.cards-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.produto2 {
-  background-color: rgb(0, 255, 26);
+img {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
 }
 
-.produto3 {
-  background-color: rgb(20, 27, 220);
+.cards {
+  text-align: center;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  max-width: 210px;
+  max-height: 250px;
+  padding: 20px;
 }
+
+// .produto1 {
+//   background-color: crimson;
+// }
+
+// .produto2 {
+//   background-color: rgb(0, 255, 26);
+// }
+
+// .produto3 {
+//   background-color: rgb(20, 27, 220);
+// }
+
