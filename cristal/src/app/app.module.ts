@@ -14,6 +14,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
 import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -41,6 +43,8 @@ import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.compo
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatCardModule,
     HttpClientModule,
     FormsModule
   ],

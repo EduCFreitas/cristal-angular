@@ -33,7 +33,7 @@
   box-shadow: 0 0 12px   lightskyblue;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   color: rgb(149, 149, 149);
 }
 
@@ -52,11 +52,11 @@
   transition: all 0.3s;
 }
 
-.ent{
+.ent {
   display: none;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .botao{
       display: none;
   }
@@ -64,5 +64,5 @@
   .ent {
       display: inherit;
   }
-
+  
 }
