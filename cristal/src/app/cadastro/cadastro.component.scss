@@ -1,0 +1,38 @@
+input{
+    width: 100%;
+}
+
+modal-header {
+    text-decoration: none;
+}
+.botao-formulario{
+    width: 50%;
+    text-align: center;
+    display: flex-end;
+}
+
+.modal-content{
+    padding: 20px;
+}
+.titulo{
+    font-size: 2.8rem;
+    font-weight: 150;
+    line-height: 0.8;
+    text-align: center;
+}
+
+.tem-erro input{
+    border-color: red;
+}
+
+.tem-erro ul{
+    color: red;
+}
+
+.sem-erro input{
+    border-color: green;
+}
+
+.sem-erro ul{
+    color: green;
+}
