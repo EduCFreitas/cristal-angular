@@ -1,44 +1,60 @@
-<!-- <body class="background">
-  <header class="itens">
-    <a href="#" class="logo">Logo</a>
+<nav class="navbar navbar-bg navbar-expand-md">
+  <div class="container">
+    <!-- logo -->
+    <a href="#" class="navbar-brand">
+      <img src="#" alt="Cristal" />
+    </a>
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Produtos</a></li>
-      <li><a href="#">Sobre nós</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#">Faq</a></li>
-    </ul>
+    <!-- Botão de responsividade -->
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Abrir Navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <!-- Menu -->
+    <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/home">
+            Home
+          </a>
+        </li>
 
-  </header>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/produtos">
+            Produtos
+          </a>
+        </li>
 
-  <section class="banner" ></section>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/contato">
+            Contato
+          </a>
+        </li>
 
-  <script type="text/javascript">
-    window.addEventListener("scroll"), function(){
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 0);
-    }
-  </script>
-</body> -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/sobre-nos">
+            Equipe
+          </a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link ent" href="#" routerLink="/">
+            Entrar
+          </a>
+        </li>
 
-<header>
-        <div class="menu-toggle" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="overlay"></div>
-        <div class="container">
-            <nav>
-                <div class="brand"><a routerLink="/home">Cr<span>is</span>tal</a></div>
-                <ul>
-                    <li><a routerLink="/home">Home</a></li>
-                    <li><a routerLink="/produtos">Produtos</a></li>
-                    <li><a routerLink="/sobre-nos">Sobre nós</a></li>
-                    <li><a routerLink="/contato">Contato</a></li>
-                    <li><a routerLink="/login">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-</header>
+      </ul>
+
+      <!-- Botão Entrar -->
+      <li class="navbar navbar-expand-sm botao">
+        <a class="nav-link" href="#" routerLink="/home">
+          <button class="btn">Entrar</button>
+        </a>
+
+      </li>
+    </div>
+  </div>
+</nav>
+
