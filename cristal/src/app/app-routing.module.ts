@@ -9,6 +9,8 @@ import { PoliticaDePrivacidadeComponent } from './politica-de-privacidade/politi
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.component';
+import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: 'politica-de-privacidade', component: PoliticaDePrivacidadeComponent},
   {path: 'produtos', component: ProdutosComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
-  {path: 'lista-de-usuarios', component: ListaDeUsuariosComponent}
+  {path: 'lista-de-usuarios', component: ListaDeUsuariosComponent},
+  {path: 'editar-usuario', component: EditarUsuarioComponent},
+  {path: 'deletar-usuario', component: DeletarUsuarioComponent}
 ];
 
 @NgModule({

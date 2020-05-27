@@ -1,7 +1,7 @@
 <main class="container">
     <div class="row my-4">
         <div class="col-12 text-center">
-            <h1 class="h2">Lista de Usuários</h1>
+            <h1 class="h2">Deletar Usuário</h1>
         </div>
     </div>
 
@@ -15,18 +15,18 @@
                         <th scope="col">Nome</th>
                         <th scope="col">E-Mail</th>
                         <th scope="col">Senha</th>
-                        <th scope="col">Ação</th>
+                        <th scope="col">Confirmar Deleção?</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let usuario of listaUsuarios">
-                        <td scope="row">{{ usuario.id }}</td>
-                        <td>{{ usuario.nome }}</td>
-                        <td>{{ usuario.email }}</td>
-                        <td>{{ usuario.senha }}</td>
+                    <tr>
+                        <td scope="row"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td>
-                            <button type="button" class="btn btn-outline-info col-5 mr-1">Editar</button>
-                            <button type="button" class="btn btn-outline-danger col-5 ml-1">Apagar</button>
+                            <button type="button" class="btn btn-outline-success col-5 mr-1">Sim</button>
+                            <button type="button" class="btn btn-outline-danger col-5 ml-1">Não</button>
                         </td>
                     </tr>
                 </tbody>
@@ -34,3 +34,4 @@
         </div>
     </div>
 </main>
+

@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { FormsModule } from '@angular/forms';
     ProdutosComponent,
     FooterComponent,
     SobreNosComponent,
-    ListaDeUsuariosComponent
+    ListaDeUsuariosComponent,
+    EditarUsuarioComponent,
+    DeletarUsuarioComponent
   ],
   imports: [
     BrowserModule,
