@@ -18,15 +18,21 @@
                         <th scope="col">Confirmar Edição?</th>
                     </tr>
                 </thead>
+
+
+
+
                 <tbody>
                     <tr>
+                        <td> {{ usuario.id }} </td>
+                        <td><input type="text" [(ngModel)]="usuario.nome"></td>
+                        <td><input type="text" [(ngModel)]= "usuario.email"></td>
+                        <td><input type="text" [(ngModel)]= "usuario.senha"></td> 
                         <td scope="row"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td>
-                            <button type="button" class="btn btn-outline-success col-5 mr-1">Sim</button>
-                            <button type="button" class="btn btn-outline-danger col-5 ml-1">Não</button>
+                            <button type="button" class="btn btn-outline-success col-5 mr-1" (click)="salvarEdicao()" routerLink="/lista-de-usuarios">Sim</button>
+
+                            <button type="button" class="btn btn-outline-danger col-5 ml-1"routerLink="/lista-de-usuarios">Não</button>
                         </td>
                     </tr>
                 </tbody>
