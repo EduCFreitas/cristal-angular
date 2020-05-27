@@ -20,6 +20,10 @@ export class UsuarioService {
   getUsuarioById(id: number){
     return this.http.get(`http://93.188.161.223:9000/user/${id}`) 
   }
+
+  deleteUsuario(id: number){
+    return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
+  }
   postUsuario(usuario:Usuario){
     return this.http.post('http://93.188.161.223:9000/user', usuario)
   }
