@@ -13,4 +13,11 @@ export class UsuarioService {
     return this.http.get('http://93.188.161.223:9000/user')
   }
 
+  putUsuarios(usuario: Usuario) {
+    return this.http.put('http://93.188.161.223:9000/user', usuario)
+  }
+
+  getUsuarioById(id: number){
+    return this.http.get(`http://93.188.161.223:9000/user/${id}`) 
+  }
 }
