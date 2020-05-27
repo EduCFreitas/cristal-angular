@@ -1,0 +1,40 @@
+<main class="container">
+    <div class="row my-4">
+        <div class="col-12 text-center">
+            <h1 class="h2">Editar Usuário</h1>
+            <h5 class="h5">ID {{ usuario.id }}</h5>
+        </div>
+    </div>
+    
+    <!-- Tabela para lista de usuários -->
+    <div class="row mb-4 d-flex justify-content-center">
+        <div class="col-6">
+            <!-- Nome -->
+            <div class="form-group">
+                <label for="nome" class="lead">Nome:</label>
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui seu nome completo" [(ngModel)]="usuario.nome">
+            </div>
+            
+            <!-- E-mail -->
+            <div class="form-group">
+                <label for="email" class="lead">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Ex: carla@gmail.com" [(ngModel)]= "usuario.email">
+            </div>
+            
+            <!-- Senha -->
+            <div class="form-group">
+                <label for="senha" class="lead">Senha:</label>
+                <input type="password" name="senha" id="senha" class="form-control" [(ngModel)]= "usuario.senha">
+            </div>
+            <hr>
+            
+            <!-- Mensagem e botões -->
+            <div class="form-group text-center">
+                <p class="lead">Salvar as alterações?</p>
+                <button type="button" class="btn btn-outline-success col-5 mr-1" (click)="salvar()">Sim</button>
+                <button type="button" class="btn btn-outline-danger col-5 ml-1" routerLink="/lista-de-usuarios">Não</button>
+            </div>
+        </div>
+    </div>
+</main>
+
