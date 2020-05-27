@@ -33,8 +33,8 @@ export class CadastroComponent implements OnInit {
 
   cadastrar(){
     this.usuarioService.postUsuario(this.usuario).subscribe((resp:Usuario)=>{
-      this.usuario = resp;
-      location.assign('/lista-de-usuarios');
+      this.usuario = resp
+      location.assign('/lista-de-usuarios')
     })
   }
   
