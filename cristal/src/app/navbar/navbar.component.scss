@@ -1,4 +1,5 @@
 * {
+  padding: 2px;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7,7 +8,13 @@
 }
 
 .navbar-bg {
-  background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
+  // background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
+  background-color: rgb(55, 55, 55);
+}
+
+.logo {
+  width: 118px;
+  height: 44px;
 }
 
 .menu ul li a:hover {
@@ -21,7 +28,7 @@
   cursor: pointer;
   background-size: 250%;
   transition: 0.6s;
-  background-color: #f1a9e5;
+  border: solid 1px lightskyblue;
   background-image: linear-gradient(to left #348AC7, #ffffff, #348AC7);
 }
 
@@ -64,5 +71,5 @@
   .ent {
       display: inherit;
   }
-  
+
 }
