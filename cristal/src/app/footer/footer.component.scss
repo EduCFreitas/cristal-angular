@@ -1,5 +1,4 @@
-.site-footer
-{
+.site-footer {
   background-color:#26272b;
   padding:45px 0 20px;
   font-size:15px;
@@ -7,19 +6,16 @@
   color:#737373;
 }
 
-.site-footer hr
-{
+.site-footer hr {
   border-top-color:#bbb;
   opacity:0.5
 }
 
-.site-footer hr.small
-{
+.site-footer hr.small {
   margin:20px 0
 }
 
-.site-footer h6
-{
+.site-footer h6 {
   color:#fff;
   font-size:16px;
   text-transform:uppercase;
@@ -28,51 +24,42 @@
 }
 
 // copy
-.site-footer a
-{
+.site-footer a {
   color:#ffffff;
 }
 
-.site-footer a:hover
-{
+.site-footer a:hover {
   color: #14b9bc;
   text-decoration:none;
 }
 
-.footer-links
-{
+.footer-links {
   padding-left:0;
   list-style:none
 }
 
-.footer-links li
-{
+.footer-links li {
   display:block
 }
 
-.footer-links a
-{
+.footer-links a {
   color:#737373
 }
 
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover {
   color:#14b9bc;
   text-decoration:none;
 }
 
-.footer-links.inline li
-{
+.footer-links.inline li {
   display:inline-block
 }
 
-.site-footer .social-icons
-{
+.site-footer .social-icons {
   text-align:right
 }
 
-.site-footer .social-icons a
-{
+.site-footer .social-icons a {
   width:40px;
   height:40px;
   line-height:40px;
@@ -82,8 +69,7 @@
   background-color:#33353d
 }
 
-.copyright-text
-{
+.copyright-text {
   margin:0;
 }
 
