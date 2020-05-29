@@ -1,4 +1,7 @@
+import { Usuario } from './../model/Usuario';
+import { UsuarioService } from './../service/usuario.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-usuario',
@@ -6,10 +9,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editar-usuario.component.scss']
 })
 export class EditarUsuarioComponent implements OnInit {
+  
+  
+  usuario: Usuario = new Usuario();
 
-  constructor() { }
+
+  constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+// pegar na rota ativa (API) o item pelo ID
+    let id = this.route.snapshot.params['id']
+    this.findById(id)
+
+  }
+
+  findById(id:number){
+    this.usuarioService.getUsuarioById(id).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+    }, err =>{
+      console.log(`Erro: ${err.status}, não conseguimos pegar o id`)
+    })
+  }
+
+  salvar(){
+    this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+      this.router.navigate(['/lista-de-usuarios'])
+      location.assign('/lista-de-usuarios')
+    })
   }
 
 }
