@@ -1,13 +1,15 @@
 .site-footer {
-  background-color:#26272b;
+  // background-color:#26272b;
+  background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
+  background-color: #2768c8;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color:#ffffff;
 }
 
 .site-footer hr {
-  border-top-color:#bbb;
+  border-top-color:rgb(255, 255, 255);
   opacity:0.5
 }
 
@@ -29,7 +31,7 @@
 }
 
 .site-footer a:hover {
-  color: #14b9bc;
+  color: rgb(135, 195, 255);
   text-decoration:none;
 }
 
@@ -43,11 +45,11 @@
 }
 
 .footer-links a {
-  color:#737373
+  color:#ffffff;
 }
 
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover {
-  color:#14b9bc;
+  color:#FEBAC4;
   text-decoration:none;
 }
 
@@ -66,7 +68,7 @@
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color:rgba(255, 255, 255, 0.683);
 }
 
 .copyright-text {
