@@ -28,14 +28,13 @@ export class CadastroComponent implements OnInit {
       this.cadastrar();
     }else{
       this.erroSenha=true;
-      // alert("Não rolou");
     }
   }
 
   cadastrar(){
     this.usuarioService.postUsuario(this.usuario).subscribe((resp:Usuario)=>{
-      this.usuario = resp;
-      location.assign('/lista-de-usuarios');
+      this.usuario = resp
+      location.assign('/lista-de-usuarios')
     })
   }
   
