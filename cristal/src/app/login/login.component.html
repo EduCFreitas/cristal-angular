@@ -3,35 +3,37 @@
 <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-           
+            
             <div class="modal-header">
                 <h5 class="modal-title titulo" id="modalLogin">Login</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/home">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
+            
             <div class="modal-body">
                 <form>
                     <!-- E-mail -->
                     <label for="inputText" class="lead">Email:</label>
                     <br>
                     <input type="e-mail" class="form-control" placeholder="Ex: carla@gmail.com">
-                <br>
+                    <br>
                     <!-- Senha -->
                     <label for="inputText" class="form-control" class="lead">Senha: </label>
-                <br>
+                    <br>
                     <input type="password" class="form-control">
                     <!-- botoes -->
-                    <button type="button" class="btn btn-secondary botao-formulario mt-3" data-dismiss="modal">Cancelar</button>
-                    <br>
-                    <button type="submit" class="btn btn-primary botao-formulario mt-3">Entrar</button>
-            </form>
+                    <div class="col-12 d-flex justify-content-around">
+                        <button type="submit" class="btn btn-primary botao-formulario mt-3 col-5">Entrar</button>
+                        <button type="button" class="btn btn-secondary botao-formulario mt-3 col-5" data-dismiss="modal">Cancelar</button>
+                    </div>
+                    
+                </form>
                 
-               
+                
             </div>
-           
-
+            
+            
             <div class="modal-footer">
                 <p> Não tem cadastro? <a data-toggle="modal" data-target="#modalCadastro" routerLink='/cadastro'> Clique aqui</a></p>
             </div>
