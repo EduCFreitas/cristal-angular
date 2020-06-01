@@ -10,7 +10,7 @@
 
 
 .navbar-bg {
-  background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
+  background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgba(255, 186, 195, 0.71) 100%);
   background-color: #2768c8;
 }
 
@@ -55,9 +55,8 @@
 }
 
 .nav-item a:hover {
-  border-bottom: rgb(255, 255, 255) solid 2px;
+  border-bottom: rgb(255, 255, 255) solid 1px;
   border-radius: 5px;
-  background-color:#14b9bc;
   transition: all 0.3s;
 }
 
