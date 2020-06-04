@@ -96,3 +96,19 @@
       }
   }
 }
+
+.tem-erro input{
+    border-color: red;
+}
+
+.tem-erro ul{
+    color: red;
+}
+
+.sem-erro input{
+    border-color: green;
+}
+
+.sem-erro ul{
+    color: green;
+}
