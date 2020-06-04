@@ -3,6 +3,7 @@
 
   .logo {
       height: 100px;
+      display: flex;
   }
 }
 
@@ -62,11 +63,13 @@
       line-height: 20px;
       color: #fff;
       margin-bottom: 24px;
+      transition: 0.5s;
 
       &:hover {
           border: 1px solid #E4C5FE;
           background-color: transparent;
           color: #E4C5FE;
+          transition: 0.5s;
       }
   }
 
