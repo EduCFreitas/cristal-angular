@@ -23,7 +23,7 @@
                   </ul>
                 </span>
               </div>
-              
+
               <div class="form-group">
                 <label for="email" class="sr-only">Email</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Endereço de Email" [(ngModel)]="email" #emailContato="ngModel" required email>
@@ -37,7 +37,7 @@
 
               <div class="form-group">
                 <label for="telefoneContato" class="sr-only">Telefone</label>
-                <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control" placeholder="DDD e Telefone" [(ngModel)]="telefone" #telefoneContato="ngModel" required (keyup)="validarTelefone()">
+                <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control" placeholder="DDD e Número" [(ngModel)]="telefone" #telefoneContato="ngModel" required (keyup)="validarTelefone()">
                 <span class="help-block" *ngIf="telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)">
                   <ul>
                     <li *ngIf="telefoneContato.errors.required">Preenchimento do campo "telefone" obrigatório.</li>
@@ -50,13 +50,12 @@
                   </ul>
                 </span>
               </div>
-              
+
               <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4" type="button" value="Enviar" (click)="enviar()">
               <!-- </form> -->
-              
+
             </div>
           </div>
         </div>
       </div>
     </div>
-    
