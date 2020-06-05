@@ -13,9 +13,6 @@ export class ContatoComponent implements OnInit {
   numTelefone:number;
   erroTelefone:boolean = false;
 
-  i:number = 0;
-
-
   constructor() { }
 
   ngOnInit(): void {
@@ -29,8 +26,6 @@ export class ContatoComponent implements OnInit {
     }else{
       this.erroTelefone = false;
     }
-    console.log(this.telefone)
-    console.log(this.numTelefone)
   }
 
   enviar(){

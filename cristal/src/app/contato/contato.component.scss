@@ -50,7 +50,7 @@
   &-description {
       font-size: 25px;
       color: #000;
-      font-weight: normal;
+    //   font-weight: normal;
       margin-bottom: 23px;
   }
 
@@ -59,7 +59,7 @@
   }
 
   .form-control {
-      border: 1px solid #d5dae2;
+    //   border: 1px solid #d5dae2;
       padding: 15px 25px;
       margin-bottom: 20px;
       min-height: 45px;
@@ -116,7 +116,7 @@
 }
 
 .tem-erro input{
-    border-color: red;
+    border-color: rgb(255, 81, 81);
 }
 
 .tem-erro ul{
