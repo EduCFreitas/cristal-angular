@@ -11,7 +11,7 @@
               <img src="../../assets/Cristal-v1.svg" alt="logo" class="logo">
             </div>
             <p class="login-card-description">Deixe suas informações para contato!</p>
-            <!-- <form> -->
+            <form>
               <div class="form-group">
                 <label for="nome" class="sr-only">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo" [(ngModel)]="nome" #nomeContato="ngModel" autofocus required minlength="3" maxlength="80">
@@ -52,7 +52,7 @@
               </div>
 
               <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4" type="button" value="Enviar" (click)="enviar()">
-              <!-- </form> -->
+              </form>
 
             </div>
           </div>
