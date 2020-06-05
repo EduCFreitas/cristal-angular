@@ -7,6 +7,7 @@
   }
 }
 
+
 .form-group ul li {
   list-style: none;
   color: red;
@@ -16,6 +17,10 @@
 
 .form-group ul {
   padding: 0;
+}
+
+.form-control {
+  margin: 5px;
 }
 
 
@@ -33,6 +38,7 @@
       height: 100%;
       object-fit: cover;
   }
+
   .card-body {
       padding: 85px 60px 60px;
 
