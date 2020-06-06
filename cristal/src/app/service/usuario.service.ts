@@ -9,6 +9,7 @@ export class UsuarioService {
 
   constructor(private http:HttpClient) { }
 
+
   getAllUsuarios(){
     return this.http.get('http://93.188.161.223:9000/user')
   }
@@ -28,5 +29,9 @@ export class UsuarioService {
   deleteUsuario(id: number){
     return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
   }
+
+
+
+
 
 }

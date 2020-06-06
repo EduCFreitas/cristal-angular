@@ -21,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule} from '@angular/material/button';
+
+
 
 @NgModule({
   declarations: [
@@ -38,6 +42,7 @@ import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.compo
     ListaDeUsuariosComponent,
     EditarUsuarioComponent,
     DeletarUsuarioComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,10 @@ import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.compo
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    MatMenuModule,
+    MatButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

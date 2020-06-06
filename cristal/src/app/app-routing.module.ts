@@ -12,7 +12,6 @@ import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.
 import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 
-
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
