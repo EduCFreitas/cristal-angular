@@ -10,27 +10,52 @@
             <div class="brand-wrapper">
               <img src="../../assets/Cristal-v1.svg" alt="logo" class="logo">
             </div>
-            <p class="login-card-description">Deixe suas informações para contato!</p>
-            <form action="#!">
-              <div class="form-group">
+            <p class="login-card-description lead">Deixe suas informações para contato!</p>
+            <form>
+              <div class="form-group" [ngClass]="{'tem-erro': nomeContato.errors && (nomeContato.dirty || nomeContato.touched)}">
                 <label for="nome" class="sr-only">Nome</label>
-                <input type="text" name="text" id="text" class="form-control" placeholder="Nome Completo" required="">
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo" [(ngModel)]="nome" #nomeContato="ngModel" autofocus required minlength="3" maxlength="80">
+                <span class="help-block lead" *ngIf="nomeContato.errors && (nomeContato.dirty || nomeContato.touched)">
+                  <ul>
+                    <li *ngIf="nomeContato.errors.required">Preenchimento do campo "nome" obrigatório.</li>
+                    <li *ngIf="!nomeContato.errors.required && nomeContato.errors.minlength">Mínimo de 3 caracteres.</li>
+                    <li *ngIf="!nomeContato.errors.required && nomeContato.errors.maxlength">Máximo de 80 caracteres.</li>
+                  </ul>
+                </span>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" [ngClass]="{'tem-erro' : emailContato.errors && (emailContato.dirty || emailContato.touched)}">
                 <label for="email" class="sr-only">Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Endereço de Email">
-              </div>
-              <div class="form-group">
-                <label for="nome" class="sr-only">Telefone</label>
-                <input type="tel" name="tel" id="tel" class="form-control" placeholder="DDD e Telefone" required="">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Endereço de Email" [(ngModel)]="email" #emailContato="ngModel" required email>
+                <span class="help-block lead" *ngIf="emailContato.errors && (emailContato.dirty || emailContato.touched)">
+                  <ul>
+                    <li *ngIf="emailContato.errors.required">Preenchimento do campo "e-mail" obrigatório.</li>
+                    <li *ngIf="emailContato.errors.email">O e-mail informado é inválido.</li>
+                  </ul>
+                </span>
               </div>
 
-              <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4" type="button" value="Enviar">
-            </form>
+              <div class="form-group" [ngClass]="{'tem-erro' : (telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)) || (erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched))}">
+                <label for="telefoneContato" class="sr-only">Telefone</label>
+                <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control" placeholder="DDD e Número" [(ngModel)]="telefone" #telefoneContato="ngModel" required (keyup)="validarTelefone()">
+                <span class="help-block lead" *ngIf="telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)">
+                  <ul>
+                    <li *ngIf="telefoneContato.errors.required">Preenchimento do campo "telefone" obrigatório.</li>
+                  </ul>
+                </span>
+                <span class="help-block lead" *ngIf="erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched)">
+                  <ul>
+                    <li *ngIf="erroTelefone==true">O telefone informado é inválido.</li>
+                    <li *ngIf="erroTelefone==true">Informar DDD + número.</li>
+                  </ul>
+                </span>
+              </div>
 
+              <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4" type="button" value="Enviar" (click)="enviar()">
+              </form>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
