@@ -1,17 +1,17 @@
 .card{
     border: 1px solid rgba(0,0,0,0);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .card:hover{
-    transition: 0.5s;
+    transition: 0.2s;
     color: white;
     background-color: #5D9BD4;
     transition-timing-function: ease-in-out;
 }
 
 .card2:hover{
-  transition: 0.5s;
+  transition: 0.2s;
   color: white;
   background-color: #C1A4C8;
   transition-timing-function: ease-in-out;
