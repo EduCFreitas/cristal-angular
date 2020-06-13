@@ -34,7 +34,7 @@
                   </ul>
                 </span>
               </div>
-
+              
               <div class="form-group" [ngClass]="{'tem-erro' : (telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)) || (erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched))}">
                 <label for="telefoneContato" class="sr-only">Telefone</label>
                 <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control" placeholder="DDD e Número" [(ngModel)]="telefone" #telefoneContato="ngModel" required (keyup)="validarTelefone()">
@@ -50,12 +50,11 @@
                   </ul>
                 </span>
               </div>
-
               <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4" type="button" value="Enviar" (click)="enviar()">
-              </form>
-
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  
