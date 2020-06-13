@@ -22,21 +22,6 @@
 }
 
 // Diminuição das imagens no modo responsivo, pois utilizando apenas o Bootstrap elas ficavam muito grandes
-<<<<<<< HEAD
-@media screen and (max-width: 767px){
-    .card-img{
-        width: 75%;
-        height: 75%;
-        margin: auto;
-    }
-
-    .div-img-card{
-        width: 75%;
-        height: 75%;
-        text-align: center;
-        margin: auto;
-    }
-=======
 @media screen and (max-width: 767px) {
   .card-img {
     width: 75%;
@@ -50,5 +35,4 @@
     text-align: center;
     margin: 0 auto;
   }
->>>>>>> 2c381649b475619d6a85f6d154e5e9a7479ff0ef
 }
