@@ -36,7 +36,7 @@
   }
 
   .card-body {
-    padding: 30px 60px 60px;
+    padding: 50px 60px 60px;
     height: 750px;
 
     @media (max-width: 422px) {
@@ -69,21 +69,23 @@
 
   .login-btn {
     padding: 13px 20px 12px;
-    background-color: #E4C5FE;
+    background-color: #A79FFD;
     border-radius: 4px;
     font-size: 17px;
     font-weight: bold;
-    line-height: 20px;
     color: #fff;
     margin-bottom: 24px;
-    transition: 0.5s;
 
 
     &:hover {
-      border: 1px solid #E4C5FE;
+      border: 1px solid #A79FFD;
       background-color: transparent;
-      color: #E4C5FE;
+      color: #A79FFD;
       transition: 0.5s;
+    }
+
+    &:focus {
+      outline: none;
     }
 
   }
@@ -122,7 +124,6 @@
 .sem-erro ul {
   color: green;
 }
-
 
 textarea {
   height: 100px;
