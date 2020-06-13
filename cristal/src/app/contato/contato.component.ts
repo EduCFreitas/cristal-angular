@@ -32,11 +32,12 @@ export class ContatoComponent implements OnInit {
   }
 
   enviar(){
-    // alert("testando método enviar");
-    this.contatoService.postContato(this.contato).subscribe((resp:Contato)=>{
-      this.contato = resp;
-      alert("Mensagem de contato enviada!");
-    })
+    if(this.erroTelefone==false || this.contato.telefone.length==0){
+      this.contatoService.postContato(this.contato).subscribe((resp:Contato)=>{
+        this.contato = resp;
+        alert("Mensagem de contato enviada!");
+      })
+    }
   }
 
   
