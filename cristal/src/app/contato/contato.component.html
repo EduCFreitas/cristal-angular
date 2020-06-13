@@ -5,13 +5,15 @@
         <div class="col-md-5">
           <img src="../../assets/bubble-kidv3.png" alt="kid" class="login-card-img">
         </div>
+
         <div class="col-md-7">
           <div class="card-body">
             <div class="brand-wrapper">
               <img src="../../assets/Cristal-v1.svg" alt="logo" class="logo">
             </div>
-            <p class="login-card-description lead">Deixe suas informações para contato!</p>
-            <form>
+            <p class="login-card-description lead">Insira suas informações!</p>
+            <div class="formulario">
+
               <div class="form-group" [ngClass]="{'tem-erro': nomeContato.errors && (nomeContato.dirty || nomeContato.touched)}">
                 <label for="nome" class="sr-only">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo" [(ngModel)]="nome" #nomeContato="ngModel" autofocus required minlength="3" maxlength="80">
@@ -50,8 +52,15 @@
                   </ul>
                 </span>
               </div>
-              <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4" type="button" value="Enviar" (click)="enviar()">
-            </form>
+
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Insira sua mensagem aqui" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+              <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4 botao" type="button" value="Enviar" (click)="enviar()">
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
