@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Contato } from '../model/Contato';
+import { ContatoService } from '../service/contato.service';
 
 @Component({
   selector: 'app-contato',
@@ -7,21 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  nome:string = ''
-  email:string = '';
-  telefone:string = '';
+  contato:Contato = new Contato();
+  // nome:string = ''
+  // email:string = '';
+  // telefone:string = '';
   numTelefone:number;
   erroTelefone:boolean = false;
 
-  constructor() { }
+  constructor(private contatoService:ContatoService) { }
 
   ngOnInit(): void {
 
   }
 
   validarTelefone(){
-    this.numTelefone = parseInt(this.telefone);
-    if(this.telefone.length<10 || this.telefone.length>11 || isNaN(this.numTelefone)){
+    this.numTelefone = parseInt(this.contato.telefone);
+    if(this.contato.telefone.length<10 || this.contato.telefone.length>11 || isNaN(this.numTelefone)){
       this.erroTelefone = true;
     }else{
       this.erroTelefone = false;
@@ -29,7 +32,11 @@ export class ContatoComponent implements OnInit {
   }
 
   enviar(){
-
+    // alert("testando método enviar");
+    this.contatoService.postContato(this.contato).subscribe((resp:Contato)=>{
+      this.contato = resp;
+      alert("Mensagem de contato enviada!");
+    })
   }
 
   
