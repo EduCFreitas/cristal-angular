@@ -1,1 +1,40 @@
-<p>produtos works!</p>
+<div class="body">
+    <div class="matMenu">
+        <ul>
+            <li><button class="buttonMenu" (click)="cliqueCamiseta()">Camisetas</button></li>
+            <li><button class="buttonMenu" (click)="clickBlusa()">Blusas</button></li>
+            <li><button class="buttonMenu" (click)="clickMoletom()">Moletons</button></li>
+            <li><button class="buttonMenu" (click)="clickcalca()">Calças</button></li>
+            <li><button class="buttonMenu" (click)="clickshorts()">Shorts</button></li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="cards-grupo" *ngFor="let produto of listaProdutos">
+    
+        <mat-card class="cards mat-elevation-z3" >
+        <!-- nome do produto-->
+            <mat-card-title class="title">
+                {{produto.nome}}
+            </mat-card-title>
+            <!-- imagem do produto -->
+            <div class="imagem">
+                <img src="{{produto.foto}}" alt="Peças de Roupa">
+            </div>
+        <!-- descrição dos produtos -->
+            <mat-card-subtitle class="subtitle">
+                Cor: {{produto.cor}}
+                <br>
+                Quantidade em Estoque: {{produto.qtEstoque}}
+            </mat-card-subtitle>
+            <!-- Preço do Produto -->
+            <mat-card-title class="title">
+            Preço: R{{produto.valor | currency}}
+            </mat-card-title>
+
+        </mat-card>
+
+    </div>
+</div>

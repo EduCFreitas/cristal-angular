@@ -1,0 +1,92 @@
+.body{
+      background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.096) 0%, #C5C1FF 56%, rgba(255, 186, 195, 0.096) 100%);
+
+}
+
+.matMenu{
+    height: 35px;
+    background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.096) 0%, #C5C1FF 56%, rgba(255, 186, 195, 0.096) 100%);
+    background-color: #2767c800;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.buttonMenu{
+    border-style: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+.buttonMenu:hover{
+     box-shadow:
+            0px 2px #ffffff,
+            0px 2px #ffffff;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    transition: ease 0,8s;
+
+}
+
+
+ul{ padding: 0em;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+
+}
+li{
+    height: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 5px;
+    
+}
+
+.mat-menu-content:not(:empty){
+        display: inline-flex;
+
+}
+
+
+
+.cards-grupo {
+display: inline-flex;
+flex-wrap: wrap;
+padding: 20px;
+}
+
+.cards {
+    text-align: center;
+    justify-content: space-between;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 230px;
+    max-height: 320px;
+    padding: 15px;
+    height: 450px;
+    width: 250px;
+    cursor: pointer;
+}
+.imagem{
+    max-width: 220px;
+    max-height: 150px;
+}
+
+img {
+
+    height: 100%;
+}
+
+.title{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 0px;
+}

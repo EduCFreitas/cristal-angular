@@ -20,3 +20,19 @@ modal-header {
     line-height: 0.8;
     text-align: center;
 }
+
+.tem-erro input{
+    border-color: red;
+}
+
+.tem-erro ul{
+    color: red;
+}
+
+.sem-erro input{
+    border-color: green;
+}
+
+.sem-erro ul{
+    color: green;
+}

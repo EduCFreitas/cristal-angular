@@ -1,0 +1,63 @@
+.bg-full {
+  background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
+}
+.bg {
+  // background-image: url(https://i.imgur.com/FRMd7uv.png);
+  background-image: url(https://i.imgur.com/JqWDitT.png);
+  height: 22em;
+  background-size: cover;
+}
+
+.titulo {
+  color: white;
+  margin-top: 180px;
+  padding-top: 40px;
+  padding-left: 600px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.texto {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+
+// Cards
+.cards-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+img {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  text-align: center;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  max-width: 210px;
+  max-height: 250px;
+  padding: 20px;
+}
+
+// .produto1 {
+//   background-color: crimson;
+// }
+
+// .produto2 {
+//   background-color: rgb(0, 255, 26);
+// }
+
+// .produto3 {
+//   background-color: rgb(20, 27, 220);
+// }
+
