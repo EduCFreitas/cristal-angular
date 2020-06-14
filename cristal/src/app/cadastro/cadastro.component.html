@@ -15,19 +15,19 @@
                 <!-- Nome -->
                 <div class="form-group">
                     <label for="nome" class="lead">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui seu nome completo" [(ngModel)]="usuario.nome" minlength="3" maxlength="80" required>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo" [(ngModel)]="usuario.nome" minlength="3" maxlength="80" required>
                 </div>
                 
                 <div class="form-row">
                     <!-- CPF -->
                     <div class="form-group col-md-12 col-lg-6">
                         <label for="cpf" class="lead">CPF:</label>
-                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite aqui seu CPF" [(ngModel)]="usuario.cpf" minlength="11" maxlength="11" required>
+                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Apenas números" [(ngModel)]="usuario.cpf" minlength="11" maxlength="11" required>
                     </div>
                     <!-- Telefone -->
                     <div class="form-group col-md-12 col-lg-6">
                         <label for="telefone" class="lead">Telefone:</label>
-                        <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="Digite aqui seu telefone" [(ngModel)]="usuario.telefone" minlength="10" maxlength="11">
+                        <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="DDD seguido do número" [(ngModel)]="usuario.telefone" minlength="10" maxlength="11">
                     </div>
                 </div>
                 
@@ -35,27 +35,27 @@
                 <div class="form-row">
                     <div class="form-group col-md-12 col-lg-9">
                         <label for="logradouro" class="lead">Endereço:</label>
-                        <input type="text" name="logradouro" id="logradouro" class="form-control" placeholder="Digite aqui seu endereço" [(ngModel)]="usuario.logradouro" minlength="3" maxlength="150" required>
+                        <input type="text" name="logradouro" id="logradouro" class="form-control" placeholder="Digite seu endereço" [(ngModel)]="usuario.logradouro" minlength="3" maxlength="150" required>
                     </div>
                     <div class="form-group col-md-12 col-lg-3">
                         <label for="numResidencia" class="lead">Número:</label>
-                        <input type="text" name="numResidencia" id="numResidencia" class="form-control" placeholder="N°" [(ngModel)]="usuario.numResidencia" maxlength="10" required>
+                        <input type="text" name="numResidencia" id="numResidencia" class="form-control" placeholder="" [(ngModel)]="usuario.numResidencia" maxlength="10" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12 col-lg-6">
                         <label for="estado" class="lead">Estado:</label>
-                        <input type="text" name="estado" id="estado" class="form-control" placeholder="Digite aqui seu estado" [(ngModel)]="usuario.estado" minlength="2" maxlength="20" required>
+                        <input type="text" name="estado" id="estado" class="form-control" placeholder="Digite o estado" [(ngModel)]="usuario.estado" minlength="2" maxlength="20" required>
                     </div>
                     <div class="form-group col-md-12 col-lg-6">
                         <label for="cidade" class="lead">Cidade:</label>
-                        <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite aqui sua cidade" [(ngModel)]="usuario.cidade" minlength="2" maxlength="50" required>
+                        <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite a cidade" [(ngModel)]="usuario.cidade" minlength="2" maxlength="50" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12 col-lg-6">
                         <label for="bairro" class="lead">Bairro:</label>
-                        <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Digite aqui seu bairro" [(ngModel)]="usuario.bairro" minlength="3" maxlength="50" required>
+                        <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Digite o bairro" [(ngModel)]="usuario.bairro" minlength="3" maxlength="50" required>
                     </div>
                     <div class="form-group col-md-12 col-lg-6">
                         <label for="cep" class="lead">CEP:</label>
@@ -70,7 +70,7 @@
                 </div>
                 
                 <!-- Senha -->
-                <div class="form-group" [ngClass]="{'tem-erro' : erroSenha && usuario.senha!=confirmacao.senha}" [ngClass]="{'sem-erro' : erroSenha && usuario.senha==confirmacao.senha}">
+                <div class="form-group" placeholder="Mínimo de 8 caracteres" [ngClass]="{'tem-erro' : erroSenha && usuario.senha!=confirmacao.senha}" [ngClass]="{'sem-erro' : erroSenha && usuario.senha==confirmacao.senha}">
                     <label for="senha" class="lead">Senha:</label>
                     <input type="password" name="senha" id="senha" class="form-control" [(ngModel)]="usuario.senha">
                 </div>
