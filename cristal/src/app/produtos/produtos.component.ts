@@ -12,37 +12,61 @@ import { Component, OnInit } from '@angular/core';
 export class ProdutosComponent implements OnInit {
 
   listaProdutos: Produtos[]
+  listaProdutosResetada: Produtos[]
 
 
   constructor(private produtoService: ProdutosService) { }
 
   ngOnInit() {
-    
     this.todosProdutos();
   }
 
 todosProdutos(){
   this.produtoService.getAllProdutos().subscribe((res: Produtos[]) => {
     this.listaProdutos = res
+    this.listaProdutosResetada = res
   })
 }
 
-filtrarCamisetas(categoria:string){
-  this.produtoService.getProdutoCamisetas(categoria)
+// filtrarCamisetas () {
+//   this.listaProdutos.filter(function (produto: any) {
+//     return produto.categoria === "camiseta"
+//   })
+// }
+
+filtrarCamisetas (produto: Produtos){
+return produto.categoria === "camiseta"
+}
+cliqueCamiseta(){
+ this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarCamisetas)
 }
 
-filtrarBlusas(){
+filtrarBlusas(produto: Produtos){  
+  return produto.categoria === "blusa"
+}
+clickBlusa(){
+  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarBlusas)
 }
 
-filtrarMoletons(){
-
+filtrarMoletons(produto: Produtos){
+  return produto.categoria === "moletom"
+}
+clickMoletom(){
+  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarMoletons)
 }
 
-filtrarCalcas(){
-
+  filtrarCalcas(produto: Produtos){
+    return produto.categoria === "calcas"
+}
+clickcalca(){
+  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarCalcas)
 }
 
-filtrarShorts(){
+  filtrarShorts(produto: Produtos){
+    return produto.categoria === "shorts"
+}
+clickshorts(){
+  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarShorts)
 
 }
 
