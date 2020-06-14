@@ -12,13 +12,61 @@
             <!-- Nome -->
             <div class="form-group">
                 <label for="nome" class="lead">Nome:</label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui seu nome completo" [(ngModel)]="usuario.nome">
+                <input type="text" name="nome" id="nome" class="form-control" [(ngModel)]="usuario.nome">
+            </div>
+
+            <!-- CPF -->
+            <div class="form-group">
+                <label for="cpf" class="lead">CPF:</label>
+                <input type="text" name="cpf" id="cpf" class="form-control" [(ngModel)]="usuario.cpf">
             </div>
             
             <!-- E-mail -->
             <div class="form-group">
                 <label for="email" class="lead">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Ex: carla@gmail.com" [(ngModel)]= "usuario.email">
+                <input type="email" name="email" id="email" class="form-control" [(ngModel)]= "usuario.email">
+            </div>
+
+            <!-- Telefone -->
+            <div class="form-group">
+                <label for="telefone" class="lead">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" class="form-control" [(ngModel)]= "usuario.telefone">
+            </div>
+
+            <!-- Endereço -->
+            <div class="form-group">
+                <label for="logradouro" class="lead">Endereço:</label>
+                <input type="text" name="logradouro" id="logradouro" class="form-control" [(ngModel)]= "usuario.logradouro">
+            </div>
+
+            <!-- Número -->
+            <div class="form-group">
+                <label for="nemResidencia" class="lead">Número:</label>
+                <input type="text" name="numResidencia" id="numResidencia" class="form-control" [(ngModel)]= "usuario.numResidencia">
+            </div>
+
+            <!-- Estado -->
+            <div class="form-group">
+                <label for="estado" class="lead">Estado:</label>
+                <input type="text" name="estado" id="estado" class="form-control" [(ngModel)]= "usuario.estado">
+            </div>
+
+            <!-- Bairro -->
+            <div class="form-group">
+                <label for="bairro" class="lead">Bairro:</label>
+                <input type="text" name="bairro" id="bairro" class="form-control" [(ngModel)]= "usuario.bairro">
+            </div>
+
+            <!-- CEP -->
+            <div class="form-group">
+                <label for="cep" class="lead">CEP:</label>
+                <input type="text" name="cep" id="cep" class="form-control" [(ngModel)]= "usuario.cep">
+            </div>
+
+            <!-- Cidade -->
+            <div class="form-group">
+                <label for="cidade" class="lead">Cidade:</label>
+                <input type="text" name="cidade" id="cidade" class="form-control" [(ngModel)]= "usuario.cidade">
             </div>
             
             <!-- Senha -->
