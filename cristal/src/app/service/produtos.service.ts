@@ -14,6 +14,10 @@ export class ProdutosService {
     return this.http.get(" http://www.mocky.io/v2/5edad2823200006f005d261b")
   }
 
+  getProdutoById(id: number){
+    return this.http.get(`http://www.mocky.io/v2/5edad2823200006f005d261b/${id}`) 
+  }
+
   getProdutoCamisetas(categoria:string){
     return this.http.get(` http://www.mocky.io/v2/5edad2823200006f005d261b/${categoria}`)
   }
@@ -33,4 +37,11 @@ export class ProdutosService {
   getProdutoShorts(categoria: string) {
     return this.http.get(` http://www.mocky.io/v2/5edad2823200006f005d261b/${categoria}`)
   }
+
+  postProduto(produto:Produtos){
+    return this.http.post('http://www.mocky.io/v2/5edad2823200006f005d261b', produto)
+  }
+
+
+
 }

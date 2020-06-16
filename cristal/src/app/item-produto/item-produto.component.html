@@ -14,15 +14,15 @@
 
         <div class="col-md-12 d-flex text-justify-content-center">
 
-            <div class="row">
+            <div class="row" ngFor = "let produto of produto.id">
                 <div class="col-6">
 
                     <div class="grid product">
 
                         <div class="product-gallery">
                             <div class="imagem-produto d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Imagem de capa do card">
+                                <div class="card-img" style="width: 18rem;">
+                                    <img class="card-img-top" src="{produto.foto}" alt="Imagem de capa do card">
                                   </div>
                             </div>
                         </div>
@@ -32,23 +32,22 @@
 
                 <div class="col-6">
                     <div class="column-xs-12 column-md-5">
-                        <h1 class="text-left">nome</h1>
+                        <h1 class="text-left">{{produto.nome}}</h1>
                         <div class="descricao">
-                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
-                                ad quas beatae aliquid, unde magnam vero voluptatem laboriosam deserunt explicabo
-                                inventore mollitia illum doloribus reprehenderit obcaecati adipisci. Laborum, harum
-                                saepe?</p>
-                            <h4 class="text-left">preco</h4>
+                            <small>{{produto.categoria}}</small>
+                            <p class="text-justify">{{produto.descricao}}</p>
+                            <h4 class="text-left">{{produto.valor}}</h4>
                         </div>
                         <div class="card border-0">
                             <div class="card-body-input ">
-                                <h5 class="d-inline"> tamanho </h5>
+                                <h5 class="d-inline"> Tamanho {{produto.tamanho}} </h5>
 
+<!-- 
                                 <div class="btn-group text-left ml-5" role="group" aria-label="Exemplo básico">
                                     <button type="button" class="btn btn-secondary btn btn-dark">12</button>
                                     <button type="button" class="btn btn-secondary btn btn-dark">14</button>
                                     <button type="button" class="btn btn-secondary btn btn-dark">16</button>
-                                </div>
+                                </div> -->
 
 
                                 <!-- Botão para acionar modal -->
@@ -96,12 +95,13 @@
                             </div> -->
 
                                 <div class="card-body">
-                                    <p class="card-text"> Quantidade em estoque:</p>
+                                    <p class="card-text"> Quantidade em estoque:{{produto.qtdEstoque}}</p>
                                 </div>
 
-                                <button type="button"
-                                    class="btn btn-outline-info btn-lg btn-block mt-5" target="_blank">Comprar</button>
+                                <!-- <button type="button"
+                                    class="btn btn-outline-info btn-lg btn-block mt-5" target="_blank" (click)="comprar()">comprar</button> -->
                             </div>
 
                         </div>
                     </div>
+

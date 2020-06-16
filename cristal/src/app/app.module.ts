@@ -24,6 +24,9 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
 import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule} from '@angular/material/button';
+import { CreateItemProdutoComponent } from './create-item-produto/create-item-produto.component';
+import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
+import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
 
 
 
@@ -43,7 +46,10 @@ import { MatButtonModule} from '@angular/material/button';
     ItemProdutoComponent,
     ListaDeUsuariosComponent,
     EditarUsuarioComponent,
-    DeletarUsuarioComponent
+    DeletarUsuarioComponent,
+    CreateItemProdutoComponent,
+    EditarItemProdutoComponent,
+    DeletarItemProdutoComponent
     
   ],
   imports: [
