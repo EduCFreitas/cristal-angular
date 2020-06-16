@@ -20,6 +20,7 @@
                         <tr>
                             <th scope="col">Ação</th>
                             <th scope="col">Id</th>
+                            <th scope="col">Usuário</th>
                             <th scope="col">Nome</th>
                             <th scope="col">CPF</th>
                             <th scope="col">E-Mail</th>
@@ -30,7 +31,7 @@
                             <th scope="col">Cidade</th>
                             <th scope="col">Bairro</th>
                             <th scope="col">CEP</th>
-                            <th scope="col">Senha</th>
+                            <!-- <th scope="col">Senha</th> -->
                             
                         </tr>
                     </thead>
@@ -41,6 +42,7 @@
                                 <button type="button" class="btn btn-outline-danger col-lg-5 col-md-12 ml-1 mr-3" [routerLink]="['/deletar-usuario', usuario.id]">Apagar</button>
                             </td>
                             <td scope="row">{{ usuario.id }}</td>
+                            <td>{{ usuario.username }}</td>
                             <td>{{ usuario.nome }}</td>
                             <td>{{ usuario.cpf }}</td>
                             <td>{{ usuario.email }}</td>
@@ -51,7 +53,7 @@
                             <td>{{ usuario.cidade }}</td>
                             <td>{{ usuario.bairro }}</td>
                             <td>{{ usuario.cep }}</td>
-                            <td>{{ usuario.senha }}</td>
+                            <!-- <td>{{ usuario.senha }}</td> -->
                         </tr>
                     </tbody>
                 </table>

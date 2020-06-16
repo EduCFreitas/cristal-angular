@@ -12,10 +12,16 @@
             </div>
             
             <div class="modal-body">
-                <!-- Nome -->
-                <div class="form-group">
-                    <label for="nome" class="lead">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo" [(ngModel)]="usuario.nome" minlength="3" maxlength="80" required>
+                <!-- Nome e Username-->
+                <div class="form-row">
+                    <div class="form-group col-md-12 col-lg-8">
+                        <label for="nome" class="lead">Nome:</label>
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo" [(ngModel)]="usuario.nome" minlength="3" maxlength="80" required>
+                    </div>
+                    <div class="form-group col-md-12 col-lg-4">
+                        <label for="username" class="lead">Nome de usuário:</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Digite seu nome de usuário" [(ngModel)]="usuario.username" minlength="3" maxlength="80" required>
+                    </div>
                 </div>
                 
                 <div class="form-row">
@@ -53,11 +59,11 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-12 col-lg-6">
+                    <div class="form-group col-md-12 col-lg-9">
                         <label for="bairro" class="lead">Bairro:</label>
                         <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Digite o bairro" [(ngModel)]="usuario.bairro" minlength="3" maxlength="50" required>
                     </div>
-                    <div class="form-group col-md-12 col-lg-6">
+                    <div class="form-group col-md-12 col-lg-3">
                         <label for="cep" class="lead">CEP:</label>
                         <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite apenas números" [(ngModel)]="usuario.cep" minlength="8" maxlength="8" required>
                     </div>
