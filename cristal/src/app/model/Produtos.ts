@@ -6,5 +6,5 @@ export class Produtos{
     tamanho: string
     cor: string
     valor: number
-    qtEstoque: number
+    qtdEstoque: number
 }
