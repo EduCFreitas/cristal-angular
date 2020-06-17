@@ -9,7 +9,7 @@ import { ProdutosService } from '../service/produtos.service';
 })
 export class CreateItemProdutoComponent implements OnInit {
 
-  produto: Produtos = new Produtos();
+  produto: Produtos = new Produtos()
 
   constructor(private produtoService: ProdutosService) { }
 

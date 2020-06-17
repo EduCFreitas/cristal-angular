@@ -37,7 +37,7 @@ export class ProdutosService {
     return this.http.get(`http://localhost:8080/produto/categoria/${categoria}`)
   }
 
-  postProduto(produto:Produtos){
+  postProduto(produto: Produtos){
     return this.http.post('http://localhost:8080/produto', produto)
   }
 
