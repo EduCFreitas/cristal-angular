@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produtos } from '../model/Produtos';
 import { ProdutosService } from '../service/produtos.service';
 
-@Component({
+@Component({ 
   selector: 'app-create-item-produto',
   templateUrl: './create-item-produto.component.html',
   styleUrls: ['./create-item-produto.component.scss']

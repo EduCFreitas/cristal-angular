@@ -1,21 +1,23 @@
+<div class="body">
+
 <div class="grid second-nav">
     <nav>
-        <ol class="breadcrumb-list ml-3">
+        <ol class="breadcrumb-list pt-4 ml-3">
             <li class="breadcrumb-item" routerLink="/home">Home</li>
             <li class="breadcrumb-item" routerLink='/produtos'>produtos</li>
-            <li class="breadcrumb-item active">nome_id</li>
+            <li class="breadcrumb-item active">{{produto.id}}</li>
         </ol>
     </nav>
 </div>
 
 <main class="main text-center mt-5">
         <div class="col-md-12 d-flex text-justify-content-center">
-            <div class="container ">
+            <div class="container"> 
 
                 <div class="row">
 
                     <div class="col-6">
-                        <div class="grid product">
+                        <div class="grid produto">
                             <div class="produto-galeria">
                                 <div class="imagem-produto d-flex justify-content-center">
                                     <div class="card-img" style="width: 18rem;">
@@ -30,7 +32,7 @@
                         <div class="column-xs-12 column-md-5">
                             <h1 class="text-left">{{produto.nome}}</h1>
                             <div class="descricao">
-                                <small>
+                                <small class="text-left">
                                     {{produto.categoria}}
                                 </small>
                                 <p class="text-justify">
@@ -40,8 +42,8 @@
                                     {{produto.valor}}
                                 </h4>
                             </div>
-                            <div class="card border-0">
-                                <div class="card-body-input ">
+                            <div class="column-xs-12 column-md-5">
+                                <div class="card-body">
                                     <h5 class="d-inline"> 
                                         Tamanho {{produto.tamanho}} 
                                     </h5>
@@ -72,10 +74,9 @@
                                                 <div class="modal-body">
                                                     ...
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Fechar</button>
-                                                </div>
+                                               
+                                                    <input name="comprar" id="comprar" class="login-btn mb-4" type="button" value="Comprar" (click)="comprar()">
+                                            
                                             </div>
                                         </div>
                                         <div>
@@ -89,10 +90,7 @@
                                         </p>
                                     </div>
 
-                                    <button type="button"
-                                        class="btn btn-outline-info btn-lg btn-block mt-5" target="_blank" (click)="comprar()">
-                                        Comprar
-                                    </button> 
+                                    <input name="comprar" id="comprar" class="btn btn-block login-btn mb-4" type="button" value="Comprar" (click)="comprar()">
                                 </div>
 
                             </div>
@@ -102,3 +100,4 @@
             </div>
         </div>
 </main>
+</div>

@@ -11,12 +11,13 @@ import { ActivatedRoute } from '@angular/router';
 export class ItemProdutoComponent implements OnInit {
 
   produto: Produtos = new Produtos()
+  id:number;
 
   constructor(private produtoService: ProdutosService, private route: ActivatedRoute) { 
 
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     let id:number = this.route.snapshot.params['id']
     this.findById(id)
 
@@ -25,9 +26,10 @@ export class ItemProdutoComponent implements OnInit {
   findById(id:number){
     this.produtoService.getProdutoById(id).subscribe((resp: Produtos)=>{    
       this.produto = resp
+      console.log(this.produto)
     }, err => {
       console.log(`Erro: ${err.status}, não conseguimos pegar o id`)
-    })
+    });
   }
 
   comprar(){

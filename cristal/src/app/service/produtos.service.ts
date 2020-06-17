@@ -14,7 +14,7 @@ export class ProdutosService {
   }
 
   getProdutoById(id: number){
-    return this.http.get(`http://localhost:8080/produto/categoria/${id}`) 
+    return this.http.get(`http://localhost:8080/produto/${id}`) 
   }
 
   getProdutoCamisetas(categoria:string){
