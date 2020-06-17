@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'lista-de-usuarios', component: ListaDeUsuariosComponent},
   {path: 'editar-usuario/:id', component: EditarUsuarioComponent},
   {path: 'deletar-usuario/:id', component: DeletarUsuarioComponent},
-  {path: 'create-item-produto/:id', component: CreateItemProdutoComponent}
+  {path: 'create-item-produto', component: CreateItemProdutoComponent}
 ];
 
 
