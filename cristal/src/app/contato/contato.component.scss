@@ -1,8 +1,9 @@
 .container {
- padding-top: 30px;
- padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-textarea{
+
+textarea {
   resize: none;
   height: 100px;
 }
@@ -15,7 +16,6 @@ textarea{
     display: flex;
   }
 }
-
 
 .form-group ul li {
   list-style: none;
@@ -78,7 +78,7 @@ textarea{
 
   .login-btn {
     padding: 13px 20px 12px;
-    background-color: #A79FFD;
+    background-color: #a79ffd;
     border-radius: 4px;
     font-size: 17px;
     font-weight: bold;
@@ -86,18 +86,16 @@ textarea{
     margin-bottom: 24px;
     outline: none !important;
 
-
     &:hover {
-      border: 1px solid #A79FFD;
+      border: 1px solid #a79ffd;
       background-color: transparent;
-      color: #A79FFD;
+      color: #a79ffd;
       transition: 0.5s;
     }
 
     &:active {
       outline: none !important;
     }
-
   }
 
   &-footer-text {
@@ -134,4 +132,3 @@ textarea{
 .sem-erro ul {
   color: green;
 }
-
