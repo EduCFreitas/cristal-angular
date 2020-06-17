@@ -38,8 +38,8 @@ export class UsuarioService {
     return this.http.get(`http://localhost:8080/usuarios/nome/${nome}`) 
   }
 
-  getUsuarioByUsername(username: string){
-    return this.http.get(`http://localhost:8080/usuarios/username/${username}`) 
+  getUsuarioByUsername(usuario: string){
+    return this.http.get(`http://localhost:8080/usuarios/username/${usuario}`) 
   }
 
   // postUsuario(usuario:Usuario){
