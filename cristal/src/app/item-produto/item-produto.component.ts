@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ItemProdutoComponent implements OnInit {
 
-  produto: Produtos = new Produtos()
+  itemProduto: Produtos = new Produtos()
 
   constructor(private produtoService: ProdutosService, private route: ActivatedRoute) { 
 
@@ -24,7 +24,7 @@ export class ItemProdutoComponent implements OnInit {
 
   findById(id:number){
     this.produtoService.getProdutoById(id).subscribe((resp: Produtos)=>{    
-      this.produto = resp
+      this.itemProduto = resp
     }, err => {
       console.log(`Erro: ${err.status}, não conseguimos pegar o id`)
     })

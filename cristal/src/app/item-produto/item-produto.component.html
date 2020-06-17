@@ -3,7 +3,7 @@
         <ol class="breadcrumb-list ml-3">
             <li class="breadcrumb-item" routerLink="/home">Home</li>
             <li class="breadcrumb-item" routerLink='/produtos'>produtos</li>
-            <li class="breadcrumb-item active">nome_id</li>
+            <li class="breadcrumb-item active" >nome_id</li>
         </ol>
     </nav>
 </div>
@@ -14,7 +14,7 @@
 
         <div class="col-md-12 d-flex text-justify-content-center">
 
-            <div class="row" ngFor = "let produto of produto.id">
+            <div class="row" *ngFor = "let produto of itemProduto">
                 <div class="col-6">
 
                     <div class="grid product">
@@ -22,7 +22,7 @@
                         <div class="product-gallery">
                             <div class="imagem-produto d-flex justify-content-center">
                                 <div class="card-img" style="width: 18rem;">
-                                    <img class="card-img-top" src="{produto.foto}" alt="Imagem de capa do card">
+                                    <img class="card-img-top" src="{{itemProduto.foto}}" alt="Imagem de capa do card">
                                   </div>
                             </div>
                         </div>
@@ -32,15 +32,15 @@
 
                 <div class="col-6">
                     <div class="column-xs-12 column-md-5">
-                        <h1 class="text-left">{{produto.nome}}</h1>
+                        <h1 class="text-left">{{itemProduto.nome}}</h1>
                         <div class="descricao">
-                            <small>{{produto.categoria}}</small>
-                            <p class="text-justify">{{produto.descricao}}</p>
-                            <h4 class="text-left">{{produto.valor}}</h4>
+                            <small>{{itemProduto.categoria}}</small>
+                            <p class="text-justify">{{itemProduto.descricao}}</p>
+                            <h4 class="text-left">{{itemProduto.valor}}</h4>
                         </div>
                         <div class="card border-0">
                             <div class="card-body-input ">
-                                <h5 class="d-inline"> Tamanho {{produto.tamanho}} </h5>
+                                <h5 class="d-inline"> Tamanho {{itemProduto.tamanho}} </h5>
 
 <!-- 
                                 <div class="btn-group text-left ml-5" role="group" aria-label="Exemplo básico">
@@ -95,7 +95,7 @@
                             </div> -->
 
                                 <div class="card-body">
-                                    <p class="card-text"> Quantidade em estoque:{{produto.qtdEstoque}}</p>
+                                    <p class="card-text"> Quantidade em estoque: {{itemProduto.qtdEstoque}}</p>
                                 </div>
 
                                 <button type="button"
