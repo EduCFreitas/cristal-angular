@@ -14,7 +14,7 @@
 
     <div class="cards-grupo" *ngFor="let produto of listaProdutos">
     
-        <mat-card class="cards mat-elevation-z3" >
+        <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
         <!-- nome do produto-->
             <mat-card-title class="title">
                 {{produto.nome}}
