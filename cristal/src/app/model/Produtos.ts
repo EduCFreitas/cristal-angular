@@ -1,11 +1,11 @@
 export class Produtos{
     id: number
     categoria: string 
+    qtdEstoque: number
+    valor: number
+    cor: string
+    tamanho: string
+    descricao: String
     nome: string
     foto: string 
-    tamanho: string 
-    cor: string
-    valor: number 
-    qtdEstoque: number
-    descricao: string 
 }

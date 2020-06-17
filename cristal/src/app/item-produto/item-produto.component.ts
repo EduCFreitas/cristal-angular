@@ -30,4 +30,9 @@ export class ItemProdutoComponent implements OnInit {
     })
   }
 
+  comprar(){
+      // location.assign('/carrinho')
+   // }
+}
+
 }
