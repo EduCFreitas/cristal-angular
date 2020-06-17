@@ -14,6 +14,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { ItemProdutoComponent } from './item-produto/item-produto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.component';
@@ -23,6 +24,9 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
 import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule} from '@angular/material/button';
+import { CreateItemProdutoComponent } from './create-item-produto/create-item-produto.component';
+import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
+import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
 
 
 
@@ -39,9 +43,13 @@ import { MatButtonModule} from '@angular/material/button';
     ProdutosComponent,
     FooterComponent,
     SobreNosComponent,
+    ItemProdutoComponent,
     ListaDeUsuariosComponent,
     EditarUsuarioComponent,
-    DeletarUsuarioComponent
+    DeletarUsuarioComponent,
+    CreateItemProdutoComponent,
+    EditarItemProdutoComponent,
+    DeletarItemProdutoComponent
     
   ],
   imports: [

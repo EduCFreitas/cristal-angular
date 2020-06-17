@@ -28,11 +28,6 @@ todosProdutos(){
   })
 }
 
-// filtrarCamisetas () {
-//   this.listaProdutos.filter(function (produto: any) {
-//     return produto.categoria === "camiseta"
-//   })
-// }
 
 filtrarCamisetas (produto: Produtos){
 return produto.categoria === "camiseta"

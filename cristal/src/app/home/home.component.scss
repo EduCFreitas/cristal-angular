@@ -2,7 +2,6 @@
   background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
 }
 .bg {
-  // background-image: url(https://i.imgur.com/FRMd7uv.png);
   background-image: url(https://i.imgur.com/JqWDitT.png);
   height: 22em;
   background-size: cover;
@@ -49,15 +48,39 @@ img {
   padding: 20px;
 }
 
-// .produto1 {
-//   background-color: crimson;
-// }
+.cards-grupo {
+display: inline-flex;
+flex-wrap: wrap;
+padding: 20px;
+}
 
-// .produto2 {
-//   background-color: rgb(0, 255, 26);
-// }
+.cards {
+    text-align: center;
+    justify-content: space-between;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 230px;
+    max-height: 320px;
+    padding: 15px;
+    height: 450px;
+    width: 250px;
+    cursor: pointer;
+}
+.imagem{
+    max-width: 220px;
+    max-height: 150px;
+}
 
-// .produto3 {
-//   background-color: rgb(20, 27, 220);
-// }
+img {
 
+    height: 100%;
+}
+
+.title{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 0px;
+}
