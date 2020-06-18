@@ -1,1 +1,53 @@
-<p>editar-item-produto works!</p>
+<div class="container">
+
+    <div class="container mt-5"> 
+ 
+        <h3 class="text-center">Editar produto</h3>
+
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Imagem:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite URL da imagem" [(ngModel)]="produto.foto">
+        </div>
+    
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Nome:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o nome" [(ngModel)]="produto.nome">
+        </div>
+
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Descrição:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a descrição" [(ngModel)]="produto.descricao">       
+        </div>
+
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Categoria:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a Categoria" [(ngModel)]="produto.categoria">      
+        </div>
+        
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Preço:</label>
+            <input type="number" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o preço" [(ngModel)]="produto.valor">       
+        </div>
+
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Cor:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a cor do produto" [(ngModel)]="produto.cor"> 
+        </div>
+
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Tamanho:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o Tamanho do produto" [(ngModel)]="produto.tamanho">  
+        </div>
+        
+        <div class="form-group">
+            <label for="titulo" class="text-monospace">Quantidade em estoque:</label>
+            <input type="number" name="titulo" id="titulo" class="form-control" placeholder="Digite a quantidade em estoque" [(ngModel)]="produto.qtdEstoque">
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-info w-25 mb-5" (click)="salvar()">salvar</button>
+        </div>
+
+    </div>
+
+</div>

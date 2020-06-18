@@ -41,6 +41,13 @@ export class ProdutosService {
     return this.http.post('http://localhost:8080/produto', produto)
   }
 
+  putProduto(produto: Produtos){
+    return this.http.put('http://localhost:8080/produto', produto)
+  }
+
+  deleteProduto(id:number){
+    return this.http.delete(`http://localhost:8080/produto/${id}`)
+  }
 
 
   
