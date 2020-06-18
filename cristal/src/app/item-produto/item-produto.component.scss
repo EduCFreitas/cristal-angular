@@ -14,10 +14,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     color: gray;
-    font-weight: normal;
-    margin: 1.75rem 0 1rem 0;
     text-transform: uppercase;
-  
   }
   
 img {
@@ -70,7 +67,7 @@ img {
 
 .descricao {
     border-top: 0.0625rem solid gray;
-    padding: 1rem 0 0 0;
+    padding: 0.10rem 0 0 0;
   }
   
   .container {
@@ -94,7 +91,7 @@ img {
   font-weight: bold;
   line-height: 20px;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   transition: 0.5s;
   text-transform: uppercase;
 }
