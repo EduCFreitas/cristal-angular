@@ -2,6 +2,7 @@
   background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
 }
 .bg {
+  // background-image: url(https://i.imgur.com/FRMd7uv.png);
   background-image: url(https://i.imgur.com/JqWDitT.png);
   height: 22em;
   background-size: cover;
@@ -21,37 +22,30 @@
   color: white;
 }
 
+.titulo-card{
+  text-align: end;
+  margin-right: 1.5rem;
+  font-size: 2rem;
+  font-weight: 0.5rem;
+  line-height: 2;
+  color: rgb(51, 51, 51);
+  font-family: 'Montserrat', sans-serif;
+
+  
+}
+
 
 // Cards
 .cards-grupo {
-  display: flex;
+display: inline-flex;
   flex-wrap: wrap;
   padding: 20px;
 }
 
 img {
-  width: 90%;
-  height: 90%;
-  display: flex;
+  width: 80%;
+  height: 75%;
   justify-content: center;
-}
-
-.cards {
-  text-align: center;
-  justify-content: space-between;
-  flex: 0 0 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  max-width: 210px;
-  max-height: 250px;
-  padding: 20px;
-}
-
-.cards-grupo {
-display: inline-flex;
-flex-wrap: wrap;
-padding: 20px;
 }
 
 .cards {
@@ -66,11 +60,6 @@ padding: 20px;
     padding: 15px;
     height: 450px;
     width: 250px;
-    cursor: pointer;
-}
-.imagem{
-    max-width: 220px;
-    max-height: 150px;
 }
 
 img {
@@ -79,8 +68,8 @@ img {
 }
 
 .title{
-    
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     margin: 0px;
 }
+

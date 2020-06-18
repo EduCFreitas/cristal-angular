@@ -10,11 +10,11 @@ export class ProdutosService {
   constructor(private http:HttpClient) { }
 
   getAllProdutos(){
-    return this.http.get("http://localhost:8080/produto")
+    return this.http.get("https://run.mocky.io/v3/56ef1cd0-0c7e-4ed6-8c15-da17bd126e7d")
   }
 
   getProdutoById(id: number){
-    return this.http.get(`http://localhost:8080/produto/categoria/${id}`) 
+    return this.http.get(`http://localhost:8080/produto/${id}`) 
   }
 
   getProdutoCamisetas(categoria:string){

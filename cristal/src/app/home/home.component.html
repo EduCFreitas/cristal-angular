@@ -7,6 +7,10 @@
     </div>
   </div>
 
+<div class="titulo-card">
+  Confira!
+</div>
+
 <div class="cards-grupo" *ngFor="let produto of listaProdutos">
   <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
     <!-- nome do produto-->
@@ -17,15 +21,10 @@
     <div class="imagem">
       <img src="{{produto.foto}}" alt="Peças de Roupa">
     </div>
-    <!-- descrição dos produtos -->
-    <mat-card-subtitle class="subtitle">
-      Cor: {{produto.cor}}
-      <br>
-      Quantidade em Estoque: {{produto.qtdEstoque}}
-    </mat-card-subtitle>
+   
     <!-- Preço do Produto -->
     <mat-card-title class="title">
-      Preço: R{{produto.valor | currency}}
+      R{{produto.valor | currency}}
     </mat-card-title>
 
   </mat-card>
