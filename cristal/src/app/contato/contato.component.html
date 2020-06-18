@@ -5,7 +5,7 @@
         <div class="col-md-5">
           <img src="../../assets/bubble-kidv3.png" alt="kid" class="login-card-img">
         </div>
-        
+
         <div class="col-md-7">
           <div class="card-body">
             <div class="brand-wrapper">
@@ -13,7 +13,7 @@
             </div>
             <p class="login-card-description lead">Insira suas informações!</p>
             <div class="formulario">
-              
+
               <div class="form-group" [ngClass]="{'tem-erro': nomeContato.errors && (nomeContato.dirty || nomeContato.touched)}">
                 <label for="nome" class="sr-only">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo" [(ngModel)]="contato.nome" #nomeContato="ngModel" autofocus required minlength="3" maxlength="80">
@@ -25,7 +25,7 @@
                   </ul>
                 </span>
               </div>
-              
+
               <div class="form-group" [ngClass]="{'tem-erro' : emailContato.errors && (emailContato.dirty || emailContato.touched)}">
                 <label for="email" class="sr-only">Email</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Endereço de Email" [(ngModel)]="contato.email" #emailContato="ngModel" required email>
@@ -36,7 +36,7 @@
                   </ul>
                 </span>
               </div>
-              
+
               <div class="form-group" [ngClass]="{'tem-erro' : (telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)) || (erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched))}">
                 <label for="telefoneContato" class="sr-only">Telefone</label>
                 <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control" placeholder="DDD e Número" [(ngModel)]="contato.telefone" #telefoneContato="ngModel" required maxlength="13" (keyup)="validarTelefone()">
@@ -52,14 +52,14 @@
                   </ul>
                 </span>
               </div>
-              
+
               <div class="form-group">
                 <textarea class="form-control" placeholder="Insira sua mensagem aqui" id="textoContato" rows="3" [(ngModel)]="contato.texto"></textarea>
               </div>
-              
+
               <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4 botao" type="button" value="Enviar" (click)="enviar()">
             </div>
-            
+
           </div>
         </div>
       </div>
