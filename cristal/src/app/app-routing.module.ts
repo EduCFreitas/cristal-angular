@@ -13,6 +13,7 @@ import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.
 import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 import { CreateItemProdutoComponent } from './create-item-produto/create-item-produto.component';
+import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'lista-de-usuarios', component: ListaDeUsuariosComponent},
   {path: 'editar-usuario/:id', component: EditarUsuarioComponent},
   {path: 'deletar-usuario/:id', component: DeletarUsuarioComponent},
-  {path: 'create-item-produto', component: CreateItemProdutoComponent}
+  {path: 'create-item-produto', component: CreateItemProdutoComponent},
+  {path: 'editar-item-produto/:id', component: EditarItemProdutoComponent}
 ];
 
 
