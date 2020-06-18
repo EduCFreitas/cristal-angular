@@ -38,15 +38,15 @@ export class UsuarioService {
     return this.http.get(`http://localhost:8080/usuarios/nome/${nome}`) 
   }
 
-  getUsuarioByUsername(username: string){
-    return this.http.get(`http://localhost:8080/usuarios/username/${username}`) 
+  getUsuarioByUsername(usuario: string){
+    return this.http.get(`http://localhost:8080/usuarios/username/${usuario}`) 
   }
 
   // postUsuario(usuario:Usuario){
   //   return this.http.post('http://93.188.161.223:9000/user', usuario)
   // }
   postUsuario(usuario:Usuario){
-    return this.http.post('http://localhost:8080/usuarios', usuario)
+    return this.http.post('http://localhost:8080/usuarios/cadastrar', usuario)
   }
   
   // deleteUsuario(id: number){
