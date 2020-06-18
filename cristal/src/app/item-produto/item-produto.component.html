@@ -13,9 +13,7 @@
     <main class="main text-center mt-5">
         <div class="col-md-12 d-flex text-justify-content-center">
             <div class="container"> 
-
                 <div class="row">
-
                     <div class="col-6">
                                 <div class="grid produto">
                                     <div class="produto-galeria">
@@ -27,20 +25,18 @@
                                     </div>
                                 </div>
                     </div>
-
                     <div class="col-6">
                         <div class="column-xs-12 column-md-5 pt-5">
                             <h1 class="card-title text-left lead">{{produto.nome}}</h1>
                             <div class="descricao">
                                 <div class="card-body text-left">
-                                    <p class="card-subtitle mb-1 pt-1 text-muted lead"> Peça: {{produto.categoria}}</p>
-                                    <p class="card-subtitle mb-1 p-1 text-muted lead">Tamanho: {{produto.tamanho}}</p>
-                                    <p class="card-subtitle mb-1 p-1 lead">Preço: R{{produto.valor | currency}}</p>
-                                    <p class="card-text lead d-flex text-justify p-1">{{produto.descricao}}</p>
-                                    <p class="card-text lead mb-1 pt-1">Quantidade em estoque: {{produto.qtdEstoque}}</p>
-                                </div>
-                                        
-                                </div>
+                                    <p class="card-subtitle pt-1 text-muted lead">Peça: {{produto.categoria}}</p>
+                                    <p class="card-subtitle pt-1 text-muted lead">Tamanho: {{produto.tamanho}}</p>
+                                    <p class="card-subtitle pt-1 lead">Preço: R{{produto.valor | currency}}</p>
+                                    <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p>
+                                    <p class="card-text lead d-flex text-justify pt-2">{{produto.descricao}}</p>
+                                </div>        
+                            </div>
                                 <div class="col-xs-12 col-md-5">
                                     <div class="card-body">
                                         <!-- Botão para acionar modal -->
@@ -80,9 +76,9 @@
                                         </div> -->
                                     </div>
                                 </div>
-                                <input name="comprar" id="comprar" class="btn  btn-block login-btn mb-4" type="button" value="Comprar" (click)="comprar()">
-                            </div>
+                                <input name="comprar" id="comprar" class="btn  btn-block comprar-btn mb-4" type="button" value="Comprar" (click)="comprar()">
                         </div>
+                    </div>
                 </div>
             </div>
         </div>

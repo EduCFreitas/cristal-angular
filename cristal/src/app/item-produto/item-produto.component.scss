@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 .body{
@@ -8,11 +7,35 @@
 
 }
 
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  padding: 10px 0 0 0;
+}
+
+.breadcrumb-list  li {
+    font-size: 0.85rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+.breadcrumb-item .active {
+    color: black;
+}
+
+.breadcrumb-item ::before {
+      display: inline-block;
+      padding: 0 0.5rem;
+      color: lightergray;
+}
+
 .main{
     padding:0 0 40px 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, p {
     color: gray;
     text-transform: uppercase;
   }
@@ -23,10 +46,10 @@ img {
     object-fit: cover;
 }
 
-// img:hover{
-//       transition: 0.5s;
-//       opacity:1;
-// }
+.imagem-produto {
+  margin: 0;
+  border: 0;
+}
 
 .card-img img:hover {
   -webkit-transform: scale(1.1);
@@ -37,33 +60,6 @@ img {
   transition: 0.9s;
   opacity:6;
 }
-  
-
-
-.breadcrumb-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    list-style: none;
-    padding: 10px 0 0 0;
-}
-
-.breadcrumb-list  li {
-      font-size: 0.85rem;
-      letter-spacing: 0.125rem;
-      text-transform: uppercase;
-}
-  
-.breadcrumb-item .active {
-      color: black;
-}
-
-.breadcrumb-item ::before {
-        display: inline-block;
-        padding: 0 0.5rem;
-        color: lightergray;
-}
-
 
 .descricao {
     border-top: 0.0625rem solid gray;
@@ -77,13 +73,7 @@ img {
     width: 100%;
   }
 
-.imagem-produto {
-      margin: 0;
-      border: 0;
-}
-
-
-#comprar{
+.comprar-btn{
   padding: 13px 20px 12px;
   background-color: #E4C5FE;
   border-radius: 4px;
@@ -94,14 +84,85 @@ img {
   margin-bottom: 10px;
   transition: 0.5s;
   text-transform: uppercase;
-}
-
-  #comprar:hover {
+   & :hover {
       border: 1px solid #E4C5FE;
       background-color: transparent;
       color: #E4C5FE;
       transition: 0.5s;
   }
+}
 
+@media (min-width: 1.7rem) {
+  .product-image img, .image-list img {
+    width: 100%;
+  }
+
+  .product-image {
+    display: block;
+    img {
+      height: 52vh;
+      &.active {
+        display: block;
+        margin: 0 0 0.75rem 0;
+      }
+    }
+  }
   
+  .image-list {
+    display: flex;
+    overflow: hidden;
+    li {
+      margin: 0 0.75rem 0 0;
+      flex-basis: 100%;
+      &:nth-child(3) {
+        margin: 0;
+      }
+    }
+    img {
+      height: 10rem;
+      width: 100%;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
 
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  .toggle-nav {
+    display: none;
+  }
+
+  .flex-nav {
+    display: block;
+    ul {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: flex-end;
+      li {
+        font-size: 1.125rem;
+        margin: 0 1.5rem 0 0;
+        &:nth-child(4) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+ 
