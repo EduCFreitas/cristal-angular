@@ -21,6 +21,17 @@ modal-header {
     text-align: center;
 }
 
+.form-group ul li {
+    list-style: none;
+    //   color: red;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .form-group ul {
+    padding: 0;
+  }
+
 .tem-erro input{
     border-color: red;
 }

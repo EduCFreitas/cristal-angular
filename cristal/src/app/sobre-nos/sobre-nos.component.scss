@@ -1,34 +1,38 @@
-.card{
-    border: 1px solid rgba(0,0,0,0);
-    transition: 0.2s;
+.card {
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: 0.5s;
 }
 
-.card:hover{
-    transition: 0.2s;
-    color: white;
-    background-color: #5D9BD4;
-    transition-timing-function: ease-in-out;
+.card:hover {
+  transition: 0.5s;
+  color: white;
+  background-color: #5D9BD4;
+  transition-timing-function: ease-in-out;
 }
 
-.card2:hover{
-  transition: 0.2s;
+.card2:hover {
+  transition: 0.5s;
   color: white;
   background-color: #C1A4C8;
   transition-timing-function: ease-in-out;
 }
 
-// Diminuição das imagens no modo responsivo, pois utilizando apenas o Bootstrap elas ficavam muito grandes
-@media screen and (max-width: 767px){
-    .card-img{
-        width: 75%;
-        height: 75%;
-        margin: 0 auto;
-    }
+.card-text {
+  text-align: left;
+}
 
-    .div-img-card{
-        width: 75%;
-        height: 75%;
-        text-align: center;
-        margin: 0 auto;
-    }
+// Diminuição das imagens no modo responsivo, pois utilizando apenas o Bootstrap elas ficavam muito grandes
+@media screen and (max-width: 767px) {
+  .card-img {
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
+  }
+
+  .div-img-card {
+    width: 75%;
+    height: 75%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

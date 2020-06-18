@@ -11,7 +11,7 @@ import { Route } from '@angular/compiler/src/core';
 })
 export class DeletarUsuarioComponent implements OnInit {
   
-  usuario:Usuario = new Usuario
+  usuario:Usuario = new Usuario()
   delOk: boolean = false
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
