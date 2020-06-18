@@ -11,7 +11,21 @@ export class CadastroComponent implements OnInit {
   
   usuario:Usuario = new Usuario()
 
+  // numCpf:number;
+  // numTelefone:number;
+  // numCep:number;
   erroSenha:boolean=false;
+  // erroCpf:boolean=false;
+  // erroTelefone:boolean=false;
+  // erroCep:boolean=false;
+  // erroNome:boolean=false;
+  // erroEmail:boolean=false;
+  // erroLogradouro:boolean=false;
+  // erroNumResidencia:boolean=false;
+  // erroEstado:boolean=false;
+  // erroCidade:boolean=false;
+  // erroBairro:boolean=false;
+  // erroCadastro:boolean=false;
 
   confirmacao = {
     senha:''
@@ -21,7 +35,7 @@ export class CadastroComponent implements OnInit {
   
   ngOnInit(): void {
   }
-  
+
   validar(){
     if(this.usuario.senha===this.confirmacao.senha){
       this.erroSenha=false;
