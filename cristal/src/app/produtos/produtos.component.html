@@ -11,9 +11,12 @@
 
 
 
-
-    <div class="cards-grupo" *ngFor="let produto of listaProdutos">
-    
+    <div *ngIf = 'alerta'>
+        <div class="alert alert-success" role="alert">
+            Produto deletado! 
+        </div>
+    </div>
+    <div class="cards-grupo" *ngFor="let produto of listaProdutos">        
         <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
         <!-- nome do produto-->
             <mat-card-title class="title">
@@ -26,8 +29,8 @@
         <!-- descrição dos produtos -->
             <mat-card-subtitle class="subtitle">
                 Cor: {{produto.cor}}
-                <br>
-                Quantidade em Estoque: {{produto.qtdEstoque}}
+                <!-- <br>
+                Quantidade em Estoque: {{produto.qtEstoque}} -->
             </mat-card-subtitle>
             <!-- Preço do Produto -->
             <mat-card-title class="title">

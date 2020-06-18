@@ -14,11 +14,25 @@ export class ProdutosComponent implements OnInit {
   listaProdutos: Produtos[]
   listaProdutosResetada: Produtos[]
 
+  alerta:boolean = false
+
 
   constructor(private produtoService: ProdutosService) { }
 
   ngOnInit() {
     this.todosProdutos();
+
+    let item = localStorage.getItem('deletar')
+    
+    if (item == "true"){
+      this.alerta = true
+      localStorage.clear()
+      
+      setTimeout(()=>{
+        location.assign('/produtos')
+      },3000)
+ 
+    }
   }
 
 todosProdutos(){
