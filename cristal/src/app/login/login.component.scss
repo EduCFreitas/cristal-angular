@@ -141,9 +141,9 @@ form{
 	margin-bottom: 4px;
 }
 
-a{
+.cadastro, a{
 	display: block;
-	text-align: right;
+	text-align: left;
 	text-decoration: none;
 	color: #999;
 	font-size: 0.9rem;
@@ -153,6 +153,11 @@ a{
 a:hover{
 	color: #38d39f;
 }
+
+.cadastro{
+  text-align: center;
+}
+
 
 .btn{
 	display: block;

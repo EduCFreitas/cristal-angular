@@ -49,15 +49,21 @@
 
     <!-- Botão Entrar -->
     <li class="navbar navbar-expand-sm botao">
-      <a class="nav-link" data-toggle="modal" data-target="#modalLogin" routerLink="/login">
-        <button class="btn">Entrar</button>
+      <a class="nav-link">
+        <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" routerLink="/login" href="#">Login</a>
+          <a class="dropdown-item"routerLink="/cadastro" href="#">Cadastro</a>
+        </div>
+      </div>
       </a>
-
     </li>
-  </div>
 
 
 
+</div>
 </div>
 </nav>
 

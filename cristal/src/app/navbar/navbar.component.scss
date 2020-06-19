@@ -28,6 +28,23 @@
   transition: 0.5s;
 }
 
+.dropdown-item {
+  color: #FFF;
+  font-size: 0.9rem;
+  transition: .3s;
+  border-radius: 5px;
+  border: none;
+}
+
+.dropdown-item:hover {
+  background-color: #7e7eb4;
+}
+
+.dropdown-menu {
+  background-color: #f4c0eb;
+  border: none;
+}
+
 .botao .btn {
   padding: 5px;
   width: 100px;
