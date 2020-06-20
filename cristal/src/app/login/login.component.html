@@ -13,8 +13,8 @@
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Usuário</h5>
-           		   		<input type="text" class="input">
+           		   		<h5>Email</h5>
+           		   		<input type="text" name="email" class="input" [(ngModel)]="usuarioLogin.email">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -23,11 +23,11 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" name="senha" class="input" [(ngModel)]="usuarioLogin.senha">
             	   </div>
             	</div>
             	<a href="#">Esqueceu sua senha?</a>
-              <input type="submit" class="btn" value="Login">
+              <input type="submit" class="btn" value="Login" (click)="logar()">
               <a href="#" class="cadastro" routerLink="/cadastro">Clique aqui para se cadastrar</a>
             </form>
         </div>
