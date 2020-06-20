@@ -10,9 +10,9 @@ import { Usuario } from '../model/Usuario';
 export class CadastroComponent implements OnInit {
   
   usuario:Usuario = new Usuario()
-
+  
   erroSenha:boolean=false;
-
+  
   confirmacao = {
     senha:''
   }
@@ -30,11 +30,11 @@ export class CadastroComponent implements OnInit {
       this.erroSenha=true;
     }
   }
-
+  
   cadastrar(){
     this.usuarioService.postUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      location.assign('/lista-de-usuarios')
+      location.assign('/login')
     })
   }
   

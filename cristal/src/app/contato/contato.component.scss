@@ -1,3 +1,13 @@
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
 .brand-wrapper {
   margin-bottom: 19px;
 
@@ -6,7 +16,6 @@
     display: flex;
   }
 }
-
 
 .form-group ul li {
   list-style: none;
@@ -69,25 +78,24 @@
 
   .login-btn {
     padding: 13px 20px 12px;
-    background-color: #A79FFD;
+    background-color: #a79ffd;
     border-radius: 4px;
     font-size: 17px;
     font-weight: bold;
     color: #fff;
     margin-bottom: 24px;
-
+    outline: none !important;
 
     &:hover {
-      border: 1px solid #A79FFD;
+      border: 1px solid #a79ffd;
       background-color: transparent;
-      color: #A79FFD;
+      color: #a79ffd;
       transition: 0.5s;
     }
 
-    &:focus {
-      outline: none;
+    &:active {
+      outline: none !important;
     }
-
   }
 
   &-footer-text {
@@ -123,8 +131,4 @@
 
 .sem-erro ul {
   color: green;
-}
-
-textarea {
-  height: 100px;
 }

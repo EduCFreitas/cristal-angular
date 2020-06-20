@@ -1,42 +1,35 @@
-
-<!-- Modal -->
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <h5 class="modal-title titulo" id="modalLogin">Login</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/home">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <div class="modal-body">
-                <form>
-                    <!-- E-mail -->
-                    <label for="inputText" class="lead">Email:</label>
-                    <br>
-                    <input type="e-mail" class="form-control" placeholder="Ex: carla@gmail.com">
-                    <br>
-                    <!-- Senha -->
-                    <label for="inputText" class="form-control" class="lead">Senha: </label>
-                    <br>
-                    <input type="password" class="form-control">
-                    <!-- botoes -->
-                    <div class="col-12 d-flex justify-content-around">
-                        <button type="submit" class="btn btn-primary botao-formulario mt-3 col-5">Entrar</button>
-                        <button type="button" class="btn btn-secondary botao-formulario mt-3 col-5" data-dismiss="modal">Cancelar</button>
-                    </div>
-
-                </form>
-
-
-            </div>
-
-
-            <div class="modal-footer">
-                <p> Não tem cadastro? <a data-toggle="modal" data-target="#modalCadastro" routerLink='/cadastro'> Clique aqui</a></p>
-            </div>
+<div class="corpo">
+	<img class="wave" src="../../assets/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="../../assets/baby.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="../../assets/girl.svg">
+				<h2 class="title">Bem Vindo</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Email</h5>
+           		   		<input type="text" name="email" class="input" [(ngModel)]="usuarioLogin.email">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i">
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Senha</h5>
+           		    	<input type="password" name="senha" class="input" [(ngModel)]="usuarioLogin.senha">
+            	   </div>
+            	</div>
+            	<a href="#">Esqueceu sua senha?</a>
+              <input type="submit" class="btn" value="Login" (click)="logar()">
+              <a href="#" class="cadastro" routerLink="/cadastro">Clique aqui para se cadastrar</a>
+            </form>
         </div>
     </div>
 </div>

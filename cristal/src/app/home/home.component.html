@@ -7,65 +7,26 @@
     </div>
   </div>
 
-  <!-- <div class="container mt-3">
-    <div class="row text-center d-flex justify-content-center">
+<div class="titulo-card">
+  Confira!
+</div>
 
-      <div class="col-lg-3 col-md-6 text-center produto1 ">
-        a
-      </div>
-
-      <div class="col-lg-3 col-md-6 text-center produto2">
-        a
-      </div>
-
-      <div class="col-lg-3 col-md-6 text-center produto3">
-        a
-      </div>
+<div class="cards-grupo" *ngFor="let produto of listaProdutos">
+  <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
+    <!-- nome do produto-->
+    <mat-card-title class="title">
+      {{produto.nome}}
+    </mat-card-title>
+    <!-- imagem do produto -->
+    <div class="imagem">
+      <img src="{{produto.foto}}" alt="Peças de Roupa">
     </div>
-  </div> -->
+   
+    <!-- Preço do Produto -->
+    <mat-card-title class="title">
+      R{{produto.valor | currency}}
+    </mat-card-title>
 
-  <!-- Cards -->
-  <div class="cards-grupo">
-    <mat-card class="cards mat-elevation-z3">
-        <img src="../../assets/card-eduardo.jpg">
+  </mat-card>
 
-        <mat-card-subtitle class="subtitle">
-            cristal
-        </mat-card-subtitle>
-
-    </mat-card>
-
-    <mat-card class="cards mat-elevation-z3">
-        <img src="../../assets/card-eduardo.jpg">
-
-        <mat-card-subtitle class="subtitle">
-            cristal
-        </mat-card-subtitle>
-
-    </mat-card>
-
-    <mat-card class="cards mat-elevation-z3">
-        <img src="../../assets/card-eduardo.jpg">
-
-        <mat-card-subtitle class="subtitle">
-            cristal
-        </mat-card-subtitle>
-
-    </mat-card>
-
-    <mat-card class="cards mat-elevation-z3">
-        <img src="../../assets/card-eduardo.jpg">
-
-        <mat-card-subtitle class="subtitle">
-            cristal
-        </mat-card-subtitle>
-
-    </mat-card>
-
-    <mat-card class="cards mat-elevation-z3">
-        <img src="../../assets/card-eduardo.jpg">
-
-        <mat-card-subtitle class="subtitle">
-            cristal
-        </mat-card-subtitle>
-
+</div>
