@@ -1,53 +1,61 @@
-<div class="container">
+<div class="container justify-content-center">
+    <div class="form text-uppercase">
 
-    <div class="container mt-5"> 
- 
-        <h3 class="text-center">Cadastrar um produto</h3>
+        <h2 class=" text-center lead pt-1">Cadastrar um produto</h2>
+        <div class="input">
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace text-left">
+                </label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite URL da imagem"
+                    [(ngModel)]="produto.foto">
+            </div>
 
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Imagem:</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite URL da imagem" [(ngModel)]="produto.foto">
-        </div>
-    
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Nome:</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o nome" [(ngModel)]="produto.nome">
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o nome"
+                    [(ngModel)]="produto.nome">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a descrição"
+                    [(ngModel)]="produto.descricao">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a Categoria"
+                    [(ngModel)]="produto.categoria">
+            </div>
+
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="number" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o preço"
+                    [(ngModel)]="produto.valor">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control"
+                    placeholder="Digite aqui a cor do produto" [(ngModel)]="produto.cor">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control"
+                    placeholder="Digite aqui o Tamanho do produto" [(ngModel)]="produto.tamanho">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="number" name="titulo" id="titulo" class="form-control"
+                    placeholder="Digite a quantidade em estoque" [(ngModel)]="produto.qtdEstoque">
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Descrição:</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a descrição" [(ngModel)]="produto.descricao">       
+        <div class="inputBox pt-4">
+            <button type="button" class="btn btn-cadastrar btn-block mb-5" (click)="cadastrar()">Cadastrar</button>
         </div>
-
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Categoria:</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a Categoria" [(ngModel)]="produto.categoria">      
-        </div>
-        
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Preço:</label>
-            <input type="number" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o preço" [(ngModel)]="produto.valor">       
-        </div>
-
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Cor:</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a cor do produto" [(ngModel)]="produto.cor"> 
-        </div>
-
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Tamanho:</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o Tamanho do produto" [(ngModel)]="produto.tamanho">  
-        </div>
-        
-        <div class="form-group">
-            <label for="titulo" class="text-monospace">Quantidade em estoque:</label>
-            <input type="number" name="titulo" id="titulo" class="form-control" placeholder="Digite a quantidade em estoque" [(ngModel)]="produto.qtdEstoque">
-        </div>
-
-        <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-outline-info w-25 mb-5" (click)="cadastrar()">Cadastrar</button>
-        </div>
-
     </div>
-
 </div>
