@@ -20,6 +20,20 @@ export class CadastroComponent implements OnInit {
   constructor(private usuarioService:UsuarioService)  { }
 
   ngOnInit(): void {
+      function validarCpf() {
+      let numbers = this.usuarioBuscar.login.match(/\d/g);
+      let numberLength = 0;
+      if (numbers) {
+        numberLength = numbers.join('').length;
+      }
+      if (numberLength <= 11) {
+        return [/[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+      } else {
+        return [/[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '/', /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+      }
+    }
+
+
     const inputs = document.querySelectorAll(".input");
 
 

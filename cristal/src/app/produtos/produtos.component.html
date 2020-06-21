@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  <div class="cards-grupo">
     <mat-card class="cards mat-elevation-z3">
         <img src="../../assets/card-eduardo.jpg">
@@ -45,48 +44,3 @@
 
     </mat-card>
 </div>
-=======
-<div class="body">
-    <div class="matMenu">
-        <ul>
-            <li><button class="buttonMenu" (click)="cliqueCamiseta()">Camisetas</button></li>
-            <li><button class="buttonMenu" (click)="clickBlusa()">Blusas</button></li>
-            <li><button class="buttonMenu" (click)="clickMoletom()">Moletons</button></li>
-            <li><button class="buttonMenu" (click)="clickcalca()">Calças</button></li>
-            <li><button class="buttonMenu" (click)="clickshorts()">Shorts</button></li>
-        </ul>
-    </div>
-
-
-
-    <div *ngIf = 'alerta'>
-        <div class="alert alert-success" role="alert">
-            Produto deletado! 
-        </div>
-    </div>
-    <div class="cards-grupo" *ngFor="let produto of listaProdutos">        
-        <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
-        <!-- nome do produto-->
-            <mat-card-title class="title">
-                {{produto.nome}}
-            </mat-card-title>
-            <!-- imagem do produto -->
-            <div class="imagem">
-                <img src="{{produto.foto}}" alt="Peças de Roupa">
-            </div>
-        <!-- descrição dos produtos -->
-            <mat-card-subtitle class="subtitle">
-                Cor: {{produto.cor}}
-                <!-- <br>
-                Quantidade em Estoque: {{produto.qtEstoque}} -->
-            </mat-card-subtitle>
-            <!-- Preço do Produto -->
-            <mat-card-title class="title">
-            Preço: R{{produto.valor | currency}}
-            </mat-card-title>
-
-        </mat-card>
-
-    </div>
-</div>
->>>>>>> 30ca34c1ae99f9522e81dd68a99f38842cede9ec
