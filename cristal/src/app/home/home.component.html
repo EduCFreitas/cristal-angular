@@ -1,32 +1,10 @@
-<div class="bg-full">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 p-0 bg">
-        <!-- Background + texto -->
-      </div>
-    </div>
+<div class="introducao">
+  <div class="container">
+    <h1>Ou tudo ou moda!</h1>
+    <blockquote class="quote-externo">
+      <p>“Nada é tão forte quanto a delicadeza, e nada é tão delicado como a força verdadeira”</p>
+      <cite>RALPH WASHINGTON SOCKMAN</cite>
+    </blockquote>
+    <a href="produtos.html" class="btn">produtos</a>
   </div>
-
-<div class="titulo-card">
-  Confira!
-</div>
-
-<div class="cards-grupo" *ngFor="let produto of listaProdutos">
-  <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
-    <!-- nome do produto-->
-    <mat-card-title class="title">
-      {{produto.nome}}
-    </mat-card-title>
-    <!-- imagem do produto -->
-    <div class="imagem">
-      <img src="{{produto.foto}}" alt="Peças de Roupa">
-    </div>
-   
-    <!-- Preço do Produto -->
-    <mat-card-title class="title">
-      R{{produto.valor | currency}}
-    </mat-card-title>
-
-  </mat-card>
-
 </div>

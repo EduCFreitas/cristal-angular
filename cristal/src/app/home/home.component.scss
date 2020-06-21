@@ -1,76 +1,43 @@
-.bg-full {
-  background-image: linear-gradient(-225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(255, 186, 195) 100%);
-}
-.bg {
-  // background-image: url(https://i.imgur.com/FRMd7uv.png);
-  background-image: url(https://i.imgur.com/JqWDitT.png);
-  height: 22em;
+/* Introdução */
+.introducao {
   width: 100%;
+  height: 380px;
+  background: url("https://i.imgur.com/ZEtttJp.png") no-repeat center;
   background-size: cover;
+  text-align: center;
+  padding-top: 80px;
 }
 
-.titulo {
-  color: white;
-  margin-top: 180px;
-  padding-top: 40px;
-  padding-left: 600px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.introducao h1 {
+  font-size: 48px;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.texto {
-  margin: 0;
-  padding: 0;
-  color: white;
+.quote-externo {
+  max-width: 320px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: #FFF;
 }
 
-.titulo-card{
-  text-align: end;
-  margin-right: 1.5rem;
-  font-size: 2rem;
-  font-weight: 0.5rem;
-  line-height: 2;
-  color: rgb(51, 51, 51);
-  font-family: 'Montserrat', sans-serif;
-
-  
+.quote-externo p {
+  font-style: italic;
 }
 
-
-// Cards
-.cards-grupo {
-display: inline-flex;
-  flex-wrap: wrap;
-  padding: 20px;
+.quote-externo p:before, .quote-externo p:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #FFF;
+  margin: 14px auto 10px auto;
 }
 
-img {
-  width: 80%;
-  height: 75%;
-  justify-content: center;
+.quote-externo cite {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: .1em;
 }
-
-.cards {
-    text-align: center;
-    justify-content: space-between;
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    max-width: 230px;
-    max-height: 320px;
-    padding: 15px;
-    height: 450px;
-    width: 250px;
-}
-
-img {
-
-    height: 100%;
-}
-
-.title{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    margin: 0px;
-}
-
