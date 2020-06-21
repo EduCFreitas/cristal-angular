@@ -13,7 +13,9 @@ import { ListaDeUsuariosComponent } from './lista-de-usuarios/lista-de-usuarios.
 import { DeletarUsuarioComponent } from './deletar-usuario/deletar-usuario.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
 import { CreateItemProdutoComponent } from './create-item-produto/create-item-produto.component';
-
+import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
+import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
+ 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
@@ -28,10 +30,12 @@ const routes: Routes = [
   {path: 'lista-de-usuarios', component: ListaDeUsuariosComponent},
   {path: 'editar-usuario/:id', component: EditarUsuarioComponent},
   {path: 'deletar-usuario/:id', component: DeletarUsuarioComponent},
-  {path: 'create-item-produto', component: CreateItemProdutoComponent}
+  {path: 'criar-item-produto', component: CreateItemProdutoComponent},
+  {path: 'editar-item-produto/:id', component: EditarItemProdutoComponent},
+  {path: 'deletar-item-produto/:id', component: DeletarItemProdutoComponent}
 ];
 
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

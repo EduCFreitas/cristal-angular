@@ -1,107 +1,86 @@
-<div class="grid second-nav">
-    <nav>
-        <ol class="breadcrumb-list ml-3">
-            <li class="breadcrumb-item" routerLink="/home">Home</li>
-            <li class="breadcrumb-item" routerLink='/produtos'>produtos</li>
-            <li class="breadcrumb-item active" >nome_id</li>
-        </ol>
-    </nav>
-</div>
+<div class="body">
 
-<main class="main text-center mt-5">
+    <div class="grid second-nav">
+        <nav>
+            <ol class="breadcrumb-list pt-4 ml-3">
+                <li class="breadcrumb-item" routerLink="/home">Home</li>
+                <li class="breadcrumb-item" routerLink='/produtos'>produtos</li>
+                <li class="breadcrumb-item active">{{produto.id}}</li>
+            </ol>
+        </nav>
+    </div>
 
-    <div class="container">
-
+    <main class="main text-center mt-5">
         <div class="col-md-12 d-flex text-justify-content-center">
-
-            <div class="row" *ngFor = "let produto of itemProduto">
-                <div class="col-6">
-
-                    <div class="grid product">
-
-                        <div class="product-gallery">
-                            <div class="imagem-produto d-flex justify-content-center">
-                                <div class="card-img" style="width: 18rem;">
-                                    <img class="card-img-top" src="{{itemProduto.foto}}" alt="Imagem de capa do card">
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-6">
-                    <div class="column-xs-12 column-md-5">
-                        <h1 class="text-left">{{itemProduto.nome}}</h1>
-                        <div class="descricao">
-                            <small>{{itemProduto.categoria}}</small>
-                            <p class="text-justify">{{itemProduto.descricao}}</p>
-                            <h4 class="text-left">{{itemProduto.valor}}</h4>
-                        </div>
-                        <div class="card border-0">
-                            <div class="card-body-input ">
-                                <h5 class="d-inline"> Tamanho {{itemProduto.tamanho}} </h5>
-
-<!-- 
-                                <div class="btn-group text-left ml-5" role="group" aria-label="Exemplo básico">
-                                    <button type="button" class="btn btn-secondary btn btn-dark">12</button>
-                                    <button type="button" class="btn btn-secondary btn btn-dark">14</button>
-                                    <button type="button" class="btn btn-secondary btn btn-dark">16</button>
-                                </div> -->
-
-
-                                <!-- Botão para acionar modal -->
-                                <div class="button-modal text-right d-inline ml-5">
-                                    <button type="button-modal" class="btn" data-toggle="modal" data-target="#Modal">
-                                        Tabelas de tamanhos
-                                    </button>
-                                </div>
-
-
-                                <!-- Modal EDITAR -->
-                                <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
-                                    aria-labelledby="ModalLabel" aria-hidden="true">
-
-
-
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="TituloModalCentralizado">Título do modal
-                                                </h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Fechar">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                ...
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-dismiss="modal">Fechar</button>
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-6">
+                                <div class="grid produto">
+                                    <div class="produto-galeria">
+                                        <div class="imagem-produto d-flex justify-content-center">
+                                            <div class="card-img" style="width: 18rem;">
+                                                <img class="card-img-top" src="{{produto.foto}}" alt="Imagem de capa do card">
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
+                                </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="column-xs-12 column-md-5 pt-5">
+                            <h1 class="card-title text-left lead">{{produto.nome}}</h1>
+                            <div class="descricao">
+                                <div class="card-body text-left">
+                                    <p class="card-subtitle pt-1 text-muted lead">Peça: {{produto.categoria}}</p>
+                                    <p class="card-subtitle pt-1 text-muted lead">Tamanho: {{produto.tamanho}}</p>
+                                    <p class="card-subtitle pt-1 lead">Preço: R{{produto.valor | currency}}</p>
+                                    <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p>
+                                    <p class="card-text lead d-flex text-justify pt-2">{{produto.descricao}}</p>
+                                </div>        
+                            </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <div class="card-body">
+                                        <!-- Botão para acionar modal -->
+                                        <div class="button-modal text-right d-inline ml-5 lead">
+                                                <!-- <button type="button-modal" class="btn in-line" data-toggle="modal" data-target="#Modal">
+                                                    Tabelas de tamanhos
+                                                </button> -->
+                                        </div>
 
+                                        <!-- Modal EDITAR -->
+                                        <!-- <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+                                                aria-labelledby="ModalLabel" aria-hidden="true">
+
+
+
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="TituloModalCentralizado">Título do modal
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Fechar">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                    
+                                                            <input name="comprar" id="comprar" class="login-btn mb-4" type="button" value="Comprar" (click)="comprar()">
+                                                    
+                                                    </div>
+                                                </div>
+                                                <div>
+
+                                                </div>
+                                        </div> -->
                                     </div>
                                 </div>
-
-                                <!-- input incremento/decremento -->
-                                <!-- <div class="form-group card-input text-left">
-                                <input type="number" id = "quantidade" name="quantidade" min="1" max="10" class="form-control align-center">
-                                <label for = "quantidade"></label>
-                            </div> -->
-
-                                <div class="card-body">
-                                    <p class="card-text"> Quantidade em estoque: {{itemProduto.qtdEstoque}}</p>
-                                </div>
-
-                                <button type="button"
-                                    class="btn btn-outline-info btn-lg btn-block mt-5" target="_blank" (click)="comprar()">comprar</button> 
-                            </div>
-
+                                <input name="comprar" id="comprar" class="btn  btn-block comprar-btn mb-4" type="button" value="Comprar" (click)="comprar()">
                         </div>
                     </div>
-
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

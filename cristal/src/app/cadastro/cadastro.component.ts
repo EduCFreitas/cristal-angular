@@ -10,23 +10,9 @@ import { Usuario } from '../model/Usuario';
 export class CadastroComponent implements OnInit {
   
   usuario:Usuario = new Usuario()
-
-  // numCpf:number;
-  // numTelefone:number;
-  // numCep:number;
-  erroSenha:boolean=false;
-  // erroCpf:boolean=false;
-  // erroTelefone:boolean=false;
-  // erroCep:boolean=false;
-  // erroNome:boolean=false;
-  // erroEmail:boolean=false;
-  // erroLogradouro:boolean=false;
-  // erroNumResidencia:boolean=false;
-  // erroEstado:boolean=false;
-  // erroCidade:boolean=false;
-  // erroBairro:boolean=false;
-  // erroCadastro:boolean=false;
-
+  
+  erro:boolean=false;
+  
   confirmacao = {
     senha:''
   }
@@ -34,21 +20,60 @@ export class CadastroComponent implements OnInit {
   constructor(private usuarioService:UsuarioService)  { }
   
   ngOnInit(): void {
+    
+    this.erro=false;
+    
+    function validarCpf() {
+      let numbers = this.usuarioBuscar.login.match(/\d/g);
+      let numberLength = 0;
+      if (numbers) {
+        numberLength = numbers.join('').length;
+      }
+      if (numberLength <= 11) {
+        return [/[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+      } else {
+        return [/[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '/', /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+      }
+    }
+    
+    
+    const inputs = document.querySelectorAll(".input");
+    
+    
+    function addcl(){
+      let parent = this.parentNode.parentNode;
+      parent.classList.add("focus");
+    }
+    
+    function remcl(){
+      let parent = this.parentNode.parentNode;
+      if(this.value == ""){
+        parent.classList.remove("focus");
+      }
+    }
+    
+    
+    inputs.forEach(input => {
+      input.addEventListener("focus", addcl);
+      input.addEventListener("blur", remcl);
+    });
   }
-
+  
   validar(){
     if(this.usuario.senha===this.confirmacao.senha){
-      this.erroSenha=false;
+      this.erro=false;
       this.cadastrar();
     }else{
-      this.erroSenha=true;
+      this.erro=true;
     }
   }
-
+  
   cadastrar(){
+    this.erro=true;
     this.usuarioService.postUsuario(this.usuario).subscribe((resp:Usuario)=>{
+      this.erro=false;
       this.usuario = resp
-      location.assign('/lista-de-usuarios')
+      location.assign('/login')
     })
   }
   

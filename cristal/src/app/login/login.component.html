@@ -1,35 +1,46 @@
 <div class="corpo">
-	<img class="wave" src="../../assets/wave.png">
+	<img class="wave" src="../../assets/wave2.png">
 	<div class="container">
 		<div class="img">
 			<img src="../../assets/baby.svg">
 		</div>
 		<div class="login-content">
 			<form action="index.html">
-				<img src="../../assets/girl.svg">
+				<img src="../../assets/man.svg">
 				<h2 class="title">Bem Vindo</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Usuário</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i">
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Senha</h5>
-           		    	<input type="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Esqueceu sua senha?</a>
-              <input type="submit" class="btn" value="Login">
-              <a href="#" class="cadastro" routerLink="/cadastro">Clique aqui para se cadastrar</a>
-            </form>
-        </div>
-    </div>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Email</h5>
+						<input type="text" name="email" class="input" [(ngModel)]="usuarioLogin.email" autofocus required email #emailLogin="ngModel">
+					</div>
+				</div>
+				<span class="help-block" *ngIf="erro==true && emailLogin.errors && (emailLogin.dirty || emailLogin.touched)" class="tem-erro">
+					<ul>
+						<li *ngIf="emailLogin.errors.required">Informe o email</li>
+						<li *ngIf="emailLogin.errors.email">Email inválido</li>
+					</ul>
+				</span>
+				<div class="input-div pass">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Senha</h5>
+						<input type="password" name="senha" class="input" [(ngModel)]="usuarioLogin.senha" required #senhaLogin="ngModel">
+					</div>
+				</div>
+				<span class="help-block" *ngIf="erro==true && senhaLogin.errors && (senhaLogin.dirty || senhaLogin.touched)" class="tem-erro">
+					<ul>
+						<li *ngIf="senhaLogin.errors.required">Informe a senha</li>
+					</ul>
+				</span>
+				<a href="#">Esqueceu sua senha?</a>
+				<input type="submit" class="btn" value="Login" (click)="logar()">
+				<a href="#" class="cadastro" routerLink="/cadastro">Clique aqui para se cadastrar</a>
+			</form>
+		</div>
+	</div>
 </div>

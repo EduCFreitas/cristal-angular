@@ -1,1 +1,62 @@
-<p>editar-item-produto works!</p>
+<div class="container justify-content-center">
+    <div class="form text-uppercase">
+
+        <h2 class=" text-center lead pt-1">Editar produto: Id-{{produto.id}}</h2>
+        <div class="input">
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace text-left">
+                </label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite URL da imagem"
+                    [(ngModel)]="produto.foto">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o nome"
+                    [(ngModel)]="produto.nome">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a descrição"
+                    [(ngModel)]="produto.descricao">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui a Categoria"
+                    [(ngModel)]="produto.categoria">
+            </div>
+
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="number" name="titulo" id="titulo" class="form-control" placeholder="Digite aqui o preço"
+                    [(ngModel)]="produto.valor">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control"
+                    placeholder="Digite aqui a cor do produto" [(ngModel)]="produto.cor">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="text" name="titulo" id="titulo" class="form-control"
+                    placeholder="Digite aqui o Tamanho do produto" [(ngModel)]="produto.tamanho">
+            </div>
+
+            <div class="inputBox">
+                <label for="titulo" class="text-monospace"></label>
+                <input type="number" name="titulo" id="titulo" class="form-control"
+                    placeholder="Digite a quantidade em estoque" [(ngModel)]="produto.qtdEstoque">
+            </div>
+        </div>
+
+        <div class="inputBox pt-4">
+            <button type="button" class="btn btn-editar btn-block mb-5" (click)="salvar()">salvar</button>
+        </div>
+
+    </div>
+</div>

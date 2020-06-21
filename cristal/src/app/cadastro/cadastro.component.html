@@ -1,111 +1,113 @@
-
-<!-- Modal -->
-<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" routerLink="/home">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            
-            <div class="modal-header">
-                <h5 class="modal-title titulo" id="modalCadastro">Cadastro</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/home">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            
-            <div class="modal-body">
-                <!-- Nome e Username-->
-                <div class="form-row">
-                    <div class="form-group col-md-12 col-lg-7">
-                        <label for="nome" class="lead">Nome:</label>
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo" [(ngModel)]="usuario.nome" minlength="3" maxlength="80" required>
-                    </div>
-                    <div class="form-group col-md-12 col-lg-5">
-                        <label for="username" class="lead">Usuário:</label>
-                        <input type="text" name="username" id="username" class="form-control" placeholder="Nome de usuário" [(ngModel)]="usuario.usuario" minlength="3" maxlength="80" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <!-- CPF -->
-                    <div class="form-group col-md-12 col-lg-6">
-                        <label for="cpf" class="lead">CPF:</label>
-                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Apenas números" [(ngModel)]="usuario.cpf" minlength="11" maxlength="11" required>
-                    </div>
-                    <!-- Telefone -->
-                    <div class="form-group col-md-12 col-lg-6">
-                        <label for="telefone" class="lead">Telefone:</label>
-                        <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="DDD seguido do número" [(ngModel)]="usuario.telefone" minlength="10" maxlength="11">
-                    </div>
-                </div>
-                
-                <!-- Endereço -->
-                <div class="form-row">
-                    <div class="form-group col-md-12 col-lg-9">
-                        <label for="logradouro" class="lead">Endereço:</label>
-                        <input type="text" name="logradouro" id="logradouro" class="form-control" placeholder="Digite seu endereço" [(ngModel)]="usuario.logradouro" minlength="3" maxlength="150" required>
-                    </div>
-                    <div class="form-group col-md-12 col-lg-3">
-                        <label for="numResidencia" class="lead">Número:</label>
-                        <input type="text" name="numResidencia" id="numResidencia" class="form-control" placeholder="" [(ngModel)]="usuario.numResidencia" maxlength="10" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-12 col-lg-6">
-                        <label for="estado" class="lead">Estado:</label>
-                        <input type="text" name="estado" id="estado" class="form-control" placeholder="Digite o estado" [(ngModel)]="usuario.estado" minlength="2" maxlength="20" required>
-                    </div>
-                    <div class="form-group col-md-12 col-lg-6">
-                        <label for="cidade" class="lead">Cidade:</label>
-                        <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite a cidade" [(ngModel)]="usuario.cidade" minlength="2" maxlength="50" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-12 col-lg-7">
-                        <label for="bairro" class="lead">Bairro:</label>
-                        <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Digite o bairro" [(ngModel)]="usuario.bairro" minlength="3" maxlength="50" required>
-                    </div>
-                    <div class="form-group col-md-12 col-lg-5">
-                        <label for="cep" class="lead">CEP:</label>
-                        <input type="text" name="cep" id="cep" class="form-control" placeholder="Apenas números" [(ngModel)]="usuario.cep" minlength="8" maxlength="8" required>
-                    </div>
-                </div>
-                
-                <!-- E-mail -->
-                <div class="form-group">
-                    <label for="email" class="lead">E-mail:</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Ex: carla@gmail.com" [(ngModel)]="usuario.email" minlength="5" maxlength="120" required>
-                </div>
-                
-                <!-- Senha -->
-                <div class="form-group" placeholder="Mínimo de 8 caracteres" [ngClass]="{'tem-erro' : erroSenha && usuario.senha!=confirmacao.senha}" [ngClass]="{'sem-erro' : erroSenha && usuario.senha==confirmacao.senha}">
-                    <label for="senha" class="lead">Senha:</label>
-                    <input type="password" name="senha" id="senha" class="form-control" [(ngModel)]="usuario.senha">
-                </div>
-                
-                <!-- Confirmar senha -->
-                <div class="form-group" [ngClass]="{'tem-erro': erroSenha==true && usuario.senha!=confirmacao.senha}" [ngClass]="{'sem-erro': erroSenha==true && usuario.senha==confirmacao.senha}">
-                    <label for="confirmaSenha" class="lead">Confirme sua senha: </label>
-                    <input type="password" name="confirmaSenha" id="confirmaSenha" class="form-control"  [(ngModel)]="confirmacao.senha">
-                    <span class="help-block" *ngIf="erroSenha==true">
-                        <ul>
-                            <li *ngIf="usuario.senha!=confirmacao.senha">Senhas informadas não correspondem!</li>
-                            <li *ngIf="usuario.senha==confirmacao.senha">Senhas correspondem</li>
-                        </ul>
-                    </span>
-                </div>
-                <!-- </div> -->
-                
-                
-                
-                <!-- botoes -->
-                <div class="form-group mt-3 col-12 d-flex justify-content-around">
-                    <button type="button" class="btn btn-primary botao-formulario mt-2 text-center col-5" (click)="validar()">Cadastrar</button>
-                    <button type="button" class="btn btn-secondary botao-formulario mt-2 col-5" data-dismiss="modal">Cancelar</button>
-                </div>
-                
-                
-                <div class="modal-footer">
-                    Já tem cadastro? <a data-toggle="modal" data-target="#modalLogin" routerLink="/login">Clique aqui</a>
-                </div>
-            </div>
-        </div>
+<div class="corpo">
+  <img class="wave" src="../../assets/wave.png">
+  <div class="container">
+    <div class="img">
+      <img src="../../assets/kid.svg">
     </div>
+    <div class="login-content">
+      <form action="index.html">
+        <img src="../../assets/girl.svg">
+        <h2 class="title">Dados Cadastrais</h2>
+
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="div">
+            <h5>Nome</h5>
+            <input type="text" name="nome" class="input" [(ngModel)]="usuario.nome" autofocus required minlength="3" maxlength="80" #nomeUsuario="ngModel">
+          </div>
+        </div>
+        <span class="help-block" *ngIf="erro==true && nomeUsuario.errors && (nomeUsuario.dirty || nomeUsuario.touched)" class="tem-erro">
+          <ul>
+            <li *ngIf="nomeUsuario.errors.required">Nome requerido</li>
+            <li *ngIf="!nomeUsuario.errors.required && nomeUsuario.errors.minlength">Mínimo de 3 caracterer</li>
+          </ul>
+        </span>
+
+        <div class="input-div two">
+          <div class="i">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <div class="div">
+            <h5>CPF</h5>
+            <input type="text" name="cpf" class="input" [(ngModel)]="usuario.cpf" required minlength="11" maxlength="11" #cpfUsuario="ngModel">
+          </div>
+        </div>
+        <span class="help-block" *ngIf="erro==true && cpfUsuario.errors && (cpfUsuario.dirty || cpfUsuario.touched)" class="tem-erro">
+          <ul>
+            <li *ngIf="cpfUsuario.errors.required">CPF requerido</li>
+            <li *ngIf="!cpfUsuario.errors.required && cpfUsuario.errors.minlength">Digite apenas números</li>
+          </ul>
+        </span>
+
+        <div class="input-div three">
+          <div class="i">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="div">
+            <h5>Email</h5>
+            <input type="email" name="email" class="input" [(ngModel)]="usuario.email" required email #emailUsuario="ngModel">
+          </div>
+        </div>
+        <span class="help-block" *ngIf="erro==true && emailUsuario.errors && (emailUsuario.dirty || emailUsuario.touched)" class="tem-erro">
+          <ul>
+            <li *ngIf="emailUsuario.errors.required">Email requerido</li>
+            <li *ngIf="emailUsuario.errors.email">Email inválido</li>
+          </ul>
+        </span>
+
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="div">
+            <h5>Senha</h5>
+            <input type="password" name="senha" class="input" [(ngModel)]="usuario.senha" required>
+          </div>
+        </div>
+
+        <div class="input-div pass">
+          <div class="i">
+            <i class="fas fa-lock-open"></i>
+          </div>
+          <div class="div">
+            <h5>Confirme sua senha</h5>
+            <input type="password" name="confirmaSenha" class="input" [(ngModel)]="confirmacao.senha" required>
+          </div>
+        </div>
+        <span class="help-block" *ngIf="erro==true" class="tem-erro" [ngClass]="{'sem-erro': erro==true && usuario.senha==confirmacao.senha}">
+          <ul>
+            <li *ngIf="usuario.senha!=confirmacao.senha">Senhas não correspondem!</li>
+            <li *ngIf="usuario.senha==confirmacao.senha">Senhas correspondem</li>
+          </ul>
+        </span>
+
+        <!-- <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="div">
+            <h5>CEP</h5>
+            <input type="text" name="nome" class="input">
+          </div>
+        </div>
+
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="div">
+            <h5> e número</h5>
+            <input type="text" name="nome" class="input">
+          </div>
+        </div> -->
+
+
+
+        <input type="submit" class="btn" value="Cadastrar" (click)="validar()">
+        <a href="#" class="cadastro" routerLink="/login">Clique aqui para fazer login</a>
+      </form>
+    </div>
+  </div>
+</div>

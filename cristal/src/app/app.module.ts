@@ -31,7 +31,7 @@ import { CreateItemProdutoComponent } from './create-item-produto/create-item-pr
 import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
 import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
 
-
+  
 
 @NgModule({
   declarations: [
