@@ -16,17 +16,18 @@ background-color: rgb(232, 246, 247);
     color: black;
 }
 .buttonMenu:hover{
-     box-shadow:
-            0px 2px #ffffff,
-            0px 2px #ffffff;
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px);
-    transition: ease 0,8s;
+  box-shadow:
+  0px 2px #ffffff,
+  0px 2px #ffffff;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: ease 0,8s;
 
 }
 
 
 ul{ padding: 0em;
+<<<<<<< HEAD
     font-family: 'Montserrat', sans-serif;
     list-style: none;
     display: flex;
@@ -41,11 +42,27 @@ li{
     text-align: center;
 	margin-top: 5px;
 	margin-bottom: 0em;
+=======
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+
+}
+li{
+  height: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 5px;
+>>>>>>> solly
 
 }
 
 .mat-menu-content:not(:empty){
-        display: inline-flex;
+  display: inline-flex;
 
 }
 
@@ -60,15 +77,22 @@ li{
 }
 
 .cards-grupo {
+<<<<<<< HEAD
 display: inline-flex;
 // padding: 20px;
 
+=======
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 20px;
+>>>>>>> solly
 }
 
 .imagem-icon{
 	height: 20px;
 }
 .cards {
+<<<<<<< HEAD
 	border-radius: 8%;
     text-align: center;
     justify-content: space-between;
@@ -90,20 +114,40 @@ display: inline-flex;
 	box-shadow: 3px 3px 10px rgba(255,255,255,.1),
 			-3px -3px 10px rgba(0,0,0,.1);
 	background-color: whitesmoke
+=======
+  text-align: center;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  max-width: 230px;
+  max-height: 320px;
+  padding: 15px;
+  height: 450px;
+  width: 250px;
+  cursor: pointer;
+>>>>>>> solly
 }
 
 .imagem{
+<<<<<<< HEAD
     max-width: 220px;
     max-height: 200px;
+=======
+  max-width: 220px;
+  max-height: 150px;
+>>>>>>> solly
 }
 
 img {
 
-    height: 100%;
+  height: 100%;
 }
 
 .title{
 
+<<<<<<< HEAD
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
 	margin: 0px;
@@ -458,4 +502,9 @@ a[data-toggle="collapse"] {
 	justify-content: center;
 	margin: 0;
 
+=======
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin: 0px;
+>>>>>>> solly
 }
