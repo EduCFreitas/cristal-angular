@@ -13,7 +13,10 @@ export class ProdutosComponent implements OnInit {
 
   listaProdutos: Produtos[]
   listaProdutosResetada: Produtos[]
-
+  filtroAtual: string = ''
+  filtroCorAtual: string = ''
+  filtroTipoAtual: string = ''
+  filtroTamanhoAtual: string= ''
 
   constructor(private produtoService: ProdutosService) { }
 
@@ -21,48 +24,43 @@ export class ProdutosComponent implements OnInit {
     this.todosProdutos();
   }
 
-todosProdutos(){
-  this.produtoService.getAllProdutos().subscribe((res: Produtos[]) => {
-    this.listaProdutos = res
-    this.listaProdutosResetada = res
-  })
-}
+  resetarFiltro () {
+    this.filtroAtual = ""
+    this.listaProdutos = this.listaProdutosResetada;
+    this.filtroCorAtual !== '' && this.filtrarPorCor(this.filtroCorAtual)
+  }
 
+  resetarFiltroCor () {
+    this.filtroCorAtual = ""
+    this.listaProdutos = this.listaProdutosResetada;
+    this.filtroAtual !== '' && this.filtrarPor(this.filtroAtual, this.filtroTipoAtual)
+  }
 
-filtrarCamisetas (produto: Produtos){
-return produto.categoria === "camiseta"
-}
-cliqueCamiseta(){
- this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarCamisetas)
-}
+  todosProdutos() {
+    this.produtoService.getAllProdutos().subscribe((res: Produtos[]) => {
+      this.listaProdutos = res
+      this.listaProdutosResetada = res
+    })
+  }
 
-filtrarBlusas(produto: Produtos){  
-  return produto.categoria === "blusa"
-}
-clickBlusa(){
-  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarBlusas)
-}
+  estaMostrando: boolean = false;
+  toggle(): void {
+    this.estaMostrando = !this.estaMostrando;
+  }
 
-filtrarMoletons(produto: Produtos){
-  return produto.categoria === "moletom"
-}
-clickMoletom(){
-  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarMoletons)
-}
+  filtrarPor (filtro, tipo) {
+    this.filtroAtual = filtro;
+    this.filtroTipoAtual = tipo;
+    this.listaProdutos = (this.filtroCorAtual !== '' ? this.listaProdutos : this.listaProdutosResetada).filter(function (produto: Produtos) {
+      return produto[tipo].toLocaleLowerCase() === filtro
+    })
+  }
 
-  filtrarCalcas(produto: Produtos){
-    return produto.categoria === "calcas"
-}
-clickcalca(){
-  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarCalcas)
-}
-
-  filtrarShorts(produto: Produtos){
-    return produto.categoria === "shorts"
-}
-clickshorts(){
-  this.listaProdutos = this.listaProdutosResetada.filter(this.filtrarShorts)
-
-}
+  filtrarPorCor(cor) {
+    this.filtroCorAtual = cor;
+    this.listaProdutos = (this.filtroAtual !== '' ? this.listaProdutos : this.listaProdutosResetada).filter(function (produto: Produtos) {
+      return produto.cor.toLocaleLowerCase() === cor
+    })
+  }
 
 }

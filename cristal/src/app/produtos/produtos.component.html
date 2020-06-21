@@ -1,40 +1,121 @@
 <div class="body">
-    <div class="matMenu">
-        <ul>
-            <li><button class="buttonMenu" (click)="cliqueCamiseta()">Camisetas</button></li>
-            <li><button class="buttonMenu" (click)="clickBlusa()">Blusas</button></li>
-            <li><button class="buttonMenu" (click)="clickMoletom()">Moletons</button></li>
-            <li><button class="buttonMenu" (click)="clickcalca()">Calças</button></li>
-            <li><button class="buttonMenu" (click)="clickshorts()">Shorts</button></li>
+
+    <!-- -------------  SIDEBAR  ---------------- -->
+
+
+<input type="checkbox" id="toggleMenu" name="toggleMenu" class="hide" [checked]="estaMostrando" />
+<nav id="sidebar">
+    <div class="custom-menu">
+        <label id="sidebarCollapse" class="icon-cristal" for="toggleMenu">
+                <img src="../../assets/icon-cristal-produtos.png" alt="categorias">
+                
+        </label>
+        <div class="icon-categoria">
+            <img src="../../assets/CATEGORIAS-PRODUTO.png" alt="categorias">
+        </div>
+    </div>
+                                <!-- Categorias -->
+    <div class="p-4">
+        <h1 class="title matMenu">Categorias</h1>
+        <ul class="list-unstyled components mb-5">
+            <li>
+                <img src="../../assets/icon-camiseta-produto.png" class="imagem-icon">
+                <button class="buttonMenu" (click)="filtrarPor('camiseta', 'categoria')">Camisetas</button>
+            </li>
+            <li>
+                <img src="../../assets/icon-vestido-produto.png" class="imagem-icon">
+                <button class="buttonMenu" (click)="filtrarPor('vestido', 'categoria')">Vestido</button>
+            </li>
+            <li>
+                <img src="../../assets/icon-moletom-produto.png" class="imagem-icon">
+                <button class="buttonMenu" (click)="filtrarPor('moletom', 'categoria')">Moletons</button>
+            </li>
+            <li>
+                <img src="../../assets/icon-calca-produto.png" class="imagem-icon">
+                <button class="buttonMenu" (click)="filtrarPor('calça', 'categoria')">Calças</button>
+            </li>
+            <li>
+                <img src="../../assets/icon-shorts-produto.png" class="imagem-icon">
+                <button class="buttonMenu" (click)="filtrarPor('shorts', 'categoria')">Shorts</button>
+            </li>
         </ul>
+
+    </div>
+
+            <!-- filtros -->
+
+    <div class="p-4">
+        <h1 class="title matMenu">Filtros</h1>
+        <!-- cor -->
+        <p class="paragrafo-filtro">Filtrar por Cor:</p>
+        <ul class="list-unstyled components mb-5">
+            <br>
+            <li class="inline">
+                <button class="buttonMenu" (click)="filtrarPorCor('rosa')">
+                    <div class="bloco-rosa"></div>
+                </button>
+            </li>
+            <li class="inline">
+                <button class="buttonMenu" (click)="filtrarPorCor('branco')">
+                    <div class="bloco-branco"></div>
+                </button>
+            </li>
+            <li class="inline">
+                <button class="buttonMenu" (click)="filtrarPorCor('Vermelho')">
+                    <div class="bloco-vermelho"></div>
+                </button>
+            </li>
+            <li class="inline">
+                <button class="buttonMenu" (click)="filtrarPorCor('azul')">
+                    <div class="bloco-azul"></div>    
+                </button>
+            </li>
+            <li class="inline">
+                <button class="buttonMenu" (click)="filtrarPorCor('verde')">
+                    <div class="bloco-verde"></div>
+                </button>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+
+<!-- -------------  CARDS  ---------------- -->
+
+<!-- chips -->
+
+<div class="wrapper d-flex align-items-stretch">
+   
+    <div class="wrapper" *ngIf="filtroAtual !== '' || filtroCorAtual !== ''">
+        <p>Filtrando por:</p>
+        <mat-chip-list aria-label="Fish selection">
+            <mat-chip (click)="resetarFiltro()" *ngIf="filtroAtual !== ''">{{filtroAtual}}</mat-chip>
+            <mat-chip (click)="resetarFiltroCor()" *ngIf="filtroCorAtual !== ''">{{filtroCorAtual}}</mat-chip>
+        </mat-chip-list>
     </div>
 
 
 
-
+<!-- cards -->
+   
     <div class="cards-grupo" *ngFor="let produto of listaProdutos">
     
-        <mat-card class="cards mat-elevation-z3" [routerLink]="['/item-produto', produto.id]">
-        <!-- nome do produto-->
-            <mat-card-title class="title">
-                {{produto.nome}}
-            </mat-card-title>
+        <card class="cards" [routerLink]="['/item-produto', produto.id]">
             <!-- imagem do produto -->
             <div class="imagem">
                 <img src="{{produto.foto}}" alt="Peças de Roupa">
             </div>
-        <!-- descrição dos produtos -->
-            <mat-card-subtitle class="subtitle">
-                Cor: {{produto.cor}}
-                <br>
-                Quantidade em Estoque: {{produto.qtdEstoque}}
-            </mat-card-subtitle>
+        <!-- nome do produto-->
+        <div class="title">
+            {{produto.nome}}
+        </div>
             <!-- Preço do Produto -->
-            <mat-card-title class="title">
-            Preço: R{{produto.valor | currency}}
-            </mat-card-title>
+            <div class="title">
+            R{{produto.valor | currency}}
+            </div>
 
-        </mat-card>
+        </card>
 
     </div>
 </div>
+
