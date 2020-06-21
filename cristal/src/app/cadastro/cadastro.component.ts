@@ -8,7 +8,7 @@ import { Usuario } from '../model/Usuario';
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent implements OnInit {
-  
+
   usuario:Usuario = new Usuario()
 
   erroSenha:boolean=false;
@@ -16,12 +16,32 @@ export class CadastroComponent implements OnInit {
   confirmacao = {
     senha:''
   }
-  
+
   constructor(private usuarioService:UsuarioService)  { }
-  
+
   ngOnInit(): void {
+    const inputs = document.querySelectorAll(".input");
+
+
+		function addcl(){
+			let parent = this.parentNode.parentNode;
+			parent.classList.add("focus");
+		}
+
+		function remcl(){
+			let parent = this.parentNode.parentNode;
+			if(this.value == ""){
+				parent.classList.remove("focus");
+			}
+		}
+
+
+		inputs.forEach(input => {
+			input.addEventListener("focus", addcl);
+			input.addEventListener("blur", remcl);
+		});
   }
-  
+
   validar(){
     if(this.usuario.senha===this.confirmacao.senha){
       this.erroSenha=false;
@@ -34,8 +54,8 @@ export class CadastroComponent implements OnInit {
   cadastrar(){
     this.usuarioService.postUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario = resp
-      location.assign('/lista-de-usuarios')
+      location.assign('/login')
     })
   }
-  
+
 }

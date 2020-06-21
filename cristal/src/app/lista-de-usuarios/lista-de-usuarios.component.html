@@ -14,27 +14,46 @@
     <!-- Tabela para lista de usuários -->
     <div class="row mb-4 text-center">
         <div class="col-12 text-center">
-            <div class="table-responsive-sm">
+            <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">E-Mail</th>
-                            <th scope="col">Senha</th>
                             <th scope="col">Ação</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Usuário</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Número</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Cidade</th>
+                            <th scope="col">Bairro</th>
+                            <th scope="col">CEP</th>
+                            <!-- <th scope="col">Senha</th> -->
+                            
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let usuario of listaUsuarios">
-                            <td scope="row">{{ usuario.id }}</td>
-                            <td>{{ usuario.nome }}</td>
-                            <td>{{ usuario.email }}</td>
-                            <td>{{ usuario.senha }}</td>
                             <td class="d-flex justify-content-between">
                                 <button type="button" class="btn btn-outline-info col-lg-5 col-md-12 mr-1 ml-1" [routerLink]="['/editar-usuario', usuario.id]" >Editar</button>
-                                <button type="button" class="btn btn-outline-danger col-lg-5 col-md-12 ml-1 mr-1" [routerLink]="['/deletar-usuario', usuario.id]">Apagar</button>
+                                <button type="button" class="btn btn-outline-danger col-lg-5 col-md-12 ml-1 mr-3" [routerLink]="['/deletar-usuario', usuario.id]">Apagar</button>
                             </td>
+                            <td scope="row">{{ usuario.id }}</td>
+                            <td>{{ usuario.username }}</td>
+                            <td>{{ usuario.nome }}</td>
+                            <td>{{ usuario.cpf }}</td>
+                            <td>{{ usuario.email }}</td>
+                            <td>{{ usuario.telefone }}</td>
+                            <td>{{ usuario.logradouro }}</td>
+                            <td>{{ usuario.numResidencia }}</td>
+                            <td>{{ usuario.estado }}</td>
+                            <td>{{ usuario.cidade }}</td>
+                            <td>{{ usuario.bairro }}</td>
+                            <td>{{ usuario.cep }}</td>
+                            <!-- <td>{{ usuario.senha }}</td> -->
                         </tr>
                     </tbody>
                 </table>
