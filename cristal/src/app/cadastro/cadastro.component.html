@@ -15,9 +15,15 @@
           </div>
           <div class="div">
             <h5>Nome</h5>
-            <input type="text" name="nome" class="input">
+            <input type="text" name="nome" class="input" [(ngModel)]="usuario.nome" autofocus required minlength="3" maxlength="80" #nomeUsuario="ngModel">
           </div>
         </div>
+        <span class="help-block" *ngIf="erro==true && nomeUsuario.errors && (nomeUsuario.dirty || nomeUsuario.touched)" class="tem-erro">
+          <ul>
+            <li *ngIf="nomeUsuario.errors.required">Nome requerido</li>
+            <li *ngIf="!nomeUsuario.errors.required && nomeUsuario.errors.minlength">Mínimo de 3 caracterer</li>
+          </ul>
+        </span>
 
         <div class="input-div two">
           <div class="i">
@@ -25,9 +31,15 @@
           </div>
           <div class="div">
             <h5>CPF</h5>
-            <input type="text" name="cpf" class="input">
+            <input type="text" name="cpf" class="input" [(ngModel)]="usuario.cpf" required minlength="11" maxlength="11" #cpfUsuario="ngModel">
           </div>
         </div>
+        <span class="help-block" *ngIf="erro==true && cpfUsuario.errors && (cpfUsuario.dirty || cpfUsuario.touched)" class="tem-erro">
+          <ul>
+            <li *ngIf="cpfUsuario.errors.required">CPF requerido</li>
+            <li *ngIf="!cpfUsuario.errors.required && cpfUsuario.errors.minlength">Digite apenas números</li>
+          </ul>
+        </span>
 
         <div class="input-div three">
           <div class="i">
@@ -35,9 +47,15 @@
           </div>
           <div class="div">
             <h5>Email</h5>
-            <input type="text" name="email" class="input">
+            <input type="email" name="email" class="input" [(ngModel)]="usuario.email" required email #emailUsuario="ngModel">
           </div>
         </div>
+        <span class="help-block" *ngIf="erro==true && emailUsuario.errors && (emailUsuario.dirty || emailUsuario.touched)" class="tem-erro">
+          <ul>
+            <li *ngIf="emailUsuario.errors.required">Email requerido</li>
+            <li *ngIf="emailUsuario.errors.email">Email inválido</li>
+          </ul>
+        </span>
 
         <div class="input-div pass">
           <div class="i">
@@ -45,7 +63,7 @@
           </div>
           <div class="div">
             <h5>Senha</h5>
-            <input type="password" name="senha" class="input">
+            <input type="password" name="senha" class="input" [(ngModel)]="usuario.senha" required>
           </div>
         </div>
 
@@ -55,9 +73,15 @@
           </div>
           <div class="div">
             <h5>Confirme sua senha</h5>
-            <input type="password" name="senha" class="input">
+            <input type="password" name="confirmaSenha" class="input" [(ngModel)]="confirmacao.senha" required>
           </div>
         </div>
+        <span class="help-block" *ngIf="erro==true" class="tem-erro" [ngClass]="{'sem-erro': erro==true && usuario.senha==confirmacao.senha}">
+          <ul>
+            <li *ngIf="usuario.senha!=confirmacao.senha">Senhas não correspondem!</li>
+            <li *ngIf="usuario.senha==confirmacao.senha">Senhas correspondem</li>
+          </ul>
+        </span>
 
         <!-- <div class="input-div one">
           <div class="i">
@@ -81,7 +105,7 @@
 
 
 
-        <input type="submit" class="btn" value="Cadastrar">
+        <input type="submit" class="btn" value="Cadastrar" (click)="validar()">
         <a href="#" class="cadastro" routerLink="/login">Clique aqui para fazer login</a>
       </form>
     </div>

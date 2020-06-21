@@ -10,9 +10,7 @@ import { ContatoService } from '../service/contato.service';
 export class ContatoComponent implements OnInit {
 
   contato:Contato = new Contato();
-  // nome:string = ''
-  // email:string = '';
-  // telefone:string = '';
+  
   numTelefone:number;
   erroTelefone:boolean = false;
 

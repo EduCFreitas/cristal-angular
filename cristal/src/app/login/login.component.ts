@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
 	
 	usuarioLogin:UsuarioLogin = new UsuarioLogin();
 	
+	erro:boolean=false;
+	
 	constructor(private usuarioLoginService:UsuarioLoginService) { }
 	
 	ngOnInit(): void {
@@ -39,8 +41,10 @@ export class LoginComponent implements OnInit {
 	}
 	
 	logar(){
+		this.erro=true;
 		this.usuarioLoginService.postUsuarioLogin(this.usuarioLogin).subscribe((resp:UsuarioLogin)=>{
 			this.usuarioLogin = resp;
+			this.erro=false;
 			location.assign('/home');
 		})
 	}
