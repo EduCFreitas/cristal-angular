@@ -12,6 +12,7 @@ ul{
 .corpo{
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
+  margin-top: 94.38px;
 }
 
 .wave{
@@ -197,7 +198,7 @@ a:hover{
 
 .sem-erro ul{
   color: #00BFA6;
-} 
+}
 
 @media screen and (max-width: 1050px){
   .container{
@@ -209,12 +210,12 @@ a:hover{
   form{
     width: 290px;
   }
-  
+
   .login-content h2{
     font-size: 2.4rem;
     margin: 8px 0;
   }
-  
+
   .img img{
     width: 400px;
   }
@@ -224,15 +225,15 @@ a:hover{
   .container{
     grid-template-columns: 1fr;
   }
-  
+
   .img{
     display: none;
   }
-  
+
   .wave{
     display: none;
   }
-  
+
   .login-content{
     justify-content: center;
   }
