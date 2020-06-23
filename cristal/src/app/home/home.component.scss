@@ -12,11 +12,23 @@
     text-decoration: none;
   }
 
+  p {
+    font-family:"Popins", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    line-break: normal;
+    color: #FFF;
+  }
+
+  strong {
+    color: #8d85fd;
+  }
+
   .btn {
     margin: 0 auto;
     width: 120px;
     padding: 0px auto;
-    border-radius: 10px;
+    border-radius: 3px;
     outline: none;
     border: none;
     background-image: linear-gradient(to right, #AB99CC, #83CEE8, #348AC7);
@@ -170,7 +182,6 @@
     .call {
       padding-top: 40px;
       text-align: center;
-
     }
 
     .call p {
@@ -178,4 +189,39 @@
       font-family: 'Poppins', sans-serif;
       font-size: 13px;
       line-height: 20px;
+      color: #7066ff;
     }
+
+    .conheca {
+      background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(251, 191, 236) 100%);
+      padding-bottom: 60px;
+    }
+
+    .conheca img {
+      width: 100%;
+    }
+
+
+    .sub2 {
+      color: #ffffff;
+    }
+
+    .sub2:after {
+      background: #ffffff;
+    }
+
+    .video {
+      background-color: #FFF;
+      width: 525px;
+      height: 380px;
+      border-radius: 10px;
+    }
+
+  .texto-video {
+    color: #FFF;
+    font-weight: 400 !important;
+  }
+
+  .conheca .call p  {
+    color: #FFF;
+  }

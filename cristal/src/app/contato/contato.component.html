@@ -14,22 +14,29 @@
             <p class="login-card-description lead">Insira suas informações!</p>
             <div class="formulario">
 
-              <div class="form-group" [ngClass]="{'tem-erro': nomeContato.errors && (nomeContato.dirty || nomeContato.touched)}">
+              <div class="form-group"
+                [ngClass]="{'tem-erro': nomeContato.errors && (nomeContato.dirty || nomeContato.touched)}">
                 <label for="nome" class="sr-only">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo" [(ngModel)]="contato.nome" #nomeContato="ngModel" autofocus required minlength="3" maxlength="80">
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome Completo"
+                  [(ngModel)]="contato.nome" #nomeContato="ngModel" autofocus required minlength="3" maxlength="80">
                 <span class="help-block lead" *ngIf="nomeContato.errors && (nomeContato.dirty || nomeContato.touched)">
                   <ul>
                     <li *ngIf="nomeContato.errors.required">Preenchimento do campo "nome" obrigatório.</li>
-                    <li *ngIf="!nomeContato.errors.required && nomeContato.errors.minlength">Mínimo de 3 caracteres.</li>
-                    <li *ngIf="!nomeContato.errors.required && nomeContato.errors.maxlength">Máximo de 80 caracteres.</li>
+                    <li *ngIf="!nomeContato.errors.required && nomeContato.errors.minlength">Mínimo de 3 caracteres.
+                    </li>
+                    <li *ngIf="!nomeContato.errors.required && nomeContato.errors.maxlength">Máximo de 80 caracteres.
+                    </li>
                   </ul>
                 </span>
               </div>
 
-              <div class="form-group" [ngClass]="{'tem-erro' : emailContato.errors && (emailContato.dirty || emailContato.touched)}">
+              <div class="form-group"
+                [ngClass]="{'tem-erro' : emailContato.errors && (emailContato.dirty || emailContato.touched)}">
                 <label for="email" class="sr-only">Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Endereço de Email" [(ngModel)]="contato.email" #emailContato="ngModel" required email>
-                <span class="help-block lead" *ngIf="emailContato.errors && (emailContato.dirty || emailContato.touched)">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Endereço de Email"
+                  [(ngModel)]="contato.email" #emailContato="ngModel" required email>
+                <span class="help-block lead"
+                  *ngIf="emailContato.errors && (emailContato.dirty || emailContato.touched)">
                   <ul>
                     <li *ngIf="emailContato.errors.required">Preenchimento do campo "e-mail" obrigatório.</li>
                     <li *ngIf="emailContato.errors.email">O e-mail informado é inválido.</li>
@@ -37,15 +44,20 @@
                 </span>
               </div>
 
-              <div class="form-group" [ngClass]="{'tem-erro' : (telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)) || (erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched))}">
+              <div class="form-group"
+                [ngClass]="{'tem-erro' : (telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)) || (erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched))}">
                 <label for="telefoneContato" class="sr-only">Telefone</label>
-                <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control" placeholder="DDD e Número" [(ngModel)]="contato.telefone" #telefoneContato="ngModel" required maxlength="13" (keyup)="validarTelefone()">
-                <span class="help-block lead" *ngIf="telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)">
+                <input type="tel" name="telefoneContato" id="telefoneContato" class="form-control"
+                  placeholder="DDD e Número" [(ngModel)]="contato.telefone" #telefoneContato="ngModel" required
+                  maxlength="13" (keyup)="validarTelefone()">
+                <span class="help-block lead"
+                  *ngIf="telefoneContato.errors && (telefoneContato.dirty || telefoneContato.touched)">
                   <ul>
                     <li *ngIf="telefoneContato.errors.required">Preenchimento do campo "telefone" obrigatório.</li>
                   </ul>
                 </span>
-                <span class="help-block lead" *ngIf="erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched)">
+                <span class="help-block lead"
+                  *ngIf="erroTelefone==true && (telefoneContato.dirty || telefoneContato.touched)">
                   <ul>
                     <li *ngIf="erroTelefone==true">O telefone informado é inválido.</li>
                     <li *ngIf="erroTelefone==true">Informar DDD + número.</li>
@@ -54,10 +66,12 @@
               </div>
 
               <div class="form-group">
-                <textarea class="form-control" placeholder="Insira sua mensagem aqui" id="textoContato" rows="3" [(ngModel)]="contato.texto"></textarea>
+                <textarea class="form-control" placeholder="Insira sua mensagem aqui" id="textoContato" rows="3"
+                  [(ngModel)]="contato.texto"></textarea>
               </div>
 
-              <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4 botao" type="button" value="Enviar" (click)="enviar()">
+              <input name="enviar" id="enviar" class="btn btn-block login-btn mb-4 botao" type="button" value="Enviar"
+                (click)="enviar()">
             </div>
 
           </div>
