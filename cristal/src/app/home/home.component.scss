@@ -28,7 +28,7 @@
     margin: 0 auto;
     width: 120px;
     padding: 0px auto;
-    border-radius: 3px;
+    border-radius: 6px;
     outline: none;
     border: none;
     background-image: linear-gradient(to right, #AB99CC, #83CEE8, #348AC7);
@@ -106,7 +106,7 @@
     line-height: 30px;
     font-weight: bold;
     letter-spacing: .1em;
-    color: #7066ff;
+    color: #00bfa6;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 40px;
@@ -117,7 +117,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: #7066ff;
+    background: #00bfa6;
     margin: 8px auto;
   }
 
@@ -189,7 +189,11 @@
       font-family: 'Poppins', sans-serif;
       font-size: 13px;
       line-height: 20px;
-      color: #7066ff;
+      color: #00bfa6;
+    }
+
+    .btn-purple {
+      background-image: linear-gradient(to right, #6C63FF, #bc9fff, #6C63FF);
     }
 
     .conheca {
@@ -224,4 +228,8 @@
 
   .conheca .call p  {
     color: #FFF;
+  }
+
+  .btn-green {
+    background-image: linear-gradient(to right, #00BFA6, #38d39f, #00BFA6);
   }
