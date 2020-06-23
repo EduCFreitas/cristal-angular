@@ -17,9 +17,9 @@ export class CreateItemProdutoComponent implements OnInit {
   }
 
   cadastrar(){
-    alert("Entrou função")
+    // alert("Entrou função")
     this.produtoService.postProduto(this.produto).subscribe((resp:Produtos)=>{
-      alert("Entrou post")
+      // alert("Entrou post")
       this.produto = resp
       location.assign('/produtos')
     })

@@ -58,12 +58,12 @@
     text-align: left;
 }
 
-.form .input .inputBox
+.form .input .fom-group
 {
     margin-top: 10px;
 }
 
-.form .input .inputBox label
+.form .input .fom-group label
 {
     display: block;
     color: #fff;
@@ -72,7 +72,7 @@
     letter-spacing: 1px;
 }
 
-.form .input .inputBox input
+.form .input .fom-group input
 {
     position: relative;
     width: 100%;
@@ -86,7 +86,7 @@
     border-radius: 10px;
 }
 
-.form .input .inputBox input::-webkit-input-placeholder {
+.form .input .fom-group input::-webkit-input-placeholder {
     color: white;
  }
 
