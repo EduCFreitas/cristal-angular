@@ -9,18 +9,25 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./deletar-item-produto.component.scss']
 })
 export class DeletarItemProdutoComponent implements OnInit {
-
+  
   produto:Produtos = new Produtos
   deletar: boolean = false
-
+  
   constructor(private produtoService: ProdutosService, private route: ActivatedRoute, private router: Router) { }
-
+  
   ngOnInit(): void {
     let id:number = this.route.snapshot.params['id']
+    let token = localStorage.getItem('token')
+    
+    if(token==null){
+      alert('Faça o login antes de acessar a página Feed');
+      this.router.navigate(['/login']);
+    }
+    
     this.findById(id)
   }
-
-
+  
+  
   findById(id:number){
     this.produtoService.getProdutoById(id).subscribe((resp: Produtos)=>{    
       this.produto = resp
@@ -28,7 +35,7 @@ export class DeletarItemProdutoComponent implements OnInit {
       console.log(`Erro: ${err.status}, não conseguimos pegar o id`)
     })
   }
-
+  
   btnSim(){
     this.produtoService.deleteProduto(this.produto.id).subscribe(()=>{
       this.deletar = true
@@ -36,8 +43,8 @@ export class DeletarItemProdutoComponent implements OnInit {
       localStorage.setItem("deletar", this.deletar.toString())
     })
   }
-
+  
   btnNao(){
-  this.router.navigate(['/produtos'])    
+    this.router.navigate(['/produtos'])    
   }
 }
