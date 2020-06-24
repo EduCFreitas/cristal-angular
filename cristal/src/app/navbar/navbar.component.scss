@@ -51,21 +51,16 @@
 .botao .btn {
   padding: 5px;
   width: 100px;
-  height: 40px;
-  // background-size: 250%;
-  // transition: 0.6s;
-  // text-transform: uppercase;
-  // border: solid 1px lightskyblue;
-  // background-image: linear-gradient(to left #348AC7, #ffffff, #348AC7);
-	border-radius: 10px;
-	outline: none;
-	border: none;
-	background-image: linear-gradient(to right, #AB99CC, #83CEE8, #348AC7);
-	background-size: 200%;
-	color: #fff;
-	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
-	cursor: pointer;
+  height: 30px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #AB99CC, #83CEE8, #348AC7);
+  background-size: 200%;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
   transition: .5s;
   font-size: 13px;
 }
@@ -98,12 +93,17 @@
 }
 
 @media (max-width: 767px) {
-  .botao{
-      display: none;
+  .logo {
+    min-width: 100%;
+  }
+
+  .botao {
+    display: none;
   }
 
   .ent {
-      display: inherit;
+    display: inherit;
   }
+
 
 }

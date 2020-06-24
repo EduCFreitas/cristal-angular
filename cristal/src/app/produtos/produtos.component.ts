@@ -24,18 +24,20 @@ export class ProdutosComponent implements OnInit {
   constructor(private produtoService: ProdutosService) { }
 
   ngOnInit() {
+    window.scroll(0, 0)
+
     this.todosProdutos();
 
     let item = localStorage.getItem('deletar')
-    
+
     if (item == "true"){
       this.alerta = true
       localStorage.clear()
-      
+
       setTimeout(()=>{
         location.assign('/produtos')
       },3000)
- 
+
     }
   }
 
