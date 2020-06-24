@@ -1,97 +1,83 @@
-<div class="body">
-
-    <div class="grid second-nav">
-        <nav>
-            <ol class="breadcrumb-list pt-4 ml-3">
-                <li class="breadcrumb-item" routerLink="/home">Home</li>
-                <li class="breadcrumb-item" routerLink='/produtos'>produtos</li>
-                <li class="breadcrumb-item active">{{produto.id}}</li>
-            </ol>
-        </nav>
-    </div>
-
-    <main class="main text-center mt-5">
-        <div class="col-md-12 d-flex text-justify-content-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="imagem-produto d-flex justify-content-center ">
-                            <div class="card-img card-front" style="width: 18rem;">
-                                <img class="image-responsive shadow-lg" src="{{produto.foto}}"
-                                            alt="Imagem de capa do card">
-                            </div>
-                            <div class="card-img card-back" style="width: 18rem;">
-                                <img class="image-responsive shadow-lg" src="assets"
-                                            alt="Imagem de capa do card">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="column-xs-12 column-md-5 pt-5">
-                            <h1 class="card-title text-left lead text-nowrap bd-highlight">
-                                {{produto.nome}}
-                            </h1>
-                            <div class="descricao">
-                                <div class="card-body text-left">
-                                    <!-- <p class="card-subtitle pt-1 text-muted lead">Peça: {{produto.categoria}}</p> -->
-                                    <p class="card-subtitle lead">
-                                        R{{produto.valor | currency}}
-                                    </p>
-                                    <!-- <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p> -->
-                                    <p class="card-text lead d-flex text-justify pt-1">
-                                        {{produto.descricao}}
-                                    </p>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="card-subtitle pt-2 text-muted lead inline">Cores:
-                                                {{produto.cor}}
-                                            </p>
-                                            <p class="card-subtitle pt-2 text-muted lead inline">Tamanho: 
-                                                {{produto.tamanho}}
-                                            </p>
-                                        </div>
-                                        <div class="col">
-                                            <!-- Botão para acionar modal -->
-                                            <button name="modal" id="modal" class="btn  comprar-btn" data-toggle="modal"
-                                                data-target="#Modal" text-uppercase style="width: auto">
-                                                tabela de medida
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-2">
-                                <div class="card-body">
-                                    <!-- Modal EDITAR -->
-                                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
-                                        aria-labelledby="ModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title lead " id="TituloModalCentralizado"> Veja
-                                                        aqui, o tamanho certo de sua criança.
-                                                    </h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Fechar">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <img src="assets/tabela-medida.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input name="comprar" id="comprar" class="btn  btn-block comprar-btn" type="button"
-                                value="Comprar" (click)="comprar()">
-                        </div>
-                    </div>
+<div class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <div class="imagem-produto d-flex justify-content-center ">
+                <div class="card-img card-front" style="width: 18rem;">
+                    <img class="image-responsive shadow-lg" src="{{produto.foto}}"
+                                alt="Imagem de capa do card">
+                </div>
+                <div class="card-img card-back" style="width: 18rem;">
+                    <img class="image-responsive shadow-lg" src="assets"
+                                alt="Imagem de capa do card">
                 </div>
             </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="card-body">
+                <h1 class="card-title text-center text-nowrap bd-highlight text-uppercase">
+                    <!-- {{produto.nome}}--> Calça 
+                </h1>
+              <div class="description-product">
+                    <div class="card-description text-left pt-4">
+                        <!-- <p class="card-subtitle pt-1 text-muted lead">Peça: {{produto.categoria}}</p> -->
+                        <p class="card-subtitle price monospace">
+                            R{{produto.valor | currency}}$50,00
+                        </p>
+                        <!-- <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p> -->
+                        <p class="card-text lead d-flex text-justify pt-1">
+                            {{produto.descricao}} 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe eaque in commodi hic repudiandae, sunt corporis, tempore perspiciatis officia ea earum soluta, cum natus provident aliquid blanditiis nesciunt ullam.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <p class="card-subtitle pt-2 text-muted lead inline">Cores:
+                                    {{produto.cor}} Amarelo
+                                </p>
+                                <p class="card-subtitle pt-2 text-muted lead inline">Tamanho: 
+                                    {{produto.tamanho}} Único
+                                </p>
+                            </div>
+                            <div class="col">
+                                <!-- Botão para acionar modal -->
+                                <button name="modal" id="modal" class="btn  modal-btn" data-toggle="modal"
+                                    data-target="#Modal" text-uppercase style="width: auto">
+                                    tabela de medida
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-md-2">
+                            <!-- Modal EDITAR -->
+                            <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+                                aria-labelledby="ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title lead " id="TituloModalCentralizado"> Veja
+                                                aqui, o tamanho certo de sua criança.
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="assets/tabela-medida.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <input name="comprar" id="comprar" class="btn  btn-block comprar-btn mt-4" type="button"
+                    value="Comprar" (click)="comprar()">
+            </div>
         </div>
-    </main>
+        </div>
+    </div>
 </div>
+
