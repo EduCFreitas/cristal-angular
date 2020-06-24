@@ -21,7 +21,7 @@ export class DeletarUsuarioComponent implements OnInit {
     let token = localStorage.getItem('token')
     
     if(token==null){
-      alert('Faça o login antes de acessar a página Feed');
+      alert('Faça o login antes de acessar a página');
       this.router.navigate(['/login']);
     }
     
