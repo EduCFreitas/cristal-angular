@@ -1,7 +1,7 @@
 .site-footer {
   // background-color:#26272b;
-  background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(251, 191, 236) 100%);
-  background-color: #2768c8;
+  // background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(251, 191, 236) 100%);
+  background-color: #8d85fd;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
@@ -32,7 +32,7 @@
 }
 
 .site-footer a:hover {
-  color: #629dd6;
+  color: #6dffec;
   text-decoration:none;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover {
-  color:#FEBAC4;
+  color:#6dffec;
   text-decoration:none;
 }
 
@@ -135,8 +135,7 @@
 }
 
 .social-icons a.twitter:hover {
-  // background-color:#00aced;
-  // background: linear-gradient(to right, #4b7cb9, #00aced);
+
   background: #24C6DC;
   background: linear-gradient(to top, #514A9D, #24C6DC);
 }

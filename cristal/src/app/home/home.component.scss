@@ -8,6 +8,7 @@
 //   letter-spacing: .1em;
 //   font-weight: bold;
 // }
+
 a {
   text-decoration: none;
 }
@@ -47,7 +48,7 @@ strong {
 }
 
 .introducao {
-  margin-top: 94.38px;
+  margin-top: 93.5px;
   width: 100%;
   height: 380px;
   background: url("https://i.imgur.com/VKBbfXT.png") no-repeat center;
@@ -96,7 +97,8 @@ strong {
   text-transform: uppercase;
 }
 
-.produtos {
+.produtos,
+.qualidade {
   padding: 60px;
 }
 
@@ -206,11 +208,11 @@ strong {
 
 
 .sub2 {
-  color: #ffffff;
+  color: #FFF;
 }
 
 .sub2:after {
-  background: #ffffff;
+  background: #7066ff;
 }
 
 .video {
@@ -231,4 +233,38 @@ strong {
 
 .btn-green {
   background-image: linear-gradient(to right, #00BFA6, #38d39f, #00BFA6);
+}
+
+.qualidade {
+  background-image: linear-gradient(225deg, #58dada 0%, #c1cfff 56%, rgba(58, 176, 185, 0.493)100%);
+}
+
+.qualidade i, h3 {
+  color: #FFF;
+}
+
+.qualidade i {
+  color: #00BFA6;
+}
+
+.qualidade .subtitulo {
+  color: #FFF;
+}
+
+.qualidade p {
+  line-height: 20px;
+  font-weight: lighter;
+}
+
+.quebra {
+  width: 100%;
+  height: 220px;
+  background: url("../../assets/quartzo.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.quebra .quote-externo {
+  max-width: 400px;
 }
