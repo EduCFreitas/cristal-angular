@@ -18,17 +18,18 @@ export class ListaDeUsuariosComponent implements OnInit {
   constructor(private usuarioService:UsuarioService, private router:Router) { }
   
   ngOnInit() {
-    let item:string = localStorage.getItem('delOk')
-    let token = localStorage.getItem('token')
+    let item:string = sessionStorage.getItem('delOk')
+    let token = sessionStorage.getItem('token')
 
     if(token==null){
-      alert('Faça o login antes de acessar a página');
+      alert('Faça o login antes de acessar a página Feed');
       this.router.navigate(['/login']);
     }
 
     if (item=="true"){
       this.alerta = true
-      localStorage.clear()
+      sessionStorage.removeItem('delOk')
+      // localStorage.clear()
       setTimeout(()=>{
         location.assign('lista-de-usuarios')
       }, 4000)

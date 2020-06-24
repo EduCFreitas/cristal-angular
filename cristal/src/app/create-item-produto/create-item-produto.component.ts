@@ -15,7 +15,7 @@ export class CreateItemProdutoComponent implements OnInit {
   constructor(private produtoService: ProdutosService, private router:Router) { }
   
   ngOnInit(){  
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     
     if(token==null){
       alert('Faça o login antes de acessar a página');

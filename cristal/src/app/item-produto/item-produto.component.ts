@@ -19,7 +19,7 @@ export class ItemProdutoComponent implements OnInit {
   
   ngOnInit(): void {
     let id:number = this.route.snapshot.params['id']
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     
     if(token==null){
       alert('Faça o login antes de acessar a página');

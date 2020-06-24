@@ -26,11 +26,12 @@ export class ProdutosComponent implements OnInit {
   ngOnInit() {
     this.todosProdutos();
 
-    let item = localStorage.getItem('deletar')
+    let item = sessionStorage.getItem('deletar')
     
     if (item == "true"){
       this.alerta = true
-      localStorage.clear()
+      sessionStorage.removeItem('deletar');
+      // localStorage.clear()
       
       setTimeout(()=>{
         location.assign('/produtos')

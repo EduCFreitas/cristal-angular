@@ -19,7 +19,7 @@ export class EditarUsuarioComponent implements OnInit {
   ngOnInit(): void {
     // pegar na rota ativa (API) o item pelo ID
     let id = this.route.snapshot.params['id']
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     
     if(token==null){
       alert('Faça o login antes de acessar a página');

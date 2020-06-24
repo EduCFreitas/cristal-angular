@@ -18,7 +18,7 @@ export class DeletarUsuarioComponent implements OnInit {
   
   ngOnInit() {
     let id:number = this.route.snapshot.params['id']
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     
     if(token==null){
       alert('Faça o login antes de acessar a página');
@@ -40,7 +40,7 @@ export class DeletarUsuarioComponent implements OnInit {
     this.usuarioService.deleteUsuario(this.usuario.id).subscribe(()=>{
       this.delOk = true
       this.router.navigate(['/lista-de-usuarios'])
-      localStorage.setItem("delOk", this.delOk.toString())
+      sessionStorage.setItem("delOk", this.delOk.toString())
     })
   }
   

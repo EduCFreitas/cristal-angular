@@ -45,9 +45,9 @@ export class LoginComponent implements OnInit {
 		this.erro=true;
 		this.authService.logarUsuario(this.usuarioLogin).subscribe((resp:UsuarioLogin)=>{
 			this.usuarioLogin = resp;
-			localStorage.setItem('token', this.usuarioLogin.token);
-			localStorage.setItem('nome', this.usuarioLogin.nome);
-			localStorage.setItem('email', this.usuarioLogin.email);
+			sessionStorage.setItem('token', this.usuarioLogin.token);
+			sessionStorage.setItem('nome', this.usuarioLogin.nome);
+			sessionStorage.setItem('email', this.usuarioLogin.email);
 			this.erro=false;
 			this.router.navigate(['/home']);
 		}, err =>{

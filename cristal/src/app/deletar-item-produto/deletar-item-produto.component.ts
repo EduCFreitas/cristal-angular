@@ -17,7 +17,7 @@ export class DeletarItemProdutoComponent implements OnInit {
   
   ngOnInit(): void {
     let id:number = this.route.snapshot.params['id']
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     
     if(token==null){
       alert('Faça o login antes de acessar a página');
@@ -40,7 +40,7 @@ export class DeletarItemProdutoComponent implements OnInit {
     this.produtoService.deleteProduto(this.produto.id).subscribe(()=>{
       this.deletar = true
       this.router.navigate(['/produtos'])
-      localStorage.setItem("deletar", this.deletar.toString())
+      sessionStorage.setItem("deletar", this.deletar.toString())
     })
   }
   

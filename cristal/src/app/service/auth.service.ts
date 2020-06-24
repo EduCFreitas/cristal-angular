@@ -20,7 +20,7 @@ export class AuthService {
   
   btnSair(){
     let ok = false;
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     if(token!=null){
       ok = true;
     }
@@ -29,7 +29,7 @@ export class AuthService {
 
   btnLogin(){
     let ok = false;
-    let token = localStorage.getItem('token')
+    let token = sessionStorage.getItem('token')
     if(token==null){
       ok = true;
     }
