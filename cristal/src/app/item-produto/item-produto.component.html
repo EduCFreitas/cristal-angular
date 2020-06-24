@@ -5,45 +5,44 @@
           <div class="col-md-5">
             <div class="imagem-produto d-flex justify-content-center ">
                 <div class="card-img card-front" style="width: 18rem;">
-                    <img class="image-responsive shadow-lg" src="{{produto.foto}}"
+                    <img class="image-responsive" src="{{produto.foto}}"
                                 alt="Imagem de capa do card">
                 </div>
-                <div class="card-img card-back" style="width: 18rem;">
+                <!-- <div class="card-img card-back" style="width: 18rem;">
                     <img class="image-responsive shadow-lg" src="assets"
                                 alt="Imagem de capa do card">
-                </div>
+                </div> -->
             </div>
           </div>
 
           <div class="col-md-7">
-            <div class="card-body">
+            <div class="card-body mt-5">
                 <h1 class="card-title text-center text-nowrap bd-highlight text-uppercase">
-                    <!-- {{produto.nome}}--> Calça 
+                    {{produto.nome}}
                 </h1>
               <div class="description-product">
                     <div class="card-description text-left pt-4">
                         <!-- <p class="card-subtitle pt-1 text-muted lead">Peça: {{produto.categoria}}</p> -->
                         <p class="card-subtitle price monospace">
-                            R{{produto.valor | currency}}$50,00
+                            R{{produto.valor | currency}}
                         </p>
                         <!-- <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p> -->
                         <p class="card-text lead d-flex text-justify pt-1">
                             {{produto.descricao}} 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe eaque in commodi hic repudiandae, sunt corporis, tempore perspiciatis officia ea earum soluta, cum natus provident aliquid blanditiis nesciunt ullam.
                         </p>
 
                         <div class="row">
                             <div class="col">
                                 <p class="card-subtitle pt-2 text-muted lead inline">Cores:
-                                    {{produto.cor}} Amarelo
+                                    {{produto.cor}}
                                 </p>
                                 <p class="card-subtitle pt-2 text-muted lead inline">Tamanho: 
-                                    {{produto.tamanho}} Único
+                                    {{produto.tamanho}}
                                 </p>
                             </div>
                             <div class="col">
                                 <!-- Botão para acionar modal -->
-                                <button name="modal" id="modal" class="btn  modal-btn" data-toggle="modal"
+                                <button name="modal" id="modal" class="btn  modal-btn mt-3 btn-sm" data-toggle="modal"
                                     data-target="#Modal" text-uppercase style="width: auto">
                                     tabela de medida
                                 </button>
