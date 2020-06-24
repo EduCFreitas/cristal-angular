@@ -10,7 +10,7 @@ export class ContatoService {
   constructor(private http:HttpClient) { }
   
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', sessionStorage.getItem('token'))
   }
   
   getAllContatos(){

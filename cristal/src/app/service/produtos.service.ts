@@ -10,11 +10,11 @@ export class ProdutosService {
   constructor(private http:HttpClient) { }
   
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', sessionStorage.getItem('token'))
   }
   
   getAllProdutos(){
-    return this.http.get("http://localhost:8080/produto/")
+    return this.http.get("http://localhost:8080/produto")
   }
   
   getProdutoById(id: number){
