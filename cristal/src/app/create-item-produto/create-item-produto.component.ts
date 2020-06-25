@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produtos } from '../model/Produtos';
 import { ProdutosService } from '../service/produtos.service';
+import { Router } from '@angular/router';
 
 @Component({ 
   selector: 'app-create-item-produto',
@@ -8,14 +9,20 @@ import { ProdutosService } from '../service/produtos.service';
   styleUrls: ['./create-item-produto.component.scss']
 })
 export class CreateItemProdutoComponent implements OnInit {
-
+  
   produto: Produtos = new Produtos()
-
-  constructor(private produtoService: ProdutosService) { }
-
-  ngOnInit(): void {   
+  
+  constructor(private produtoService: ProdutosService, private router:Router) { }
+  
+  ngOnInit(){  
+    let token = sessionStorage.getItem('token')
+    
+    if(token==null){
+      alert('Faça o login antes de acessar a página');
+      this.router.navigate(['/login']);
+    } 
   }
-
+  
   cadastrar(){
     // alert("Entrou função")
     this.produtoService.postProduto(this.produto).subscribe((resp:Produtos)=>{
@@ -24,6 +31,6 @@ export class CreateItemProdutoComponent implements OnInit {
       location.assign('/produtos')
     })
   }
-
-
+  
+  
 }

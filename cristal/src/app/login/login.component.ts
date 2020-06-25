@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioLoginService } from '../service/usuario-login.service';
 import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 	
 	erro:boolean=false;
 	
-	constructor(private usuarioLoginService:UsuarioLoginService) { }
+	constructor(private authService:AuthService, private router:Router) { }
 	
 	ngOnInit(): void {
 		
@@ -42,11 +43,16 @@ export class LoginComponent implements OnInit {
 	
 	logar(){
 		this.erro=true;
-		this.usuarioLoginService.postUsuarioLogin(this.usuarioLogin).subscribe((resp:UsuarioLogin)=>{
+		this.authService.logarUsuario(this.usuarioLogin).subscribe((resp:UsuarioLogin)=>{
 			this.usuarioLogin = resp;
+			sessionStorage.setItem('token', this.usuarioLogin.token);
+			sessionStorage.setItem('nome', this.usuarioLogin.nome);
+			sessionStorage.setItem('email', this.usuarioLogin.email);
 			this.erro=false;
-			location.assign('/home');
-		})
+			this.router.navigate(['/home']);
+		}, err =>{
+			alert('Houve um erro ao entrar, verifique o e-mail e a senha');
+		});
 	}
 	
 }
