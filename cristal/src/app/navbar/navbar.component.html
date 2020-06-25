@@ -1,18 +1,18 @@
-<nav class="navbar-area navbar navbar-bg navbar-expand-md fixed-top shadow-sm">
+<!-- <nav class="navbar-area navbar navbar-bg navbar-expand-md fixed-top shadow-sm">
   <div class="container">
-    <!-- logo -->
+    logo
     <a routerLink="/home" class="navbar-brand">
       <img src="../../assets/Cristal-v1.svg" class="logo" alt="Cristal" />
     </a>
 
-    <!-- Botão de responsividade -->
+    Botão de responsividade
     <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
       aria-label="Abrir Navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu -->
+    Menu
     <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
@@ -47,21 +47,51 @@
 
       </ul>
 
-      <!-- Botão Entrar -->
+      Botão Entrar
       <li class="navbar navbar-expand-sm botao">
         <a class="nav-link">
-          <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Entrar
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" routerLink="/login" href="#">Login</a>
-              <a class="dropdown-item" routerLink="/cadastro" href="#">Cadastro</a>
-              <a class="dropdown-item" href="#">Sair</a>
-            </div>
-          </div>
         </a>
       </li>
     </div>
   </div>
-</nav>
+</nav> -->
+
+<div class="navbar-bg black fixed-top">
+
+  <a class="logo" routerLink="/home"><img src="../../assets/cristal.svg" alt="logo"></a>
+  <nav>
+      <ul class="nav__links">
+        <li><a href="#" routerLink="/home">Home</a></li>
+        <li><a href="#" routerLink="/produtos">Produtos</a></li>
+        <li><a href="#" routerLink="/contato">Contato</a></li>
+        <li><a href="#" routerLink="/sobre-nos">Equipe</a></li>
+      </ul>
+  </nav>
+  <div class="dropdown">
+    <a class="cta btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Entrar
+    </a>
+    <p class="menu cta btn">Menu</p>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#" routerLink="/login" >Entrar</a>
+      <a class="dropdown-item" href="#"routerLink="/cadastro" >Cadastrar</a>
+      <a class="dropdown-item" href="#">Sair</a>
+    </div>
+  </div>
+
+
+
+
+<div class="overlay">
+  <a class="close">&times;</a>
+  <div class="overlay__content">
+    <a href="#">Home</a>
+    <a href="#">Produtos</a>
+    <a href="#">Contato</a>
+    <a href="#">Equipe</a>
+    <a href="#">Login</a>
+    <a href="#">Cadastro</a>
+  </div>
+</div>
+
+
