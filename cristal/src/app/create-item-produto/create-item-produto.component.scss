@@ -6,6 +6,7 @@
 }
 
 .container{
+  margin-top: 76.7px;
   padding: 40px;
   margin: 0 auto;
   display: flex;
@@ -103,12 +104,12 @@
     transition: 0.5s;
     text-transform: uppercase;
 }
-     
-    
+
+
     .btn-cadastrar:hover {
         border: 1px solid #FBBFEC;
         background-color: transparent;
         color: #FBBFEC;
         transition: 0.5s;
     }
-  
+

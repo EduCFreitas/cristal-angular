@@ -5,9 +5,6 @@
   padding: 20.9px 10%;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #9921e8;
-  // background-image: linear-gradient(215deg, #4437bd 0%, #8d85fd 74%);
-  // background-image: linear-gradient(to right, #8d43e2, #9955eb);
   transition: 500ms ease;
   background: transparent;
 }
@@ -18,15 +15,13 @@
 
 .nav__links a,
 .cta,
-.overlay__content a {
+.overlay__content a,.dropdown-item  {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #D9D9DD;
+  color: rgb(214, 214, 214);
   text-decoration: none;
 }
-
-
 
 .nav__links {
   list-style: none;
@@ -43,7 +38,17 @@
 }
 
 .nav__links li a:hover {
-  color: #6dffec;
+  color: #F50057;
+}
+
+.dropdown-menu, .dropdown-item {
+  background-color: #6a14d1;
+  color: #FFF;
+}
+
+.dropdown-item:hover {
+  background-color: #F50057;
+  transition: .5s;
 }
 
 .cta {
@@ -79,6 +84,7 @@
   background-color: #24252a;
   overflow-x: hidden;
   transition: width 0.5s ease 0s;
+  padding-top: 70px;
 }
 
 .overlay--active {
@@ -95,7 +101,7 @@
 
 .overlay a {
   padding: 15px;
-  font-size: 36px;
+  font-size: 30px;
   display: block;
   transition: color 0.3s ease 0s;
 }
@@ -112,6 +118,7 @@
   font-size: 60px;
   cursor: pointer;
   color: #edf0f1;
+  padding-top: 60px;
 }
 
 .logo img {

@@ -16,8 +16,8 @@ declare var $: any;
   $(document).ready(function(){
     $(window).scroll(function(){
       var scroll = $(window).scrollTop();
-      if (scroll > 75) {
-        $(".black").css("background" , "rgba(255, 255, 255, 0.527)");
+      if (scroll > 170) {
+        $(".black").css("background" , "rgba(51, 51, 51, 0.657)");
       }
 
       else{
@@ -30,9 +30,11 @@ declare var $: any;
     const menuOpen=doc.querySelector(".menu");
     const menuClose=doc.querySelector(".close");
     const overlay=doc.querySelector(".overlay");
+   
 
     menuOpen.addEventListener("click", ()=> {
         overlay.classList.add("overlay--active");
+
       }
 
     );
@@ -42,6 +44,14 @@ declare var $: any;
       }
 
     );
+
+      overlay.addEventListener("click", ()=> {
+      overlay.classList.remove("overlay--active");
+    }
+
+  );
+
+
 
 
   }
