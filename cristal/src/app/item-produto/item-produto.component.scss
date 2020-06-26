@@ -1,7 +1,44 @@
-.container {
-  margin-top: 94.38px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+*{
+  box-sizing: border-box;
+}
+
+.body{
+background-image: white;
+margin-top: 76.7px;
+}
+
+.breadcrumb-list {
+display: flex;
+flex-wrap: wrap;
+padding: 0;
+list-style: none;
+padding: 10px 0 0 0;
+}
+
+.breadcrumb-list  li {
+  font-size: 0.85rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+.breadcrumb-item .active {
+  color: black;
+}
+
+.breadcrumb-item ::before {
+    display: inline-block;
+    padding: 0 0.5rem;
+    color: lightgray;
+}
+
+.main{
+  padding:0 0 40px 0;
+}
+
+
+h1, p {
+  color: gray;
+  text-transform: uppercase;
 }
 
 img {

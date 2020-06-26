@@ -1,110 +1,176 @@
-:root {
-  padding: 2px;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.809);
-}
-
-.navbar-area {
-  padding: 0 10px !important;
-  min-height: 60px;
-}
-
 .navbar-bg {
-  background-image: linear-gradient(-225deg, #7AC9D7, rgb(251, 191, 236) 100%);
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20.9px 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 500ms ease;
+  background: transparent;
 }
 
 .logo {
-  width: 50%;
-  height: 50%;
+  cursor: pointer;
 }
 
-.navbar-brand {
-  width: 11%;
-  height: 50%;
+.nav__links a,
+.cta,
+.overlay__content a,.dropdown-item  {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: rgb(214, 214, 214);
+  text-decoration: none;
 }
 
-.menu ul li a:hover {
-  color: #fff;
-  transition: 0.5s;
+.nav__links {
+  list-style: none;
+  display: flex;
+  padding-top: 12px;
 }
 
-.dropdown-item {
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #F50057;
+}
+
+.dropdown-menu, .dropdown-item {
+  background-color: #6a14d1;
   color: #FFF;
-  font-size: 0.9rem;
-  transition: .3s;
-  border-radius: 5px;
-  border: none;
 }
 
 .dropdown-item:hover {
-  background-color: #7e7eb4;
-  color: #FFF;
+  background-color: #F50057;
+  transition: .5s;
+  border-radius: 3px;
 }
 
-.dropdown-menu {
-  background-color: #f4c0eb;
-  border: none;
-}
-
-.botao .btn {
-  padding: 5px;
-  width: 100px;
-  height: 30px;
-  border-radius: 6px;
+.cta {
+  // padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: .1px hidden #0088a9;
+  border-radius: 10px;
   outline: none;
-  border: none;
-  background-image: linear-gradient(to right, #AB99CC, #83CEE8, #348AC7);
+  cursor: pointer;
+  background-image: linear-gradient(to right, #6a14d1, #c82090, #6a14d1);
   background-size: 200%;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
   transition: .5s;
-  font-size: 13px;
 }
 
-.botao .btn:hover {
+.cta:hover {
   background-position: right;
 }
 
-.navbar-toggler {
-  color: rgb(149, 149, 149);
-}
+/* Mobile Nav */
 
-.nav-link {
-  border-bottom: rgba(255, 255, 255, 0) solid 1.5px;
-  margin-left: 5%;
-  background: rgba(201, 204, 211, 0);
-  text-align: center;
-  transition: 0.5s;
-  color: white;
-}
-
-.nav-item a:hover {
-  border-bottom: rgb(255, 255, 255) solid 1.5px;
-  border-radius: 5px;
-  transition: 0.5s;
-}
-
-.ent {
+.menu {
   display: none;
 }
 
-@media (max-width: 767px) {
-  .logo {
-    min-width: 100%;
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+  padding-top: 70px;
+  z-index: 10000;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 30px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #c82090;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: #edf0f1;
+  padding-top: 60px;
+}
+
+.logo img {
+  width: 70%;
+}
+
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
   }
 
-  .botao {
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .nav__links,
+  .cta {
     display: none;
   }
 
-  .ent {
-    display: inherit;
+  .menu {
+    display: initial;
   }
-
-
 }

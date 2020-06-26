@@ -8,6 +8,7 @@
 //   letter-spacing: .1em;
 //   font-weight: bold;
 // }
+
 a {
   text-decoration: none;
 }
@@ -31,7 +32,7 @@ strong {
   border-radius: 6px;
   outline: none;
   border: none;
-  background-image: linear-gradient(to right, #AB99CC, #83CEE8, #348AC7);
+  background-image: linear-gradient(to right, #84c8d9, #83CEE8, #348AC7);
   background-size: 200%;
   color: #fff;
   font-family: 'Poppins', sans-serif;
@@ -47,13 +48,12 @@ strong {
 }
 
 .introducao {
-  margin-top: 94.38px;
   width: 100%;
-  height: 380px;
-  background: url("https://i.imgur.com/VKBbfXT.png") no-repeat center;
-  background-size: contain;
+  height: 540px;
+  background: url("https://images.pexels.com/photos/1381679/pexels-photo-1381679.jpeg?cs=srgb&dl=atraente-aumento-bonito-buque-1381679.jpg&fm=jpg") no-repeat center;
+  background-size: cover;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 200px;
 }
 
 .introducao h1 {
@@ -96,8 +96,9 @@ strong {
   text-transform: uppercase;
 }
 
-.produtos {
-  padding: 60px;
+.produtos,
+.qualidade {
+  padding: 10px 60px 10px;
 }
 
 .subtitulo {
@@ -105,7 +106,7 @@ strong {
   line-height: 30px;
   font-weight: bold;
   letter-spacing: .1em;
-  color: #00bfa6;
+  color: #8D85FD;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
@@ -116,7 +117,7 @@ strong {
   display: block;
   width: 60px;
   height: 3px;
-  background: #00bfa6;
+  background: #8D85FD;
   margin: 8px auto;
 }
 
@@ -148,7 +149,7 @@ strong {
   right: 100%;
   width: 100%;
   text-align: center;
-  background-color: #00bfa6b7;
+  background-color: #6b63ffa2;
   transition: all .2s linear;
 }
 
@@ -188,7 +189,7 @@ strong {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   line-height: 20px;
-  color: #00bfa6;
+  color: #6C63FF;
 }
 
 .btn-purple {
@@ -206,18 +207,11 @@ strong {
 
 
 .sub2 {
-  color: #ffffff;
+  color: #FFF;
 }
 
 .sub2:after {
-  background: #ffffff;
-}
-
-.video {
-  background-color: #FFF;
-  width: 525px;
-  height: 380px;
-  border-radius: 10px;
+  background: #7066ff;
 }
 
 .texto-video {
@@ -232,3 +226,47 @@ strong {
 .btn-green {
   background-image: linear-gradient(to right, #00BFA6, #38d39f, #00BFA6);
 }
+
+.qualidade {
+  background-image: linear-gradient(225deg, #58dada 0%, #c1cfff 56%, rgba(58, 176, 185, 0.493)100%);
+}
+
+.sub3::after {
+  background-color: #00BFA6;
+}
+
+.qualidade i, h3 {
+  color: #FFF;
+}
+
+.qualidade i {
+  color: #00BFA6;
+}
+
+.qualidade .subtitulo {
+  color: #FFF;
+}
+
+.qualidade p {
+  line-height: 20px;
+  font-weight: lighter;
+}
+
+.quebra {
+  width: 100%;
+  height: 220px;
+  background: url("../../assets/quartzo.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 55px;
+}
+
+.quebra .quote-externo {
+  max-width: 400px;
+}
+
+iframe {
+  border-radius: 5px;
+  max-width: 100%;
+}
+

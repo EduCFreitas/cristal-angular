@@ -4,6 +4,7 @@
 
 .body{
 background-image: white;
+margin-top: 76.7px;
 }
 
 .breadcrumb-list {
@@ -90,18 +91,18 @@ transform: perspective(600px) rotateY(-180deg);
 
 .imagem-produto:active > .card-back{
 transform: perspective(600px) rotateY(0deg);
-} 
+}
 
 .card-img img:hover {
   -webkit-transform: scale(3.1);
   -moz-transform: scale(2.1);
   -o-transform: scale(2.1);
-  -ms-transform: scale(2.1); 
+  -ms-transform: scale(2.1);
   transform: scale(2.1);
   transition: 2.0s;
   opacity:6;
   }
- 
+
   .card-img img{
     max-width: 100%;
     -moz-transition: all 0.7s;
