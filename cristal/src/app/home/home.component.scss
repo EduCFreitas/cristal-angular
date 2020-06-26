@@ -214,14 +214,6 @@ strong {
   background: #7066ff;
 }
 
-.video {
-  background-color: #FFF;
-  width: 525px;
-  height: 380px;
-  border-radius: 10px;
-  max-width: 100%;
-}
-
 .texto-video {
   color: #FFF;
   font-weight: 400 !important;
@@ -271,5 +263,10 @@ strong {
 
 .quebra .quote-externo {
   max-width: 400px;
+}
+
+iframe {
+  border-radius: 5px;
+  max-width: 100%;
 }
 
