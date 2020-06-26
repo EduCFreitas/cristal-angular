@@ -219,6 +219,7 @@ strong {
   width: 525px;
   height: 380px;
   border-radius: 10px;
+  max-width: 100%;
 }
 
 .texto-video {
@@ -265,7 +266,7 @@ strong {
   background: url("../../assets/quartzo.jpg") no-repeat center;
   background-size: cover;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 55px;
 }
 
 .quebra .quote-externo {
