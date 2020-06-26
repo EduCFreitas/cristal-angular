@@ -7,5 +7,6 @@ export class Usuario{
     public telefone:string
     public endereco:string
     public cep:string
+    public tipo:string
     
 }

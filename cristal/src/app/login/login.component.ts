@@ -48,6 +48,8 @@ export class LoginComponent implements OnInit {
 			sessionStorage.setItem('token', this.usuarioLogin.token);
 			sessionStorage.setItem('nome', this.usuarioLogin.nome);
 			sessionStorage.setItem('email', this.usuarioLogin.email);
+			sessionStorage.setItem('cpf', this.usuarioLogin.cpf);
+			sessionStorage.setItem('tipo', this.usuarioLogin.tipo);
 			this.erro=false;
 			this.router.navigate(['/home']);
 		}, err =>{

@@ -74,19 +74,19 @@
     <p class="menu cta btn">Menu</p>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <div *ngIf='auth.btnLogin()'>
-        <a class="dropdown-item" href="#" routerLink="/login" >Login</a>
+        <a class="dropdown-item" routerLink="/login" >Login</a>
       </div>
       <div *ngIf='auth.btnLogin()'>
-        <a class="dropdown-item" href="#"routerLink="/cadastro" >Cadastrar</a>
+        <a class="dropdown-item" routerLink="/cadastro" >Cadastrar</a>
       </div>
       <div *ngIf='auth.btnSair()'>
-        <a class="dropdown-item" href="#"routerLink="/criar-item-produto" >Criar Produto</a>
+        <a class="dropdown-item" routerLink="/criar-item-produto" >Criar Produto</a>
       </div>
       <div *ngIf='auth.btnSair()'>
-        <a class="dropdown-item" href="#"routerLink="/lista-de-usuarios" >Lista de Usuários</a>
+        <a class="dropdown-item" routerLink="/lista-de-usuarios" >Lista de Usuários</a>
       </div>
       <div *ngIf='auth.btnSair()'>
-        <a class="dropdown-item" href="#">Sair</a>
+        <a class="dropdown-item" (click)='sair()'>Sair</a>
       </div>
     </div>
   </div>
