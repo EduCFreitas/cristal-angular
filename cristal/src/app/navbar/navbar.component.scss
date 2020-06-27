@@ -84,14 +84,13 @@
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   background-color: #24252a;
   overflow-x: hidden;
   transition: width 0.5s ease 0s;
   padding-top: 70px;
-  z-index: 10000;
+  z-index: 9999999;
 }
 
 .overlay--active {
@@ -103,7 +102,6 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .overlay a {
@@ -125,13 +123,12 @@
   font-size: 60px;
   cursor: pointer;
   color: #edf0f1;
-  padding-top: 60px;
+  // padding-top: 60px;
 }
 
 .logo img {
   width: 70%;
 }
-
 
 .modal-dialog {
   max-width: 800px;
@@ -142,6 +139,7 @@
   position: relative;
   padding: 0px;
 }
+
 .close {
   position: absolute;
   right: -30px;
