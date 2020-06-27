@@ -12,17 +12,24 @@ export class EditarUsuarioComponent implements OnInit {
   
   
   usuario: Usuario = new Usuario();
-
-
+  
+  
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
-
+  
   ngOnInit(): void {
-// pegar na rota ativa (API) o item pelo ID
+    // pegar na rota ativa (API) o item pelo ID
     let id = this.route.snapshot.params['id']
+    let token = sessionStorage.getItem('token')
+    
+    if(token==null){
+      alert('Faça o login antes de acessar a página');
+      this.router.navigate(['/login']);
+    }
+    
     this.findById(id)
-
+    
   }
-
+  
   findById(id:number){
     this.usuarioService.getUsuarioById(id).subscribe((resp: Usuario)=>{
       this.usuario = resp
@@ -30,7 +37,7 @@ export class EditarUsuarioComponent implements OnInit {
       console.log(`Erro: ${err.status}, não conseguimos pegar o id`)
     })
   }
-
+  
   salvar(){
     this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario)=>{
       this.usuario = resp
@@ -38,5 +45,5 @@ export class EditarUsuarioComponent implements OnInit {
       location.assign('/lista-de-usuarios')
     })
   }
-
+  
 }

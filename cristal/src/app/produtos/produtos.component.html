@@ -80,7 +80,6 @@
     </div>
   </nav>
 
-  <!-- -------------  CARDS  ---------------- -->
 
   <!-- chips -->
 
@@ -89,7 +88,7 @@
     <div class="wrapper" *ngIf="filtroAtual !== '' || filtroCorAtual !== ''">
       <p>Filtrando por:</p>
       <mat-chip-list aria-label="Fish selection">
-        <mat-chip (click)="resetarFiltro()" *ngIf="filtroAtual !== ''">{{filtroAtual}}</mat-chip>
+        <mat-chip (click)="resetarFiltro()" *ngIf="filtroAtual !== ''">{{filtroAtual}} </mat-chip>
         <mat-chip (click)="resetarFiltroCor()" *ngIf="filtroCorAtual !== ''">{{filtroCorAtual}}</mat-chip>
       </mat-chip-list>
     </div>

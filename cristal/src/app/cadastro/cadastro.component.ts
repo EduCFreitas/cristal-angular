@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../service/usuario.service';
 import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -17,7 +19,7 @@ export class CadastroComponent implements OnInit {
     senha:''
   }
   
-  constructor(private usuarioService:UsuarioService)  { }
+  constructor(private authService:AuthService, private router:Router)  { }
   
   ngOnInit(): void {
     
@@ -70,10 +72,11 @@ export class CadastroComponent implements OnInit {
   
   cadastrar(){
     this.erro=true;
-    this.usuarioService.postUsuario(this.usuario).subscribe((resp:Usuario)=>{
+    this.authService.cadastrarUsuario(this.usuario).subscribe((resp:Usuario)=>{
       this.erro=false;
-      this.usuario = resp
-      location.assign('/login')
+      this.usuario=resp;
+      this.router.navigate(['/login']);
+      alert('Cadastro realizado com sucesso!')
     })
   }
   

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Contato } from '../model/Contato';
 import { ContatoService } from '../service/contato.service';
+import { Contato } from '../model/Contato';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contato',
@@ -14,7 +16,7 @@ export class ContatoComponent implements OnInit {
   numTelefone:number;
   erroTelefone:boolean = false;
 
-  constructor(private contatoService:ContatoService) { }
+  constructor(private contatoService:ContatoService, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -33,7 +35,10 @@ export class ContatoComponent implements OnInit {
     if(this.erroTelefone==false || this.contato.telefone.length==0){
       this.contatoService.postContato(this.contato).subscribe((resp:Contato)=>{
         this.contato = resp;
+        this.router.navigate(['/home'])
         alert("Mensagem de contato enviada!");
+      }, err =>{
+        alert('Erro ao enviar formulário de contato!')
       })
     }
   }
