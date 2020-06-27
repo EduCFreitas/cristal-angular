@@ -41,7 +41,9 @@ export class EditarItemProdutoComponent implements OnInit {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produtos)=>{
       this.produto = resp
       this.router.navigate(['/produtos'])
-      location.assign('/produtos')
+      alert('Produto editado com sucesso!')
+    }, err =>{
+      alert('Erro na edição do produto!')
     })
   }
   
