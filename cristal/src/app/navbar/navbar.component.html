@@ -1,62 +1,4 @@
-<!-- <nav class="navbar-area navbar navbar-bg navbar-expand-md fixed-top shadow-sm">
-  <div class="container">
-    logo
-    <a routerLink="/home" class="navbar-brand">
-      <img src="../../assets/Cristal-v1.svg" class="logo" alt="Cristal" />
-    </a>
-
-    Botão de responsividade
-    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
-    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-    aria-label="Abrir Navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  Menu
-  <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/home">
-          Home
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/produtos">
-          Produtos
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/contato">
-          Contato
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="/sobre-nos">
-          Equipe
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link ent" href="#" routerLink="/">
-          Entrar
-        </a>
-      </li>
-
-    </ul>
-
-    Botão Entrar
-    <li class="navbar navbar-expand-sm botao">
-      <a class="nav-link">
-      </a>
-    </li>
-  </div>
-</div>
-</nav> -->
-
-<div class="navbar-bg black fixed-top">
+<div class="navbar-bg black fixed-top" (mouseover)='atualizaNavbar()'>
 
   <a class="logo" routerLink="/home"><img src="../../assets/cristal.svg" alt="logo"></a>
   <nav>
@@ -68,25 +10,37 @@
     </ul>
   </nav>
   <div class="dropdown">
-    <a class="cta btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Entrar
+    <a class="cta btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      <span *ngIf='auth.btnLogin()'>Entrar</span>
+      <span *ngIf='auth.btnSair()'>
+        <i class="fas fa-user-circle"></i>
+        <!-- {{separaPrimeiroNome(nomeUsuario)}} -->
+        <!-- Para testar a outra forma, comente esta linha inteira -->
+      </span>
     </a>
     <p class="menu cta btn">Menu</p>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <!--Para testar a outra forma, decomente toda essa div -->
+
+      <div *ngIf='auth.btnSair()'>
+        <h1 class="dropdown-item">{{separaPrimeiroNome(nomeUsuario)}}</h1>
+      </div>
+
       <div *ngIf='auth.btnLogin()'>
-        <a class="dropdown-item" href="#" routerLink="/login" >Login</a>
+        <a class="dropdown-item" routerLink="/login">Login</a>
       </div>
       <div *ngIf='auth.btnLogin()'>
-        <a class="dropdown-item" href="#"routerLink="/cadastro" >Cadastrar</a>
+        <a class="dropdown-item" routerLink="/cadastro">Cadastrar</a>
+      </div>
+      <div *ngIf='admin==true'>
+        <a class="dropdown-item" routerLink="/criar-item-produto">Criar Produto</a>
+      </div>
+      <div *ngIf='admin==true'>
+        <a class="dropdown-item" routerLink="/lista-de-usuarios">Lista de Usuários</a>
       </div>
       <div *ngIf='auth.btnSair()'>
-        <a class="dropdown-item" href="#"routerLink="/criar-item-produto" >Criar Produto</a>
-      </div>
-      <div *ngIf='auth.btnSair()'>
-        <a class="dropdown-item" href="#"routerLink="/lista-de-usuarios" >Lista de Usuários</a>
-      </div>
-      <div *ngIf='auth.btnSair()'>
-        <a class="dropdown-item" href="#">Sair</a>
+        <a class="dropdown-item" href="#" (click)='sair()'>Sair</a>
       </div>
     </div>
   </div>
@@ -98,13 +52,24 @@
 <div class="overlay">
   <a class="close">&times;</a>
   <div class="overlay__content">
-    <a href="#" class="fechar"  routerLink="/home">Home</a>
-    <a href="#" class="fechar"  routerLink="/produtos">Produtos</a>
-    <a href="#" class="fechar"  routerLink="/contato">Contato</a>
-    <a href="#" class="fechar"  routerLink="/sobre-nos">Equipe</a>
-    <a href="#" class="fechar"  routerLink="/login">Login</a>
-    <a href="#" class="fechar"  routerLink="/cadastro">Cadastro</a>
+    <a href="#" class="fechar" routerLink="/home">Home</a>
+    <a href="#" class="fechar" routerLink="/produtos">Produtos</a>
+    <a href="#" class="fechar" routerLink="/contato">Contato</a>
+    <a href="#" class="fechar" routerLink="/sobre-nos">Equipe</a>
+    <div *ngIf='auth.btnLogin()'>
+      <a href="#" class="fechar" routerLink="/login">Login</a>
+    </div>
+    <div *ngIf='auth.btnLogin()'>
+      <a href="#" class="fechar" routerLink="/cadastro">Cadastro</a>
+    </div>
+    <div *ngIf='auth.btnSair()'>
+      <a href="#" class="fechar" routerLink="/criar-item-produto">Criar Produto</a>
+    </div>
+    <div *ngIf='auth.btnSair()'>
+      <a href="#" class="fechar" routerLink="/lista-de-usuarios">Lista de Usuários</a>
+    </div>
+    <div *ngIf='auth.btnSair()'>
+      <a href="#" class="fechar" (click)='sair()'>Sair</a>
+    </div>
   </div>
 </div>
-
-

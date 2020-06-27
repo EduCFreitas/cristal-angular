@@ -27,8 +27,11 @@ export class CreateItemProdutoComponent implements OnInit {
     // alert("Entrou função")
     this.produtoService.postProduto(this.produto).subscribe((resp:Produtos)=>{
       // alert("Entrou post")
-      this.produto = resp
-      location.assign('/produtos')
+      this.produto = resp;
+      this.router.navigate(['/produtos']);
+      alert('Produto cadastrado com sucesso!')
+    }, err =>{
+      alert('Erro no cadastramento do produto!')
     })
   }
   

@@ -20,7 +20,7 @@ export class AuthService {
   
   btnSair(){
     let ok = false;
-    let token = sessionStorage.getItem('token')
+    let token = sessionStorage.getItem('token');
     if(token!=null){
       ok = true;
     }

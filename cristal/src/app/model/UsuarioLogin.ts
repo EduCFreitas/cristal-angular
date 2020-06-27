@@ -5,4 +5,5 @@ export class UsuarioLogin{
     public token:string
     public nome:string
     public cpf:string
+    public tipo:string
 }
