@@ -4,6 +4,18 @@
   padding-bottom: 30px;
 }
 
+.card-body {
+  background-color: #E1D8FE;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border-color: #6b63ff93;
+}
+
 textarea {
   resize: none;
   height: 100px;
@@ -20,9 +32,10 @@ textarea {
 
 .form-group ul li {
   list-style: none;
-  //   color: red;
   padding: 0;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .form-group ul {
@@ -56,8 +69,9 @@ textarea {
 
   &-description {
     font-size: 25px;
-    color: #000;
-    //   font-weight: normal;
+    color: #FFF;
+    font-weight: bolder;
+    font-family: "Poppins"sans-serif;
     margin-bottom: 23px;
   }
 
@@ -66,7 +80,6 @@ textarea {
   }
 
   .form-control {
-    // border: 1px solid #d5dae2;
     margin-bottom: 0;
     min-height: 45px;
     font-size: 13px;
@@ -96,6 +109,9 @@ textarea {
 
     &:hover {
       background-position: right;
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
     }
 
     &:active {
@@ -122,12 +138,14 @@ textarea {
 }
 
 .tem-erro input {
-  border-color: rgb(255, 81, 81);
+  border-color: #f88484;
 }
 
 .tem-erro ul {
-  color: red;
+  color: rgb(255, 81, 81);
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 .sem-erro input {
@@ -136,4 +154,5 @@ textarea {
 
 .sem-erro ul {
   color: green;
+  margin: 0;
 }

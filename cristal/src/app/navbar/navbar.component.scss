@@ -23,6 +23,11 @@
   text-decoration: none;
 }
 
+.cta:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
 .nav__links {
   list-style: none;
   display: flex;
