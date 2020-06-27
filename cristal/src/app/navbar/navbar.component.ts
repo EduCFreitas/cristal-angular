@@ -58,23 +58,6 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  atualizaNavbar(){
-    this.nomeUsuario = sessionStorage.getItem('nomeUsuario');
-    this.tipoUsuario = sessionStorage.getItem('tipoUsuario');
-    this.admin = false;
-    if(this.tipoUsuario==="admin"){
-      this.admin=true;
-    }else{
-      this.admin=false;
-    }
-    this.separaPrimeiroNome(this.nomeUsuario);
-  }
-
-  separaPrimeiroNome(nomeUsuario){
-    let primeiroNome = this.nomeUsuario.split(' ').slice(0,1);
-    return primeiroNome;
-  }
-
   sair(){
     this.router.navigate(['/home'])
     sessionStorage.clear();

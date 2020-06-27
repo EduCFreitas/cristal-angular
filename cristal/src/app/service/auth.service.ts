@@ -35,4 +35,17 @@ export class AuthService {
     }
     return ok;
   }
+
+  buscaNomeUsuario(){
+    let primeiroNome = sessionStorage.getItem('nomeUsuario').split(' ').slice(0,1);
+    return primeiroNome;
+  }
+
+  buscaTipoUsuario(){
+    let admin = false;
+    if(sessionStorage.getItem('tipoUsuario')=='admin'){
+      admin = true
+    }
+    return admin;
+  }
 }
