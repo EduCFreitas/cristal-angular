@@ -1,24 +1,148 @@
+// .container {
+//   margin-top: 76.7px;
+// }
+
+// span {
+//     font-size: 1.3em;
+// }
+
+// a {
+//     color: black;
+// }
+
+// a:hover {
+//     text-decoration: none;
+//     color: #7395ae;
+// }
+// .card-header {
+//     background-color: #deeaf8;
+// }
+
+// .card-header button{
+//     background-color: #deeaf8;
+// }
+
+$midnight: #8E6BF9;
+$clouds: #ecf0f1;
+// General
+
+
 .container {
-  margin-top: 76.7px;
+  background-color: #4E57AA;
+  padding: 0 1em 1em;
+  // margin-top: 76.7px;
+  margin-top: 100px;
+  border-radius: 5px;
 }
 
-span {
-    font-size: 1.3em;
+h1 {
+  margin: 0;
+  line-height: 2;
+  text-align: center;
+  color:#FFF;
 }
 
-a {
-    color: black;
+  h1:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00BFA6;
+  margin: 8px auto;
+  margin-bottom: 30px;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #7395ae;
-}
-.card-header {
-    background-color: #deeaf8;
-}
-
-.card-header button{
-    background-color: #deeaf8;
+p {
+  font-family: "Popins", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  line-break: normal;
+  color: #FFF;
 }
 
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  // color: #4e57aab2;
+}
+
+
+// Layout
+.row {
+  display:flex;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #656FC4;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: darken(#656FC4, 10%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #656FC4;
+    background: white;
+    transition: all .35s;
+  }
+
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #656FC4;
+    cursor: pointer;
+    &:hover {
+      background: darken(#656FC4, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    background: darken(#656FC4, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+   ~.tab-content {
+    max-height: 100vh;
+    padding: 1em;
+    background-color: #f5f6fa5e;
+    border-radius: 5px;
+  }
+}
+
+.tab-label {
+  margin-bottom: 0 !important;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 5px;
+}

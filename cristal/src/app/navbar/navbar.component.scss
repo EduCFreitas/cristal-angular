@@ -15,7 +15,8 @@
 
 .nav__links a,
 .cta,
-.overlay__content a,.dropdown-item  {
+.overlay__content a,
+.dropdown-item {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -23,7 +24,7 @@
   text-decoration: none;
 }
 
-.cta:focus{
+.cta:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
 }
@@ -46,7 +47,8 @@
   color: #F50057;
 }
 
-.dropdown-menu, .dropdown-item {
+.dropdown-menu,
+.dropdown-item {
   background-color: #6a14d1;
   color: #FFF;
 }
