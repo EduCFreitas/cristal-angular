@@ -56,5 +56,9 @@ export class LoginComponent implements OnInit {
 			alert('Houve um erro ao entrar, verifique o e-mail e a senha');
 		});
 	}
+
+	enviaNovaSenha(){
+		alert('Enviado email de recuperação de senha para o endereço informado!');
+	}
 	
 }
