@@ -37,10 +37,37 @@
 						<li *ngIf="senhaLogin.errors.required">Informe a senha</li>
 					</ul>
 				</span>
-				<a href="#">Esqueceu sua senha?</a>
+				<a href="#" data-toggle="modal" data-target="#modalSenha">Esqueceu sua senha?</a>
 				<input type="submit" class="btn" value="Login" (click)="logar()">
 				<a href="#" class="cadastro" routerLink="/cadastro">Clique aqui para se cadastrar</a>
 			</form>
+		</div>
+	</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="modalSenha" tabindex="-1" role="dialog" aria-labelledby="modalSenhaLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalSenhaLabel">Esqueceu sua senha?</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="input-div one">
+						<div class="div">
+							<h5>Informe email para recuperação de senha:</h5>
+							<input type="text" name="email" class="input">
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer d-flex justify-content-center">
+					<div class="col-6">
+						<button type="button" class="btn" data-dismiss="modal">Enviar</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
