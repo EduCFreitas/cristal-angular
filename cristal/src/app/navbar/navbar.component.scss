@@ -44,17 +44,17 @@
 }
 
 .nav__links li a:hover {
-  color: #F50057;
+  color: #4450B2;
 }
 
 .dropdown-menu,
 .dropdown-item {
-  background-color: #6a14d1;
+  background-color: #4E57AA;
   color: #FFF;
 }
 
 .dropdown-item:hover {
-  background-color: #F50057;
+  background-color: #00BFA6;
   transition: .5s;
   border-radius: 3px;
 }
@@ -66,7 +66,7 @@
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  background-image: linear-gradient(to right, #6a14d1, #c82090, #6a14d1);
+  background-image: linear-gradient(to right, #4E57AA, #00BFA6, #4E57AA);
   background-size: 200%;
   color: #fff;
   transition: .5s;
@@ -115,7 +115,7 @@
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #c82090;
+  color: #4E57AA;
 }
 
 .overlay .close {
