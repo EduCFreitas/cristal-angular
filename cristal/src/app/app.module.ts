@@ -30,6 +30,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { CreateItemProdutoComponent } from './create-item-produto/create-item-produto.component';
 import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
 import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
   
 
@@ -67,7 +68,8 @@ import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
     
   ],
   providers: [],
