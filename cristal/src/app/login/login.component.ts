@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
 	}
 
 	enviaNovaSenha(){
-		this.router.navigate(['/home']);
+		// this.router.navigate(['/home']);
 		alert('Enviado email de recuperação de senha para o endereço informado!');
 	}
 	
