@@ -84,7 +84,8 @@ $color_second: #00bfa6;
 .blog-card {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  // margin: 1rem auto;
+  // Linha comentada para possibilidade de ajuste alternado em esquerda e direita dos cards
   box-shadow: 0 3px 7px -1px rgba(#000, .1);
   margin-bottom: 1.6%;
   background: $color_white;
