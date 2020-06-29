@@ -131,6 +131,7 @@ img {
 
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
+  font-weight: lighter;
   margin: 0px;
   color: rgb(58, 58, 58);
 }
@@ -247,7 +248,8 @@ h5,
 #sidebar {
   min-width: 270px;
   max-width: 290px;
-  background: #84C8D9;
+  background: rgb(232, 246, 247);
+  ;
   transition: all 0.3s;
   position: fixed;
   top: 60px;
