@@ -41,6 +41,11 @@ export class AuthService {
     return primeiroNome;
   }
 
+  buscaIdUsuario(){
+    let idUsuario = parseInt(sessionStorage.getItem('idUsuario'));
+    return idUsuario;
+  }
+
   ehUsuarioAdmin(){
     let admin = false;
     if(sessionStorage.getItem('tipoUsuario')=='admin'){

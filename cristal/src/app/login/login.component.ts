@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
 		this.authService.logarUsuario(this.usuarioLogin).subscribe((resp:UsuarioLogin)=>{
 			this.usuarioLogin = resp;
 			sessionStorage.setItem('token', this.usuarioLogin.token);
+			sessionStorage.setItem('idUsuario', this.usuarioLogin.id.toString());
 			sessionStorage.setItem('nomeUsuario', this.usuarioLogin.nome);
 			sessionStorage.setItem('email', this.usuarioLogin.email);
 			sessionStorage.setItem('cpf', this.usuarioLogin.cpf);
