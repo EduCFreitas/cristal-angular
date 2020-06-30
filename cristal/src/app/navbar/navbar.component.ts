@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     $(document).ready(function(){
       $(window).scroll(function(){
         var scroll = $(window).scrollTop();
-        if (scroll > 170) {
+        if (scroll > 40) {
           $(".black").css("background" , "#4e57aab2");
         }
 
