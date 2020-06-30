@@ -41,8 +41,7 @@ export class ItemProdutoComponent implements OnInit {
   }
   
   comprar(){
-    // location.assign('/carrinho')
-    // })
+    alert('Produto adicionado ao carrinho!');
   }
   
 }
