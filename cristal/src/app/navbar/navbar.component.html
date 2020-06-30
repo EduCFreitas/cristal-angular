@@ -26,11 +26,11 @@
       <div *ngIf='auth.btnLogin()'>
         <a class="dropdown-item" routerLink="/cadastro">Cadastrar</a>
       </div>
-      <div *ngIf='auth.ehUsuarioAdmin()'>
-        <a class="dropdown-item" routerLink="/criar-item-produto">Criar Produto</a>
+      <div *ngIf='auth.btnSair()'>
+        <a class="dropdown-item" [routerLink]="['/editar-usuario', auth.buscaIdUsuario()]">Editar perfil</a>
       </div>
       <div *ngIf='auth.ehUsuarioAdmin()'>
-        <a class="dropdown-item" routerLink="/lista-de-usuarios">Lista de Usuários</a>
+        <a class="dropdown-item" routerLink="/criar-item-produto">Criar Produto</a>
       </div>
       <div *ngIf='auth.btnSair()'>
         <a class="dropdown-item" href="#" (click)='sair()'>Sair</a>
@@ -55,11 +55,11 @@
     <div *ngIf='auth.btnLogin()'>
       <a href="#" class="fechar" routerLink="/cadastro">Cadastro</a>
     </div>
-    <div *ngIf='auth.ehUsuarioAdmin()'>
-      <a href="#" class="fechar" routerLink="/criar-item-produto">Criar Produto</a>
+    <div *ngIf='auth.btnSair()'>
+      <a href="#" class="fechar" [routerLink]="['/editar-usuario', auth.buscaIdUsuario()]">Editar perfil</a>
     </div>
     <div *ngIf='auth.ehUsuarioAdmin()'>
-      <a href="#" class="fechar" routerLink="/lista-de-usuarios">Lista de Usuários</a>
+      <a href="#" class="fechar" routerLink="/criar-item-produto">Criar Produto</a>
     </div>
     <div *ngIf='auth.btnSair()'>
       <a href="#" class="fechar" (click)='sair()'>Sair</a>

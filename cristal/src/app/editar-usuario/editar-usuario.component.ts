@@ -20,15 +20,10 @@ export class EditarUsuarioComponent implements OnInit {
     // pegar na rota ativa (API) o item pelo ID
     let id = this.route.snapshot.params['id']
     let token = sessionStorage.getItem('token')
-    let tipoUsuario = sessionStorage.getItem('tipoUsuario');
     
-    if(token==null || tipoUsuario!='admin'){
-      alert('Página disponível apenas para administradores do site!');
-      if(token==null){
-        this.router.navigate(['/login']);
-      }else{
-        this.router.navigate(['/home']);
-      }
+    if(token==null){
+      alert('Faça o login antes de acessar a página');
+      this.router.navigate(['/login']);
     }
     
     this.findById(id)
@@ -45,10 +40,12 @@ export class EditarUsuarioComponent implements OnInit {
   
   salvar(){
     this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario)=>{
-      this.usuario = resp
-      this.router.navigate(['/lista-de-usuarios'])
-      location.assign('/lista-de-usuarios')
-    })
+      this.usuario = resp;
+      this.router.navigate(['/home']);
+      alert('Alterações realizadas com sucesso!');
+    }, err =>{
+			alert('Houve um erro ao salvar as alterações, favor verificar os dados');
+		})
   }
   
 }
