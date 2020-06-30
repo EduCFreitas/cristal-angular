@@ -20,10 +20,15 @@ export class ListaDeUsuariosComponent implements OnInit {
   ngOnInit() {
     let item:string = sessionStorage.getItem('delOk')
     let token = sessionStorage.getItem('token')
-
-    if(token==null){
-      alert('Faça o login antes de acessar a página Feed');
-      this.router.navigate(['/login']);
+    let tipoUsuario = sessionStorage.getItem('tipoUsuario');
+    
+    if(token==null || tipoUsuario!='admin'){
+      alert('Página disponível apenas para administradores do site!');
+      if(token==null){
+        this.router.navigate(['/login']);
+      }else{
+        this.router.navigate(['/home']);
+      }
     }
 
     if (item=="true"){
