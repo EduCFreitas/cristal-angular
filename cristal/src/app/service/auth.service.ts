@@ -41,11 +41,12 @@ export class AuthService {
     return primeiroNome;
   }
 
-  buscaTipoUsuario(){
+  ehUsuarioAdmin(){
     let admin = false;
     if(sessionStorage.getItem('tipoUsuario')=='admin'){
       admin = true
     }
     return admin;
   }
+
 }

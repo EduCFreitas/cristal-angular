@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutosService } from '../service/produtos.service';
 import { Produtos } from '../model/Produtos';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-item-produto',
@@ -13,7 +14,7 @@ export class ItemProdutoComponent implements OnInit {
   produto: Produtos = new Produtos()
   id:number;
   
-  constructor(private produtoService: ProdutosService, private route: ActivatedRoute, private router:Router) { 
+  constructor(private produtoService: ProdutosService, public auth:AuthService, private route: ActivatedRoute, private router:Router) { 
     
   }
   

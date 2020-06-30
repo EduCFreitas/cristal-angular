@@ -72,8 +72,14 @@
                                 </div>
                             </div>
                     </div>
-                    <input name="comprar" id="comprar" class="btn  btn-block comprar-btn mt-4" type="button"
+                    <div class="row" *ngIf='!auth.ehUsuarioAdmin()'>
+                        <input name="comprar" id="comprar" class="btn btn-block comprar-btn mt-4" type="button"
                     value="Comprar" (click)="comprar()">
+                    </div>
+                    <div class="row" *ngIf='auth.ehUsuarioAdmin()'>
+                        <button class="col-5 mx-auto btn comprar-btn" [routerLink]="['/editar-item-produto', produto.id]">Editar produto</button>
+                        <button class="col-5 mx-auto btn comprar-btn" [routerLink]="['/deletar-item-produto', produto.id]">Deletar produto</button>
+                    </div>
             </div>
         </div>
         </div>
