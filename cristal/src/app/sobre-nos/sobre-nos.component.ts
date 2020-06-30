@@ -1,7 +1,6 @@
 import {
-  Component,
-  OnInit
-} from '@angular/core';
+  Component, OnInit} from '@angular/core';
+  declare var $: any;
 
 @Component({
   selector: 'app-sobre-nos',
@@ -14,6 +13,8 @@ export class SobreNosComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0, 0)
+
+
   }
 
 }

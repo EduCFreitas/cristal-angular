@@ -1,3 +1,5 @@
+$focus:#3bFEBB;
+
 .site-footer {
   // background-color:#26272b;
   // background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(251, 191, 236) 100%);
@@ -8,6 +10,7 @@
   line-height: 24px;
   color: #ffffff;
   text-shadow: black;
+
 }
 
 .site-footer hr {
@@ -30,11 +33,13 @@
 // copy
 .site-footer a {
   color: #ffffff;
+  transition: .3s;
 }
 
 .site-footer a:hover {
-  color: #F50057;
+  color: $focus;
   text-decoration: none;
+  transition: .3s;
 }
 
 .footer-links {
@@ -53,7 +58,7 @@
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #F50057;
+  color: $focus;
   text-decoration: none;
 }
 

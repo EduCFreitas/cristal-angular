@@ -1,3 +1,5 @@
+$focus:#3bFEBB;
+
 .navbar-bg {
   display: flex;
   justify-content: space-between;
@@ -44,7 +46,7 @@
 }
 
 .nav__links li a:hover {
-  color: #4450B2;
+  color: $focus;
 }
 
 .dropdown-menu,
@@ -115,7 +117,7 @@
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #4E57AA;
+  color: $focus;
 }
 
 .overlay .close {

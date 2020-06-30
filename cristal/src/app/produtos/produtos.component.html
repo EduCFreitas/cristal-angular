@@ -6,13 +6,10 @@
   <input type="checkbox" id="toggleMenu" name="toggleMenu" class="hide" [checked]="estaMostrando" />
   <nav id="sidebar">
     <div class="custom-menu">
-      <label id="sidebarCollapse" class="icon-cristal" for="toggleMenu">
-        <img src="../../assets/icon-cristal-produtos.png" alt="categorias">
-
+      <label matTooltip="CATEGORIAS" matTooltipPosition="after" id="sidebarCollapse"
+        class="icon-cristal" for="toggleMenu">
+        <img src="../../assets/icon-cristal-produtos.png" alt="categorias">        
       </label>
-      <div class="icon-categoria">
-        <img src="../../assets/CATEGORIAS-PRODUTO.png" alt="categorias">
-      </div>
     </div>
     <!-- Categorias -->
     <div class="p-4">
@@ -61,7 +58,7 @@
           </button>
         </li>
         <li class="inline">
-          <button class="buttonMenu" (click)="filtrarPorCor('Vermelho')">
+          <button class="buttonMenu" (click)="filtrarPorCor('vermelho')">
             <div class="bloco-vermelho"></div>
           </button>
         </li>

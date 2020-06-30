@@ -1,7 +1,44 @@
+$color_grey: #e2e2e2;
+
+p {
+  font-family: "Popins", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  line-break: normal;
+  color: $color_grey;
+}
+
+h1,h2 {
+  margin: 0;
+  line-height: 2;
+  text-align: left;
+  color:#FFF;
+  font-family: "Popins", sans-serif;
+  font-weight: bold;
+}
+
+  h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00BFA6;
+  margin-bottom: 15px;
+}
+
+.display {
+  text-align: center;
+}
+
+.display:after {
+  margin: auto;
+  height: 5px;
+}
+
 .container {
   margin-top: 76.7px;
 }
 
 .jumbotron{
-    background-color: #deeaf8;
+  background-color: #4E57AA;
 }
