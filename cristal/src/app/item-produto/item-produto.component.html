@@ -42,10 +42,12 @@
                             </div>
                             <div class="col">
                                 <!-- Botão para acionar modal -->
-                                <button name="modal" id="modal" class="btn  modal-btn mt-3 btn-sm" data-toggle="modal"
+                                <div *ngIf='!auth.ehUsuarioAdmin()'> 
+                                    <button name="modal" id="modal" class="btn  modal-btn mt-3 btn-sm" data-toggle="modal"
                                     data-target="#Modal" text-uppercase style="width: auto">
                                     tabela de medida
-                                </button>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
