@@ -15,12 +15,17 @@ export class CreateItemProdutoComponent implements OnInit {
   constructor(private produtoService: ProdutosService, private router:Router) { }
   
   ngOnInit(){  
-    let token = sessionStorage.getItem('token')
+    let token = sessionStorage.getItem('token');
+    let tipoUsuario = sessionStorage.getItem('tipoUsuario');
     
-    if(token==null){
-      alert('Faça o login antes de acessar a página');
-      this.router.navigate(['/login']);
-    } 
+    if(token==null || tipoUsuario!='admin'){
+      alert('Página disponível apenas para administradores do site!');
+      if(token==null){
+        this.router.navigate(['/login']);
+      }else{
+        this.router.navigate(['/home']);
+      }
+    }
   }
   
   cadastrar(){
