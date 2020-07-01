@@ -608,7 +608,7 @@ body {
 }
 
 .el-wrapper {
-  width: 300px;
+  width: 275px;
   padding: 15px;
   margin: 15px auto;
   background-color: #fff;
@@ -706,7 +706,7 @@ body {
   -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
   /* ease-out */
-  width: 580px;
+  width: 530px;
   height: 100%;
   background-color: #3bFEBB;
   position: absolute;
@@ -715,7 +715,7 @@ body {
 }
 
 .h-bg .h-bg-inner {
-  width: 50%;
+  width: 45%;
   height: 100%;
   border-radius: 3px;
   background-color: #4E57AA;
@@ -852,3 +852,7 @@ body {
 .el-wrapper {
   border-radius: 5px;
 }
+
+// .box-up{
+//   width: 174px !important;
+// }

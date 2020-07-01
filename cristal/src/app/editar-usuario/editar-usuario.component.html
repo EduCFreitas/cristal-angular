@@ -1,3 +1,4 @@
+<div class="corpo">
 <main class="container">
     <div class="row my-4">
         <div class="col-12 text-center">
@@ -5,7 +6,7 @@
             <h5 class="h5">ID {{ usuario.id }}</h5>
         </div>
     </div>
-    
+
     <!-- Tabela para lista de usuários -->
     <div class="row mb-4 d-flex justify-content-center">
         <div class="col-lg-8 col-md-9 col-sm-10">
@@ -20,7 +21,7 @@
                     <input type="email" name="email" id="email" class="form-control" [(ngModel)]= "usuario.email">
                 </div>
             </div>
-            
+
             <!-- CPF e Telefone -->
             <div class="form-row">
                 <div class="form-group col-md-12 col-lg-6">
@@ -32,7 +33,7 @@
                     <input type="tel" name="telefone" id="telefone" class="form-control" [(ngModel)]= "usuario.telefone">
                 </div>
             </div>
-            
+
             <!-- Endereço -->
             <div class="form-row">
                 <div class="form-group col-md-12 col-lg-9">
@@ -44,14 +45,14 @@
                     <input type="text" name="cep" id="cep" class="form-control" [(ngModel)]= "usuario.cep">
                 </div>
             </div>
-            
+
             <!-- Senha -->
             <!-- <div class="form-group">
                 <label for="senha" class="lead">Senha:</label>
                 <input type="password" name="senha" id="senha" class="form-control" [(ngModel)]= "usuario.senha">
             </div> -->
             <hr>
-            
+
             <!-- Mensagem e botões -->
             <div class="form-group text-center">
                 <p class="lead">Salvar as alterações?</p>
@@ -61,4 +62,4 @@
         </div>
     </div>
 </main>
-
+</div>
