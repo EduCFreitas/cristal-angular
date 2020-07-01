@@ -1,10 +1,11 @@
-*{
-  box-sizing: border-box;
+
+
+.corpo {
+  background-color: #4E57AA;
 }
 
-.body{
-background-image: white;
-margin-top: 76.7px;
+.corpo, .corpo2{
+  border-radius: 5px;
 }
 
 .breadcrumb-list {
@@ -22,13 +23,13 @@ padding: 10px 0 0 0;
 }
 
 .breadcrumb-item .active {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .breadcrumb-item ::before {
     display: inline-block;
     padding: 0 0.5rem;
-    color: lightgray;
+    color: rgb(255, 255, 255);
 }
 
 .main{
@@ -36,9 +37,22 @@ padding: 10px 0 0 0;
 }
 
 
-h1, p {
-  color: gray;
+h2 {
   text-transform: uppercase;
+  margin: 0;
+  line-height: 2;
+  text-align: center;
+  color:#FFF;
+
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #00BFA6;
+  margin: 8px auto;
 }
 
 img {
@@ -110,7 +124,7 @@ img {
 }
 
 .card-body {
-  padding: 50px 60px 60px;
+  padding: 30px 60px 60px;
   height: 500px;
 
   @media (max-width: 422px) {
@@ -120,7 +134,7 @@ img {
 
 .description-product {
   max-width: 626px;
-  border-top: 0.0625rem solid gray;
+  // border-top: 0.0625rem solid gray;
   padding: 0.1rem 0 0 0;
 }
 
@@ -153,29 +167,46 @@ img {
 }
 }
 
-.comprar-btn {
+.comprar-btn, .deletar-btn {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right, #6C63FF, #bc9fff, #6C63FF);
-    background-size: 200%;
-    font-size: 1.1rem;
+    background-color: #00BFA6;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    font-weight: 300;
     margin: 1rem 0;
     cursor: pointer;
     transition: .5s;
-    
-
-    &:hover {
-      background-position: right;
-    }
-
-    &:active {
-      outline: none !important;
-    }
   }
+
+  .comprar-btn:hover{
+    background-color: darken(#00bfa6, 5%) ;
+    transition: 0.5s;
+  }
+
+  .deletar-btn{
+    background-color: rgba(127, 255, 212, 0);
+    border: 2px solid #656FC4;
+    color: #FFF;
+    transition: .5s;
+  }
+
+  .deletar-btn:hover {
+    background-color: #656FC4;
+    color: #FFF;
+    transition: .5s;
+  }
+
+  p{
+    font-family: "Popins", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    line-break: normal;
+    color: #FFF;
+  }
+
