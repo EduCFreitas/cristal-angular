@@ -94,24 +94,33 @@
 
     <!-- cards -->
 
-    <div class="cards-grupo" *ngFor="let produto of listaProdutos">
+   <div class="container page-wrapper">
+     <div class="page-inner">
+       <div class="row">
+         <div class="el-wrapper" *ngFor="let produto of listaProdutos">
+           <div class="box-up">
+             <img class="img" src="{{produto.foto}}" alt="imagem do produto">
+             <div class="img-info">
+               <div class="info-inner">
+                 <span class="p-name">{{produto.nome}}</span>
+               </div>
+             </div>
+           </div>
 
-      <card class="cards" [routerLink]="['/item-produto', produto.id]">
-        <!-- imagem do produto -->
-        <div class="imagem">
-          <img src="{{produto.foto}}" alt="Peças de Roupa">
-        </div>
-        <!-- nome do produto-->
-        <div class="title">
-          {{produto.nome}}
-        </div>
-        <!-- Preço do Produto -->
-        <div class="title">
-          R{{produto.valor | currency}}
-        </div>
+           <div class="box-down">
+             <div class="h-bg">
+               <div class="h-bg-inner"></div>
+             </div>
 
-      </card>
-
-    </div>
-  </div>
+             <a class="cart" [routerLink]="['/item-produto', produto.id]">
+               <span class="price">R$100</span>
+               <span class="add-to-cart">
+                 <span class="txt">Comprar</span>
+               </span>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
 
