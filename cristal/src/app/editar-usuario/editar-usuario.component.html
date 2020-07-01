@@ -1,7 +1,7 @@
 <div class="corpo">
 <main class="container">
     <div class="row my-4">
-        <div class="col-12 text-center">
+        <div class="col-md-12 col-kg text-center">
             <h1 class="h2">Editar Usuário</h1>
             <h5 class="h5">ID {{ usuario.id }}</h5>
         </div>
@@ -56,8 +56,8 @@
             <!-- Mensagem e botões -->
             <div class="form-group text-center">
                 <p class="lead">Salvar as alterações?</p>
-                <button type="button" class="btn btn-outline-success col-5 mr-1" (click)="salvar()">Sim</button>
-                <button type="button" class="btn btn-outline-danger col-5 ml-1" routerLink="/home">Não</button>
+                <button type="button" class="btn sim col-5 mr-1" (click)="salvar()">Sim</button>
+                <button type="button" class="btn nao col-5 ml-1" routerLink="/home">Não</button>
             </div>
         </div>
     </div>

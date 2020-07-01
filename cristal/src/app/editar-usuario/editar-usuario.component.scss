@@ -2,6 +2,27 @@
   margin-top: 100px;
 }
 
-.container {
-  background-color: #4E57AA;
+.sim {
+  background-color: #00BFA6;
+  color: #FFF;
+}
+
+
+.sim:hover{
+
+  background-color: transparent;
+  border: solid 1px #00BFA6;
+  color: #00BFA6;
+}
+
+
+.nao {
+  background-color: transparent;
+  border: solid 1px #656FC4;
+  color:#656FC4;
+}
+
+.nao:hover{
+  background-color: #656FC4;
+  color: #FFF;
 }
