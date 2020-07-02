@@ -1,39 +1,45 @@
-<div class="container p-3 my-5 shadow-sm">
+<div class="fundo">
+  <div class="container p-3 my-5">
     <div class="row d-flex justify-content-center mx-3">
-        <h2>Carrinho</h2>
+
     </div>
-    <div class="row ">
-        <div class="col-10">
-            <table class="table table-borderless">
-                <thead>
-                    <tr>
-                        <th scope="col">Item</th>
-                        <th scope="col">Produto</th>
-                        <th scope="col">Quantidade</th>
-                        <th scope="col">Valor Unitário</th>
-                        <th scope="col">Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>{{carrinho.nomeProduto}}</td>
-                        <td>
-                            <input type="number" name="qtd" id="qtd" min="1" (click)='calculaTotal()' [(ngModel)]='carrinho.qtdProduto'>
-                        </td>
-                        <td>R{{carrinho.valorProduto | currency}}</td>
-                        <td>R{{carrinho.subtotal | currency}}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Total</th>
-                        <td colspan="3"></td>
-                        <td>R{{carrinho.total | currency}}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="row my-3">
-                <button class="btn" (click)="comprar()">Finalizar Compra</button>
-            </div>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6 bg shadow-sm">
+        <h2 class="text-center">Carrinho</h2>
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Produto</th>
+              <th scope="col">Quantidade</th>
+              <th scope="col">Valor Unitário</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>{{carrinho.nomeProduto}}</td>
+              <td>
+                <input type="number" name="qtd" id="qtd" min="1" (click)='calculaTotal()'
+                  [(ngModel)]='carrinho.qtdProduto'>
+              </td>
+              <td>R{{carrinho.valorProduto | currency}}</td>
+              <td>R{{carrinho.subtotal | currency}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Total</th>
+              <!-- <td colspan="3"></td> -->
+              <td>R{{carrinho.total | currency}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr class="text-left">
+        <div class="row my-1">
+          <button class="btn" (click)="comprar()">Finalizar Compra</button>
         </div>
+      </div>
     </div>
+  </div>
 </div>
