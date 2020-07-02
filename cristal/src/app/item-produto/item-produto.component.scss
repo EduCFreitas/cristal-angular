@@ -107,16 +107,6 @@ img {
   transform: perspective(600px) rotateY(0deg);
 }
 
-// .card-img img:hover {
-//   -webkit-transform: scale(3.1);
-//   -moz-transform: scale(2.1);
-//   -o-transform: scale(2.1);
-//   -ms-transform: scale(2.1);
-//   transform: scale(2.1);
-//   transition: 2s;
-//   opacity: 6;
-// }
-
 .card-img img {
   max-width: 100%;
   -moz-transition: all 0.7s;
@@ -134,7 +124,6 @@ img {
 
 .description-product {
   max-width: 626px;
-  // border-top: 0.0625rem solid gray;
   padding: 0.1rem 0 0 0;
 }
 
@@ -143,26 +132,29 @@ img {
   font-size: larger;
 }
 
-// #modal{
-//   width: 100px;
-// }
 
 .modal-btn {
-  padding: 13px 20px 12px;
-  background-color: #e4c5fe;
-  border-radius: 4px;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #fff;
-  margin-bottom: 10px;
-  transition: 0.5s;
-  text-transform: uppercase;
+    display: block;
+    width: 75%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #00BFA6;
+    color: #00BFA6;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
 
  &:hover {
-  border: 1px solid #e4c5fe;
   background-color: transparent;
-  color: #e4c5fe;
+  color: #FFF;
+  background-color: #00BFA6;
   transition: 0.5s;
 }
 }
@@ -206,7 +198,6 @@ img {
     font-family: "Popins", sans-serif;
     font-size: 16px;
     line-height: 20px;
-    line-break: normal;
     color: #FFF;
   }
 
