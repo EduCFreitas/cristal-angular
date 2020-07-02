@@ -41,6 +41,9 @@ export class ItemProdutoComponent implements OnInit {
   }
   
   comprar(){
+    sessionStorage.setItem('nomeProduto', this.produto.nome);
+    sessionStorage.setItem('valorProduto', this.produto.valor.toString());
+    this.router.navigate(['/carrinho']);
     alert('Produto adicionado ao carrinho!');
   }
   

@@ -15,6 +15,7 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
 import { CreateItemProdutoComponent } from './create-item-produto/create-item-produto.component';
 import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
 import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
  
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path: 'deletar-usuario/:id', component: DeletarUsuarioComponent},
   {path: 'criar-item-produto', component: CreateItemProdutoComponent},
   {path: 'editar-item-produto/:id', component: EditarItemProdutoComponent},
-  {path: 'deletar-item-produto/:id', component: DeletarItemProdutoComponent}
+  {path: 'deletar-item-produto/:id', component: DeletarItemProdutoComponent},
+  {path: 'carrinho', component: CarrinhoComponent}
 ];
 
  

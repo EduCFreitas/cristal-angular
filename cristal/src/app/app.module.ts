@@ -31,6 +31,7 @@ import { CreateItemProdutoComponent } from './create-item-produto/create-item-pr
 import { EditarItemProdutoComponent } from './editar-item-produto/editar-item-produto.component';
 import { DeletarItemProdutoComponent } from './deletar-item-produto/deletar-item-produto.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
   
 
@@ -53,7 +54,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DeletarUsuarioComponent,
     CreateItemProdutoComponent,
     EditarItemProdutoComponent,
-    DeletarItemProdutoComponent
+    DeletarItemProdutoComponent,
+    CarrinhoComponent
     
   ],
   imports: [
