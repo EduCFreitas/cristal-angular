@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
       $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 40) {
-          $(".black").css("background" , "#4e57aab2");
+          $(".black").css("background" , "#4e57aae1");
         }
 
         else{
