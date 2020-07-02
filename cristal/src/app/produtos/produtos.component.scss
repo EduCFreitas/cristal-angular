@@ -281,8 +281,6 @@ h5,
 
   ul.components {
     padding: 0;
-
-
   }
 
   ul {
@@ -321,50 +319,12 @@ h5,
     }
   }
 
-  //   @include media-breakpoint-down(md){
-  //     margin-left: -270px;
-  //     &.active {
-  //         margin-left: 0;
-  //     }
-  //   }
-
   .custom-menu {
     display: inline-block;
     position: absolute;
     top: 20px;
     right: 0;
     margin-right: -20px;
-    // @include transition(.3s);
-    // .btn{
-    // 	width: 60px;
-    // 	height: 60px;
-    // 	border-radius: 50%;
-    // 	position: relative;
-    // 	i{
-    // 		margin-right: -40px;
-    // 		font-size: 14px;
-    // 	}
-    // 	&.btn-primary{
-    // 		background: transparent;
-    // 		border-color: transparent;
-    // 		&:after{
-    // 			z-index: -1;
-    // 			position: absolute;
-    // 			top: 0;
-    // 			left: 0;
-    // 			right: 0;
-    // 			bottom: 0;
-    // 			content: '';
-    // 		  transform: rotate(45deg);
-    // 		  background: $primary;
-    // 		  border-radius: 10px;
-    // 		}
-    // 		&:hover, &:focus{
-    // 			background: transparent !important;
-    // 			border-color: transparent !important;
-    // 		}
-    // 	}
-    // }
   }
 }
 
@@ -380,14 +340,6 @@ a[data-toggle="collapse"] {
   right: 0;
   transform: translateY(-50%);
 }
-
-// #sidebarCollapse{
-// 	span{
-// 		@include media-breakpoint-down(md){
-// 	    display: none;
-// 		}
-// 	}
-// }
 
 #content {
   width: 100%;
@@ -415,8 +367,6 @@ a[data-toggle="collapse"] {
     color: rgba(255, 255, 255, .5);
   }
 }
-
-
 
 .form-control {
   height: 40px !important;
@@ -453,24 +403,6 @@ a[data-toggle="collapse"] {
     color: rgba(255, 255, 255, .5);
   }
 }
-
-// @media (min-width: 768px) {
-//   #sidebar {
-//     top: 73px;
-//   }
-// }
-
-// @media (min-width: 993px) {
-//   #sidebar {
-//     top: 80px;
-//   }
-// }
-
-// @media (min-width: 1200px) {
-//   #sidebar {
-//     top: 93px;
-//   }
-// }
 
 .wrapper {
   padding: 20px;
@@ -852,7 +784,3 @@ body {
 .el-wrapper {
   border-radius: 5px;
 }
-
-// .box-up{
-//   width: 174px !important;
-// }
