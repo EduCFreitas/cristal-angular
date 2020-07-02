@@ -29,14 +29,14 @@
               <td>R{{carrinho.subtotal | currency}}</td>
             </tr>
             <tr>
+              <td colspan="3"></td>
               <td class="font-weight-bold destaque">Total</td>
-              <!-- <td colspan="3"></td> -->
               <td class="font-weight-bold">R{{carrinho.total | currency}}</td>
             </tr>
           </tbody>
         </table>
-        <hr class="text-left">
-        <div class="row my-1">
+        <!-- <hr class="text-center"> -->
+        <div class="row my-1 d-flex justify-content-center">
           <button class="btn" (click)="comprar()">Finalizar Compra</button>
         </div>
       </div>
