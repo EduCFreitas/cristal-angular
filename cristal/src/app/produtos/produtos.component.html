@@ -113,7 +113,7 @@
              </div>
 
              <a class="cart" [routerLink]="['/item-produto', produto.id]">
-               <span class="price">R$100</span>
+               <span class="price">R{{produto.valor | currency}}</span>
                <span class="add-to-cart">
                  <span class="txt">Comprar</span>
                </span>
