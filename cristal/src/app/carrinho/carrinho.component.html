@@ -19,7 +19,7 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
+              <td class="font-weight-bold destaque">1</td>
               <td>{{carrinho.nomeProduto}}</td>
               <td>
                 <input type="number" name="qtd" id="qtd" min="1" (click)='calculaTotal()'
@@ -29,9 +29,9 @@
               <td>R{{carrinho.subtotal | currency}}</td>
             </tr>
             <tr>
-              <th scope="row">Total</th>
+              <td class="font-weight-bold destaque">Total</td>
               <!-- <td colspan="3"></td> -->
-              <td>R{{carrinho.total | currency}}</td>
+              <td class="font-weight-bold">R{{carrinho.total | currency}}</td>
             </tr>
           </tbody>
         </table>
