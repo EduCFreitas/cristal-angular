@@ -29,6 +29,9 @@
       <div *ngIf='auth.btnSair()'>
         <a class="dropdown-item" [routerLink]="['/editar-usuario', auth.buscaIdUsuario()]">Editar perfil</a>
       </div>
+      <div *ngIf='auth.btnSair() && !auth.ehUsuarioAdmin()'>
+        <a class="dropdown-item" routerLink="/carrinho">Carrinho</a>
+      </div>
       <div *ngIf='auth.ehUsuarioAdmin()'>
         <a class="dropdown-item" routerLink="/criar-item-produto">Criar Produto</a>
       </div>
@@ -54,6 +57,9 @@
     </div>
     <div *ngIf='auth.btnLogin()'>
       <a href="#" class="fechar" routerLink="/cadastro">Cadastro</a>
+    </div>
+    <div *ngIf='auth.btnSair() && !auth.ehUsuarioAdmin()'>
+      <a href="#" class="fechar" routerLink="/carrinho">Editar perfil</a>
     </div>
     <div *ngIf='auth.btnSair()'>
       <a href="#" class="fechar" [routerLink]="['/editar-usuario', auth.buscaIdUsuario()]">Editar perfil</a>
