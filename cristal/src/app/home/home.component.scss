@@ -143,7 +143,6 @@ strong {
   transition: all .2s linear;
 }
 
-
 .card-category {
   font-size: 22px;
   line-height: 20px;
@@ -225,7 +224,8 @@ strong {
   background-color: #00BFA6;
 }
 
-.qualidade i, h3 {
+.qualidade i,
+h3 {
   color: #FFF;
 }
 
@@ -259,4 +259,3 @@ iframe {
   border-radius: 5px;
   max-width: 100%;
 }
-

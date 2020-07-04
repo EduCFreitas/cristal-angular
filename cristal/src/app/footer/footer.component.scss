@@ -1,8 +1,6 @@
 $focus:#3bFEBB;
 
 .site-footer {
-  // background-color:#26272b;
-  // background-image: linear-gradient(225deg, rgba(58, 185, 183, 0.427) 0%, #C5C1FF 56%, rgb(251, 191, 236) 100%);
   background-color: #7f53ac;
   background-image: linear-gradient(211deg, #647dee 0%, #7f53ac 74%);
   padding: 45px 0 20px;
@@ -30,7 +28,6 @@ $focus:#3bFEBB;
   letter-spacing: 2px
 }
 
-// copy
 .site-footer a {
   color: #ffffff;
   transition: .3s;
@@ -84,7 +81,6 @@ $focus:#3bFEBB;
   margin: 0;
 }
 
-
 .social-icons {
   padding-left: 0;
   margin-bottom: 0;
@@ -99,14 +95,14 @@ $focus:#3bFEBB;
 .social-icons li.title {
   margin-right: 15px;
   text-transform: uppercase;
-  color:#96a2b2;
+  color: #96a2b2;
   font-weight: 700;
   font-size: 13px
 }
 
 .social-icons a {
   background-color: #eceeef;
-  color:#787e83;
+  color: #787e83;
   font-size: 16px;
   display: inline-block;
   line-height: 44px;
@@ -154,7 +150,6 @@ $focus:#3bFEBB;
   background: #e52d27;
   background: linear-gradient(to top, rgb(95, 9, 12), #e52d27);
 }
-
 
 @media (max-width:767px) {
   .social-icons li.title {

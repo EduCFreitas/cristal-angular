@@ -1,87 +1,88 @@
 <div class="d-flex align-items-center min-vh-100 py-3 py-md-0">
   <div class="container">
-      <div class="row no-gutters mt-5">
-        <div class="col-md-2"></div>
-        <div class="col-md-4 corpo-2 shadow-sm">
-          <div class="imagem-produto d-flex justify-content-center ">
-            <div class="card-img card-front" style="width: 18rem;">
-              <img class="image-responsive" src="{{produto.foto}}" alt="Imagem de capa do card">
-            </div>
-            <!-- <div class="card-img card-back" style="width: 18rem;">
+    <div class="row no-gutters mt-5">
+      <div class="col-md-2"></div>
+      <div class="col-md-4 corpo-2 shadow-sm">
+        <div class="imagem-produto d-flex justify-content-center ">
+          <div class="card-img card-front" style="width: 18rem;">
+            <img class="image-responsive" src="{{produto.foto}}" alt="Imagem de capa do card">
+          </div>
+          <!-- <div class="card-img card-back" style="width: 18rem;">
                     <img class="image-responsive shadow-lg" src="assets"
                                 alt="Imagem de capa do card">
                 </div> -->
-          </div>
         </div>
+      </div>
 
-        <div class="col-md-5 corpo shadow-sm">
-          <div class="card-body mt-5">
-            <h2 class="card-title text-center text-nowrap bd-highlight text-uppercase">
-              {{produto.nome}}
-            </h2>
-            <div class="description-product">
-              <div class="card-description text-left pt-4">
-                <!-- <p class="card-subtitle pt-1 lead">Peça: {{produto.categoria}}</p> -->
-                <p class="card-subtitle price monospace">
-                  R{{produto.valor | currency}}
-                </p>
-                <!-- <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p> -->
-                <p class="card-text lead d-flex text-justify pt-1">
-                  {{produto.descricao}}
-                </p>
+      <div class="col-md-5 corpo shadow-sm">
+        <div class="card-body mt-5">
+          <h2 class="card-title text-center text-nowrap bd-highlight text-uppercase">
+            {{produto.nome}}
+          </h2>
+          <div class="description-product">
+            <div class="card-description text-left pt-4">
+              <!-- <p class="card-subtitle pt-1 lead">Peça: {{produto.categoria}}</p> -->
+              <p class="card-subtitle price monospace">
+                R{{produto.valor | currency}}
+              </p>
+              <!-- <p class="card-subtitle pt-1 lead">Quantidade em estoque: {{produto.qtdEstoque}}</p> -->
+              <p class="card-text lead d-flex text-justify pt-1">
+                {{produto.descricao}}
+              </p>
 
-                <div class="row">
-                  <div class="col mt-3">
-                    <p class="card-subtitle pt-2 lead inline">Cores:
-                      {{produto.cor}}
-                    </p>
-                    <p class="card-subtitle pt-2 lead inline">Tamanho:
-                      {{produto.tamanho}}
-                    </p>
+              <div class="row">
+                <div class="col mt-3">
+                  <p class="card-subtitle pt-2 lead inline">Cores:
+                    {{produto.cor}}
+                  </p>
+                  <p class="card-subtitle pt-2 lead inline">Tamanho:
+                    {{produto.tamanho}}
+                  </p>
+                </div>
+                <div class="col">
+                  <!-- Botão para acionar modal -->
+                  <div *ngIf='!auth.ehUsuarioAdmin()'>
+                    <button name="modal" id="modal" class="btn  modal-btn mt-3 btn-sm" data-toggle="modal"
+                      data-target="#Modal" text-uppercase style="width: auto">
+                      tabela de medida
+                    </button>
                   </div>
-                  <div class="col">
-                    <!-- Botão para acionar modal -->
-                    <div *ngIf='!auth.ehUsuarioAdmin()'>
-                      <button name="modal" id="modal" class="btn  modal-btn mt-3 btn-sm" data-toggle="modal"
-                        data-target="#Modal" text-uppercase style="width: auto">
-                        tabela de medida
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-2">
+              <!-- Modal EDITAR -->
+              <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title lead " id="TituloModalCentralizado"> Veja
+                        aqui, o tamanho certo de sua criança.
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-12 col-md-2">
-                <!-- Modal EDITAR -->
-                <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title lead " id="TituloModalCentralizado"> Veja
-                          aqui, o tamanho certo de sua criança.
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <img src="assets/tabela-medida.png" alt="">
-                      </div>
+                    <div class="modal-body">
+                      <img src="assets/tabela-medida.png" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row" *ngIf='!auth.ehUsuarioAdmin()'>
-                <input name="comprar" id="comprar" class="btn btn-block comprar-btn mt-4" type="button" value="Comprar"
-                  (click)="comprar()">
-              </div>
-              <div class="row pt-5" *ngIf='auth.ehUsuarioAdmin()'>
-                <button class="col-4 mt-3 mx-auto btn comprar-btn" [routerLink]="['/editar-item-produto', produto.id]">Editar</button>
-                <button class="col-4 mt-3 mx-auto btn deletar-btn"
-                  [routerLink]="['/deletar-item-produto', produto.id]">Deletar</button>
-              </div>
+            </div>
+            <div class="row" *ngIf='!auth.ehUsuarioAdmin()'>
+              <input name="comprar" id="comprar" class="btn btn-block comprar-btn mt-4" type="button" value="Comprar"
+                (click)="comprar()">
+            </div>
+            <div class="row pt-5" *ngIf='auth.ehUsuarioAdmin()'>
+              <button class="col-4 mt-3 mx-auto btn comprar-btn"
+                [routerLink]="['/editar-item-produto', produto.id]">Editar</button>
+              <button class="col-4 mt-3 mx-auto btn deletar-btn"
+                [routerLink]="['/deletar-item-produto', produto.id]">Deletar</button>
             </div>
           </div>
         </div>
+      </div>
     </div>

@@ -18,11 +18,7 @@
 }
 
 .buttonMenu:hover {
-  box-shadow:
-    0px 2px #ffffff,
-    0px 2px #ffffff;
-  // -webkit-transform: translateX(-3px);
-  // transform: translateX(-3px);
+  box-shadow: 0px 2px #ffffff, 0px 2px #ffffff;
   color: #3bFEBB;
   transition: .4s;
 
@@ -53,7 +49,6 @@ li {
 
 .mat-menu-content:not(:empty) {
   display: inline-flex;
-
 }
 
 
@@ -68,8 +63,6 @@ li {
 
 .cards-grupo {
   display: inline-flex;
-  // padding: 20px;
-
   display: inline-flex;
   flex-wrap: wrap;
   padding: 20px;
@@ -124,7 +117,6 @@ li {
 }
 
 img {
-
   height: 100%;
 }
 
@@ -187,7 +179,6 @@ h5,
   line-height: 1.5;
   font-weight: 400;
   color: black;
-  //por fontemes
 }
 
 
@@ -220,7 +211,6 @@ h5,
   background-position: center center;
 }
 
-
 //SIDEBAR
 .icon-cristal {
   height: 60px;
@@ -232,9 +222,7 @@ h5,
   height: 190px;
   width: 15px;
   margin-right: 10px;
-
 }
-
 
 .wrapper {
   width: 100%;
@@ -249,7 +237,6 @@ h5,
   min-width: 270px;
   max-width: 290px;
   background: #4e57aae1;
-  ;
   transition: all 0.3s;
   position: fixed;
   top: 60px;
@@ -328,7 +315,6 @@ h5,
   }
 }
 
-
 a[data-toggle="collapse"] {
   position: relative;
 }
@@ -347,7 +333,6 @@ a[data-toggle="collapse"] {
   min-height: 100vh;
   transition: all 0.3s;
 }
-
 
 .btn {
   &.btn-primary {
@@ -500,9 +485,6 @@ p {
 }
 
 // cards
-
-
-
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;

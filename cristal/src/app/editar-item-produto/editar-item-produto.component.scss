@@ -1,60 +1,52 @@
-
-.container{
+.container {
   margin-top: 76.7px;
   padding: 40px;
   margin: 0 auto;
   display: flex;
 }
 
-.body
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
-.form
-{
-    position: relative;
-    background: #4E57AA;
-    border: none;
-    width: 550px;
-    padding: 40px 40px 20px ;
-    border-radius: 10px;
-    text-align: center;
-    margin: 0 auto;
+.form {
+  position: relative;
+  background: #4E57AA;
+  border: none;
+  width: 550px;
+  padding: 40px 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.form h2
-{
-    color: #ffffff;
-    font-weight: 500;
-    letter-spacing: 5px;
+.form h2 {
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
 
-.form .input
-{
-    margin-top: 40px;
-    text-align: left;
+.form .input {
+  margin-top: 40px;
+  text-align: left;
 }
 
-.form .input .fom-group
-{
-    margin-top: 10px;
+.form .input .fom-group {
+  margin-top: 10px;
 }
 
-.form .input .fom-group label
-{
-    display: block;
-    color: #fff;
-    margin-bottom: 5px;
-    font-size: 18px;
-    letter-spacing: 1px;
+.form .input .fom-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
-.form .input .fom-group input
-{
+.form .input .fom-group input {
   position: relative;
   width: 100%;
   height: 40px;
@@ -75,44 +67,42 @@
   line-break: normal;
 }
 
-
-.btn-editar{
+.btn-editar {
   max-width: 200px;
-    padding: 13px 20px 12px;
-    background-color: #00BFA6;
-    border-radius: 4px;
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 20px;
-    color: #fff;
-    margin-bottom: 10px;
-    transition: 0.5s;
-    text-transform: uppercase;
-    align-items: center;
+  padding: 13px 20px 12px;
+  background-color: #00BFA6;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  align-items: center;
 }
 
+.btn-editar:hover {
+  border: 1px solid #00BFA6;
+  background-color: transparent;
+  color: #00BFA6;
+  transition: 0.5s;
+}
 
-    .btn-editar:hover {
-        border: 1px solid #00BFA6;
-        background-color: transparent;
-        color: #00BFA6;
-        transition: 0.5s;
-    }
+.form h1 {
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+}
 
-    .form h1 {
-      color: #FFF;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-family: 'Poppins', sans-serif;
-      font-size: 25px;
-    }
-
-    h1:after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #00BFA6;
-      margin: 8px auto;
-      margin-bottom: 30px;
-    }
+h1:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00BFA6;
+  margin: 8px auto;
+  margin-bottom: 30px;
+}

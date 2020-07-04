@@ -6,8 +6,8 @@
   <input type="checkbox" id="toggleMenu" name="toggleMenu" class="hide" [checked]="estaMostrando" />
   <nav id="sidebar">
     <div class="custom-menu">
-      <label matTooltip="CATEGORIAS" matTooltipPosition="after" id="sidebarCollapse"
-        class="icon-cristal" for="toggleMenu">
+      <label matTooltip="CATEGORIAS" matTooltipPosition="after" id="sidebarCollapse" class="icon-cristal"
+        for="toggleMenu">
         <img src="../../assets/side-icon.svg" alt="categorias">
       </label>
     </div>
@@ -94,33 +94,32 @@
 
     <!-- cards -->
 
-   <div class="container page-wrapper">
-     <div class="page-inner">
-       <div class="row">
-         <div class="el-wrapper" *ngFor="let produto of listaProdutos">
-           <div class="box-up">
-             <img class="img" src="{{produto.foto}}" alt="imagem do produto">
-             <div class="img-info">
-               <div class="info-inner">
-                 <span class="p-name">{{produto.nome}}</span>
-               </div>
-             </div>
-           </div>
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper" *ngFor="let produto of listaProdutos">
+            <div class="box-up">
+              <img class="img" src="{{produto.foto}}" alt="imagem do produto">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">{{produto.nome}}</span>
+                </div>
+              </div>
+            </div>
 
-           <div class="box-down">
-             <div class="h-bg">
-               <div class="h-bg-inner"></div>
-             </div>
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
 
-             <a class="cart" [routerLink]="['/item-produto', produto.id]">
-               <span class="price">R{{produto.valor | currency}}</span>
-               <span class="add-to-cart">
-                 <span class="txt">Comprar</span>
-               </span>
-             </a>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-
+              <a class="cart" [routerLink]="['/item-produto', produto.id]">
+                <span class="price">R{{produto.valor | currency}}</span>
+                <span class="add-to-cart">
+                  <span class="txt">Comprar</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

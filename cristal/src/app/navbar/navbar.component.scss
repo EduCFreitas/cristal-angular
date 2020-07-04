@@ -63,7 +63,6 @@ $focus:#3bFEBB;
 }
 
 .cta {
-  // padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: .1px hidden #0088a9;
   border-radius: 10px;
@@ -80,7 +79,6 @@ $focus:#3bFEBB;
 }
 
 /* Mobile Nav */
-
 .menu {
   display: none;
 }
@@ -155,9 +153,6 @@ $focus:#3bFEBB;
   color: #fff;
   opacity: 1;
 }
-
-
-
 
 @media screen and (max-height: 450px) {
   .overlay a {

@@ -8,16 +8,17 @@ p {
   color: $color_grey;
 }
 
-h1,h2 {
+h1,
+h2 {
   margin: 0;
   line-height: 2;
   text-align: left;
-  color:#FFF;
+  color: #FFF;
   font-family: "Popins", sans-serif;
   font-weight: bold;
 }
 
-  h2:after {
+h2:after {
   content: "";
   display: block;
   width: 60px;
@@ -39,6 +40,6 @@ h1,h2 {
   margin-top: 76.7px;
 }
 
-.jumbotron{
+.jumbotron {
   background-color: #4E57AA;
 }

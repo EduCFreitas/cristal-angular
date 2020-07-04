@@ -1,9 +1,6 @@
 $midnight: #8E6BF9;
 $clouds: #ecf0f1;
 
-// General
-
-
 .container {
   background-color: #4E57AA;
   padding: 0 1em 1em;
@@ -16,10 +13,10 @@ h1 {
   margin: 0;
   line-height: 2;
   text-align: center;
-  color:#FFF;
+  color: #FFF;
 }
 
-  h1:after {
+h1:after {
   content: "";
   display: block;
   width: 60px;
@@ -44,10 +41,8 @@ input {
   // color: #4e57aab2;
 }
 
-
-// Layout
 .row {
-  display:flex;
+  display: flex;
 }
 
 /* Accordion styles */
@@ -60,6 +55,7 @@ input {
   width: 100%;
   color: white;
   overflow: hidden;
+
   &-label {
     display: flex;
     justify-content: space-between;
@@ -67,10 +63,12 @@ input {
     background: #656FC4;
     font-weight: bold;
     cursor: pointer;
+
     /* Icon */
     &:hover {
       background: darken(#656FC4, 10%);
     }
+
     &::after {
       content: "\276F";
       width: 1em;
@@ -95,21 +93,23 @@ input {
     font-size: 0.75em;
     background: #656FC4;
     cursor: pointer;
+
     &:hover {
       background: darken(#656FC4, 10%);
     }
   }
 }
 
-// :checked
 input:checked {
-  + .tab-label {
+  +.tab-label {
     background: darken(#656FC4, 10%);
+
     &::after {
       transform: rotate(90deg);
     }
   }
-   ~.tab-content {
+
+  ~.tab-content {
     max-height: 100vh;
     padding: 1em;
     background-color: #f5f6fa5e;

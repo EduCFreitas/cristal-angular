@@ -1,62 +1,61 @@
 <div class="container justify-content-center mt-5">
-    <div class="form text-uppercase">
+  <div class="form text-uppercase">
 
-        <h1 class=" text-center lead pt-1">Editar produto: Id-{{produto.id}}</h1>
-        <div class="input">
-            <div class="fom-group">
-                <label for="foto" class="text-monospace text-left">
-                </label>
-                <input type="text" name="foto" id="foto" class="form-control" placeholder="Digite URL da imagem"
-                    [(ngModel)]="produto.foto">
-            </div>
+    <h1 class=" text-center lead pt-1">Editar produto: Id-{{produto.id}}</h1>
+    <div class="input">
+      <div class="fom-group">
+        <label for="foto" class="text-monospace text-left">
+        </label>
+        <input type="text" name="foto" id="foto" class="form-control" placeholder="Digite URL da imagem"
+          [(ngModel)]="produto.foto">
+      </div>
 
-            <div class="fom-group">
-                <label for="nome" class="text-monospace"></label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui o nome"
-                    [(ngModel)]="produto.nome">
-            </div>
+      <div class="fom-group">
+        <label for="nome" class="text-monospace"></label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite aqui o nome"
+          [(ngModel)]="produto.nome">
+      </div>
 
-            <div class="fom-group">
-                <label for="descrição" class="text-monospace"></label>
-                <input type="text" name="descrição" id="descrição" class="form-control" placeholder="Digite aqui a descrição"
-                    [(ngModel)]="produto.descricao">
-            </div>
+      <div class="fom-group">
+        <label for="descrição" class="text-monospace"></label>
+        <input type="text" name="descrição" id="descrição" class="form-control" placeholder="Digite aqui a descrição"
+          [(ngModel)]="produto.descricao">
+      </div>
 
-            <div class="fom-group">
-                <label for="categoia" class="text-monospace"></label>
-                <input type="text" name="categoia" id="categoia" class="form-control" placeholder="Digite aqui a Categoria"
-                    [(ngModel)]="produto.categoria">
-            </div>
+      <div class="fom-group">
+        <label for="categoia" class="text-monospace"></label>
+        <input type="text" name="categoia" id="categoia" class="form-control" placeholder="Digite aqui a Categoria"
+          [(ngModel)]="produto.categoria">
+      </div>
 
+      <div class="fom-group">
+        <label for="valor" class="text-monospace"></label>
+        <input type="number" name="valor" id="valor" class="form-control" placeholder="Digite aqui o preço"
+          [(ngModel)]="produto.valor">
+      </div>
 
-            <div class="fom-group">
-                <label for="valor" class="text-monospace"></label>
-                <input type="number" name="valor" id="valor" class="form-control" placeholder="Digite aqui o preço"
-                    [(ngModel)]="produto.valor">
-            </div>
+      <div class="fom-group">
+        <label for="cor" class="text-monospace"></label>
+        <input type="text" name="cor" id="cor" class="form-control" placeholder="Digite aqui a cor do produto"
+          [(ngModel)]="produto.cor">
+      </div>
 
-            <div class="fom-group">
-                <label for="cor" class="text-monospace"></label>
-                <input type="text" name="cor" id="cor" class="form-control"
-                    placeholder="Digite aqui a cor do produto" [(ngModel)]="produto.cor">
-            </div>
+      <div class="fom-group">
+        <label for="tamanho" class="text-monospace"></label>
+        <input type="text" name="tamanho" id="tamanho" class="form-control"
+          placeholder="Digite aqui o Tamanho do produto" [(ngModel)]="produto.tamanho">
+      </div>
 
-            <div class="fom-group">
-                <label for="tamanho" class="text-monospace"></label>
-                <input type="text" name="tamanho" id="tamanho" class="form-control"
-                    placeholder="Digite aqui o Tamanho do produto" [(ngModel)]="produto.tamanho">
-            </div>
-
-            <div class="fom-group">
-                <label for="quantidade" class="text-monospace"></label>
-                <input type="number" name="quantidade" id="quantidade" class="form-control"
-                    placeholder="Digite a quantidade em estoque" [(ngModel)]="produto.qtdEstoque">
-            </div>
-        </div>
-
-        <div class="fom-group pt-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-editar btn-block mb-5" (click)="salvar()">salvar</button>
-        </div>
-
+      <div class="fom-group">
+        <label for="quantidade" class="text-monospace"></label>
+        <input type="number" name="quantidade" id="quantidade" class="form-control"
+          placeholder="Digite a quantidade em estoque" [(ngModel)]="produto.qtdEstoque">
+      </div>
     </div>
+
+    <div class="fom-group pt-4 d-flex justify-content-center">
+      <button type="button" class="btn btn-editar btn-block mb-5" (click)="salvar()">salvar</button>
+    </div>
+
+  </div>
 </div>

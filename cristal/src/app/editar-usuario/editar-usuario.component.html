@@ -1,65 +1,65 @@
 <div class="corpo">
-<main class="container">
+  <main class="container">
     <div class="row my-4">
-        <div class="col-md-12 col-kg text-center">
-            <h1 class="h2">Editar Usuário</h1>
-            <h5 class="h5">ID {{ usuario.id }}</h5>
-        </div>
+      <div class="col-md-12 col-kg text-center">
+        <h1 class="h2">Editar Usuário</h1>
+        <h5 class="h5">ID {{ usuario.id }}</h5>
+      </div>
     </div>
 
     <!-- Tabela para lista de usuários -->
     <div class="row mb-4 d-flex justify-content-center">
-        <div class="col-lg-8 col-md-9 col-sm-10">
-            <!-- Nome e Username -->
-            <div class="form-row">
-                <div class="form-group col-md-12 col-lg-7">
-                    <label for="nome" class="lead">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control" [(ngModel)]="usuario.nome">
-                </div>
-                <div class="form-group col-md-12 col-lg-5">
-                    <label for="email" class="lead">Email:</label>
-                    <input type="email" name="email" id="email" class="form-control" [(ngModel)]= "usuario.email">
-                </div>
-            </div>
+      <div class="col-lg-8 col-md-9 col-sm-10">
+        <!-- Nome e Username -->
+        <div class="form-row">
+          <div class="form-group col-md-12 col-lg-7">
+            <label for="nome" class="lead">Nome:</label>
+            <input type="text" name="nome" id="nome" class="form-control" [(ngModel)]="usuario.nome">
+          </div>
+          <div class="form-group col-md-12 col-lg-5">
+            <label for="email" class="lead">Email:</label>
+            <input type="email" name="email" id="email" class="form-control" [(ngModel)]="usuario.email">
+          </div>
+        </div>
 
-            <!-- CPF e Telefone -->
-            <div class="form-row">
-                <div class="form-group col-md-12 col-lg-6">
-                    <label for="cpf" class="lead">CPF:</label>
-                    <input type="text" name="cpf" id="cpf" class="form-control" [(ngModel)]="usuario.cpf">
-                </div>
-                <div class="form-group col-md-12 col-lg-6">
-                    <label for="telefone" class="lead">Telefone:</label>
-                    <input type="tel" name="telefone" id="telefone" class="form-control" [(ngModel)]= "usuario.telefone">
-                </div>
-            </div>
+        <!-- CPF e Telefone -->
+        <div class="form-row">
+          <div class="form-group col-md-12 col-lg-6">
+            <label for="cpf" class="lead">CPF:</label>
+            <input type="text" name="cpf" id="cpf" class="form-control" [(ngModel)]="usuario.cpf">
+          </div>
+          <div class="form-group col-md-12 col-lg-6">
+            <label for="telefone" class="lead">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" class="form-control" [(ngModel)]="usuario.telefone">
+          </div>
+        </div>
 
-            <!-- Endereço -->
-            <div class="form-row">
-                <div class="form-group col-md-12 col-lg-9">
-                    <label for="endereco" class="lead">Endereço:</label>
-                    <input type="text" name="endereco" id="endereco" class="form-control" [(ngModel)]= "usuario.endereco">
-                </div>
-                <div class="form-group col-md-12 col-lg-3">
-                    <label for="cep" class="lead">CEP:</label>
-                    <input type="text" name="cep" id="cep" class="form-control" [(ngModel)]= "usuario.cep">
-                </div>
-            </div>
+        <!-- Endereço -->
+        <div class="form-row">
+          <div class="form-group col-md-12 col-lg-9">
+            <label for="endereco" class="lead">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" class="form-control" [(ngModel)]="usuario.endereco">
+          </div>
+          <div class="form-group col-md-12 col-lg-3">
+            <label for="cep" class="lead">CEP:</label>
+            <input type="text" name="cep" id="cep" class="form-control" [(ngModel)]="usuario.cep">
+          </div>
+        </div>
 
-            <!-- Senha -->
-            <!-- <div class="form-group">
+        <!-- Senha -->
+        <!-- <div class="form-group">
                 <label for="senha" class="lead">Senha:</label>
                 <input type="password" name="senha" id="senha" class="form-control" [(ngModel)]= "usuario.senha">
             </div> -->
-            <hr>
+        <hr>
 
-            <!-- Mensagem e botões -->
-            <div class="form-group text-center">
-                <p class="lead">Salvar as alterações?</p>
-                <button type="button" class="btn sim col-5 mr-1" (click)="salvar()">Sim</button>
-                <button type="button" class="btn nao col-5 ml-1" routerLink="/home">Não</button>
-            </div>
+        <!-- Mensagem e botões -->
+        <div class="form-group text-center">
+          <p class="lead">Salvar as alterações?</p>
+          <button type="button" class="btn sim col-5 mr-1" (click)="salvar()">Sim</button>
+          <button type="button" class="btn nao col-5 ml-1" routerLink="/home">Não</button>
         </div>
+      </div>
     </div>
-</main>
+  </main>
 </div>

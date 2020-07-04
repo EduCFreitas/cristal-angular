@@ -1,10 +1,6 @@
-
 .container {
-
   padding: 0 1em 1em;
-  // margin-top: 76.7px;
   margin-top: 160px !important;
-
 }
 
 .bg {
@@ -19,7 +15,7 @@ h2 {
   padding: auto;
 }
 
-  h2:after {
+h2:after {
   content: "";
   display: block;
   width: 60px;
@@ -33,7 +29,7 @@ th {
   color: white;
 }
 
-.destaque{
+.destaque {
   color: white;
 }
 
@@ -41,7 +37,7 @@ td {
   color: #00BFA6;
 }
 
-.btn{
+.btn {
   display: block;
   height: 40px;
   border-radius: 10px;
@@ -61,8 +57,8 @@ td {
   margin-left: 15px;
 }
 
-.btn:hover{
-  background-color: darken(#00bfa6, 5%) ;
+.btn:hover {
+  background-color: darken(#00bfa6, 5%);
   transition: 0.5s;
 }
 
@@ -97,7 +93,7 @@ hr {
 }
 
 input[type="number"] {
-background-color: #00BFA6;
+  background-color: #00BFA6;
 }
 
 input::-webkit-inner-spin-button:hover {
