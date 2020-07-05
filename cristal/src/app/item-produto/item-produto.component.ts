@@ -22,10 +22,10 @@ export class ItemProdutoComponent implements OnInit {
     let id:number = this.route.snapshot.params['id']
     let token = sessionStorage.getItem('token')
     
-    if(token==null){
-      alert('Faça o login antes de acessar a página');
-      this.router.navigate(['/login']);
-    }
+    // if(token==null){
+    //   alert('Faça o login antes de acessar a página');
+    //   this.router.navigate(['/login']);
+    // }
 
     this.findById(id)
     
