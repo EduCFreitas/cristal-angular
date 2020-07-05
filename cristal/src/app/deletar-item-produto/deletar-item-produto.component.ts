@@ -20,14 +20,14 @@ export class DeletarItemProdutoComponent implements OnInit {
     let token = sessionStorage.getItem('token')
     let tipoUsuario = sessionStorage.getItem('tipoUsuario');
     
-    // if(token==null || tipoUsuario!='admin'){
-    //   alert('Página disponível apenas para administradores do site!');
-    //   if(token==null){
-    //     this.router.navigate(['/login']);
-    //   }else{
-    //     this.router.navigate(['/home']);
-    //   }
-    // }
+    if(token==null || tipoUsuario!='admin'){
+      alert('Página disponível apenas para administradores do site!');
+      if(token==null){
+        this.router.navigate(['/login']);
+      }else{
+        this.router.navigate(['/home']);
+      }
+    }
     
     this.findById(id)
   }
